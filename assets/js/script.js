@@ -20,10 +20,28 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.intro, .bio, .gallery, .classes-overview, .video-section, .plans, .guides')
-        .forEach(section => observer.observe(section));
+    document.querySelectorAll('.content-section').forEach(section => observer.observe(section));
 
-    // Lightbox functionality
+    // Form validation
+    const form = document.getElementById('contact-form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (name === '' || email === '' || message === '') {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            alert('Message sent successfully!');
+            form.reset();
+        });
+    }
+
+    // Lightbox functionality (if needed)
     const lightbox = document.querySelector('.lightbox');
     const lightboxClose = document.querySelector('.lightbox-close');
     const lightboxImage = document.querySelector('.lightbox-content img');
@@ -36,9 +54,11 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    lightboxClose.addEventListener('click', () => {
-        lightbox.style.display = 'none';
-    });
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+    }
 
     window.addEventListener('click', (e) => {
         if (e.target === lightbox) {
