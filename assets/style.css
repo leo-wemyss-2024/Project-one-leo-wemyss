@@ -16,7 +16,7 @@ body {
 header {
     text-align: center;
     background: url('/assets/images/military combat workout.jpg') no-repeat center center/cover;
-    height: 500px;
+    height: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,6 +177,58 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
+.intro {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 40px 0;
+    align-items: center;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: auto;
+    gap: 20px;
+}
+
+.image-container img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-text {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1;
+    max-width: 50%;
+}
+
+.image-text h2 {
+    margin-bottom: 10px;
+    color: #e96c36;
+}
+
+.image-text p {
+    margin: 0;
+    color: #333;
+}
+
+/* Styles for alternating image and text layout */
+.image-container:nth-child(odd) {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.image-container:nth-child(even) {
+    text-align: left;
+}
 
 .footer-content {
     display: flex;
@@ -212,18 +264,6 @@ nav ul li a:hover {
     font-size: 24px;
 }
 
-/* Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
@@ -241,7 +281,21 @@ nav ul li a:hover {
         justify-content: center;
     }
 
-    .contact-form form input, .contact-form form textarea {
+    .image-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .image-container img, .image-text {
         width: 100%;
+        height: auto;
+    }
+
+    .image-text {
+        order: 2;
+    }
+
+    .image-container:nth-child(odd), .image-container:nth-child(even) {
+        flex-direction: column;
     }
 }
