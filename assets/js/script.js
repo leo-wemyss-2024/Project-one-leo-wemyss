@@ -17,13 +17,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
+                entry.target.classList.add('fade-in-visible');
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    const sections = document.querySelectorAll('.intro, .bio, .gallery, .classes-overview, .video-section, .plans, .guides');
+    const sections = document.querySelectorAll('.fade-in');
     if (sections) {
         sections.forEach(section => observer.observe(section));
     }
