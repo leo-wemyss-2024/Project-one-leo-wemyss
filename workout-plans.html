@@ -24,7 +24,7 @@
             </ul>
         </nav>
         <div class="hero-content">
-            <h1>Customised Workout Plans</h1>
+            <h1>Customized Workout Plans</h1>
             <p>Achieve your fitness goals with our personalized workout plans.</p>
         </div>
     </header>
@@ -32,17 +32,46 @@
     <main>
         <section class="plans content-section">
             <h2>Workout Plans</h2>
-            <div class="plan-item">
-                <h3>Beginner Plan</h3>
-                <p>This plan is perfect for those who are new to fitness and want to build a strong foundation.</p>
-            </div>
-            <div class="plan-item">
-                <h3>Intermediate Plan</h3>
-                <p>Designed for those with some experience, looking to take their fitness to the next level.</p>
-            </div>
-            <div class="plan-item">
-                <h3>Advanced Plan</h3>
-                <p>For seasoned athletes aiming to push their limits and achieve peak performance.</p>
+            <div class="plan-container">
+                <div class="plan-item">
+                    <h3>Beginner Plan</h3>
+                    <p>This plan is perfect for those who are new to fitness and want to build a strong foundation.</p>
+                    <div class="days-container">
+                        <div class="day-box">Day 1</div>
+                        <div class="day-box">Day 2</div>
+                        <div class="day-box">Day 3</div>
+                        <div class="day-box">Day 4</div>
+                        <div class="day-box">Day 5</div>
+                        <div class="day-box">Day 6</div>
+                        <div class="day-box">Day 7</div>
+                    </div>
+                </div>
+                <div class="plan-item">
+                    <h3>Intermediate Plan</h3>
+                    <p>Designed for those with some experience, looking to take their fitness to the next level.</p>
+                    <div class="days-container">
+                        <div class="day-box">Day 1</div>
+                        <div class="day-box">Day 2</div>
+                        <div class="day-box">Day 3</div>
+                        <div class="day-box">Day 4</div>
+                        <div class="day-box">Day 5</div>
+                        <div class="day-box">Day 6</div>
+                        <div class="day-box">Day 7</div>
+                    </div>
+                </div>
+                <div class="plan-item">
+                    <h3>Advanced Plan</h3>
+                    <p>For seasoned athletes aiming to push their limits and achieve peak performance.</p>
+                    <div class="days-container">
+                        <div class="day-box">Day 1</div>
+                        <div class="day-box">Day 2</div>
+                        <div class="day-box">Day 3</div>
+                        <div class="day-box">Day 4</div>
+                        <div class="day-box">Day 5</div>
+                        <div class="day-box">Day 6</div>
+                        <div class="day-box">Day 7</div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -58,6 +87,15 @@
             </div>
         </div>
     </footer>
+    
+<!-- Modal Structure -->
+<div class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h2 id="modal-plan-title"></h2>
+        <div id="modal-plan-details"></div>
+    </div>
+</div>
 
     <script src="assets/js/script.js"></script>
 </body>
