@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Lato', 'Oswald', sans-serif;
-    background-color: #A9A9A9; /* Gray color extracted from the road in the image */
+    background-color: #e0ebea; /* Match the background color */
     color: #333;
     line-height: 1.6;
     overflow-x: hidden;
@@ -15,7 +15,7 @@ body {
 
 header {
     text-align: center;
-    background: url(/assets/images/military_combat_workout.jpg) no-repeat center center/cover;
+    background: url(/assets/images/military\ combat\ workout.jpg) no-repeat center center/cover;
     height: 700px;
     display: flex;
     justify-content: center;
@@ -191,14 +191,14 @@ nav ul li a:hover {
     align-items: center;
     justify-content: space-between;
     width: 80%;
-    height: auto;
+    height: 400px; /* Set a fixed height for images */
     gap: 20px;
 }
 
 .image-container img {
     width: 45%;
-    height: auto;
-    object-fit: cover;
+    height: 100%;
+    object-fit: cover; /* Ensure images cover the assigned area */
 }
 
 .image-text {
@@ -342,15 +342,15 @@ nav ul li a:hover {
     to { width: 100%; }
 }
 
-@keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: orange; }
-}
-
 .typing-animation {
-    width: 0;
+    width: 100%;
     overflow: hidden;
     white-space: nowrap;
     border-right: 0.15em solid orange;
-    animation: typing 4s steps(30, end) 1 normal forwards, blink-caret 0.75s step-end 5;
+    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+.typing-animation::after {
+    content: '';
+    animation: none; /* No blinking */
 }
