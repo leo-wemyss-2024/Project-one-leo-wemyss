@@ -1,18 +1,17 @@
+// Smooth scrolling for navigation links
 document.addEventListener("DOMContentLoaded", function() {
-    // Smooth scrolling
     const anchors = document.querySelectorAll('a[href^="#"]');
-    if (anchors) {
-        anchors.forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+
+    anchors.forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
             });
         });
-    }
+    });
 
-    // Intersection Observer for animations
+    // Fade-in animations with Intersection Observer
     const observerOptions = { threshold: 0.1 };
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -24,11 +23,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }, observerOptions);
 
     const sections = document.querySelectorAll('.fade-in');
-    if (sections.length > 0) {
-        sections.forEach(section => observer.observe(section));
-    }
+    sections.forEach(section => observer.observe(section));
 
-    // Modal for plans and guides
+    // Modal for workout plans and guides
     const modal = document.querySelector('.modal');
     const modalClose = document.querySelector('.modal-close');
     const modalTitle = document.getElementById('modal-plan-title');
@@ -36,23 +33,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function showModal(day) {
         const planDetails = getPlanDetails(day);
-        if (modal && modalTitle && modalDetails) {
-            modalTitle.textContent = day;
-            modalDetails.innerHTML = planDetails;
-            modal.style.display = 'flex';
-        }
+        modalTitle.textContent = day;
+        modalDetails.innerHTML = planDetails;
+        modal.style.display = 'flex';
     }
 
-    if (modalClose) {
-        modalClose.addEventListener('click', () => {
-            if (modal) {
-                modal.style.display = 'none';
-            }
-        });
-    }
+    modalClose.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
 
     window.addEventListener('click', (e) => {
-        if (modal && e.target === modal) {
+        if (e.target === modal) {
             modal.style.display = 'none';
         }
     });
