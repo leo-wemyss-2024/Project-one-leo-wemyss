@@ -168,4 +168,37 @@ document.addEventListener("DOMContentLoaded", function() {
     if (heroText) {
         heroText.classList.add('typing-animation-visible');
     }
+
+    // List of counties
+    const counties = {
+        "Ireland": [
+            "Carlow", "Cavan", "Clare", "Cork", "Donegal", "Dublin", "Galway",
+            "Kerry", "Kildare", "Kilkenny", "Laois", "Leitrim", "Limerick", "Longford",
+            "Louth", "Mayo", "Meath", "Monaghan", "Offaly", "Roscommon", "Sligo",
+            "Tipperary", "Waterford", "Westmeath", "Wexford", "Wicklow"
+        ],
+        "Northern Ireland": [
+            "Antrim", "Armagh", "Derry", "Down", "Fermanagh", "Tyrone"
+        ]
+    };
+
+    // Populate counties based on country selection
+    const countrySelect = document.getElementById('country');
+    const countySelect = document.getElementById('county');
+
+    countrySelect.addEventListener('change', function() {
+        const selectedCountry = this.value;
+        const countyOptions = counties[selectedCountry] || [];
+        
+        // Clear previous options
+        countySelect.innerHTML = '<option value="">Please Select</option>';
+        
+        // Add new options
+        countyOptions.forEach(function(county) {
+            const option = document.createElement('option');
+            option.value = county;
+            option.textContent = county;
+            countySelect.appendChild(option);
+        });
+    });
 });
