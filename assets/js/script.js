@@ -1,4 +1,3 @@
-// Smooth scrolling for navigation links
 document.addEventListener("DOMContentLoaded", function() {
     const anchors = document.querySelectorAll('a[href^="#"]');
 
@@ -11,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Fade-in animations with Intersection Observer
     const observerOptions = { threshold: 0.1 };
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -25,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll('.fade-in');
     sections.forEach(section => observer.observe(section));
 
-    // Modal for workout plans and guides
     const modal = document.querySelector('.modal');
     const modalClose = document.querySelector('.modal-close');
     const modalTitle = document.getElementById('modal-plan-title');
@@ -50,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function getPlanDetails(day) {
         const details = {
-            // Beginner Plan
             "Day 1 (Beginner)": "Beginner Plan: Day 1\nLight Cardio - 30 minutes of walking or easy jogging.",
             "Day 2 (Beginner)": "Beginner Plan: Day 2\nBodyweight Exercises - 20 minutes of exercises like squats, push-ups, and lunges.",
             "Day 3 (Beginner)": "Beginner Plan: Day 3\nRest day.",
@@ -58,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function() {
             "Day 5 (Beginner)": "Beginner Plan: Day 5\nFlexibility Training - 20 minutes of stretching or yoga.",
             "Day 6 (Beginner)": "Beginner Plan: Day 6\nBodyweight Exercises - 20 minutes of exercises like squats, push-ups, and lunges.",
             "Day 7 (Beginner)": "Beginner Plan: Day 7\nRest day.",
-            // Intermediate Plan
             "Day 1 (Intermediate)": "Intermediate Plan: Day 1\nModerate Cardio - 45 minutes of running or cycling.",
             "Day 2 (Intermediate)": "Intermediate Plan: Day 2\nWeightlifting - 45 minutes focusing on major muscle groups.",
             "Day 3 (Intermediate)": "Intermediate Plan: Day 3\nCore Training - 30 minutes of exercises like planks and sit-ups.",
@@ -66,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function() {
             "Day 5 (Intermediate)": "Intermediate Plan: Day 5\nWeightlifting - 45 minutes focusing on major muscle groups.",
             "Day 6 (Intermediate)": "Intermediate Plan: Day 6\nFlexibility Training - 30 minutes of stretching or yoga.",
             "Day 7 (Intermediate)": "Intermediate Plan: Day 7\nRest day.",
-            // Advanced Plan
             "Day 1 (Advanced)": "Advanced Plan: Day 1\nHIIT - 30 minutes of high-intensity interval training.",
             "Day 2 (Advanced)": "Advanced Plan: Day 2\nHeavy Weightlifting - 60 minutes focusing on major muscle groups.",
             "Day 3 (Advanced)": "Advanced Plan: Day 3\nAdvanced Cardio - 60 minutes of intense running or cycling.",
@@ -74,35 +68,30 @@ document.addEventListener("DOMContentLoaded", function() {
             "Day 5 (Advanced)": "Advanced Plan: Day 5\nHeavy Weightlifting - 60 minutes focusing on major muscle groups.",
             "Day 6 (Advanced)": "Advanced Plan: Day 6\nAdvanced Flexibility - 45 minutes of stretching or advanced yoga.",
             "Day 7 (Advanced)": "Advanced Plan: Day 7\nRest day.",
-            // Nutrition Plan
             "Nutrition Week 1": "Nutrition Advice: Week 1\nFocus on whole foods, balanced diet, plenty of hydration.",
             "Nutrition Week 2": "Nutrition Advice: Week 2\nInclude more proteins and healthy fats in your diet.",
             "Nutrition Week 3": "Nutrition Advice: Week 3\nMonitor your calorie intake to match your activity level.",
             "Nutrition Week 4": "Nutrition Advice: Week 4\nIncorporate more fruits and vegetables.",
             "Nutrition Week 5": "Nutrition Advice: Week 5\nReduce processed sugars and unhealthy snacks.",
             "Nutrition Week 6": "Nutrition Advice: Week 6\nMaintain a balanced diet with a variety of nutrients.",
-            // Rest and Recovery Plan
             "Rest Week 1": "Rest and Recovery: Week 1\nImportance of sleep and rest days.",
             "Rest Week 2": "Rest and Recovery: Week 2\nIncorporate active recovery like light walking or yoga.",
             "Rest Week 3": "Rest and Recovery: Week 3\nListen to your body and avoid overtraining.",
             "Rest Week 4": "Rest and Recovery: Week 4\nRegular massage or foam rolling for muscle recovery.",
             "Rest Week 5": "Rest and Recovery: Week 5\nHydration and nutrition play a key role in recovery.",
             "Rest Week 6": "Rest and Recovery: Week 6\nBalancing training intensity and rest.",
-            // Strength Training Plan
             "Strength Week 1": "Strength Training: Week 1\nFull body workout with bodyweight exercises.",
             "Strength Week 2": "Strength Training: Week 2\nIntroduction to weightlifting, focusing on form.",
             "Strength Week 3": "Strength Training: Week 3\nIncrease intensity and weight.",
             "Strength Week 4": "Strength Training: Week 4\nSplit workouts focusing on different muscle groups.",
             "Strength Week 5": "Strength Training: Week 5\nHigher reps and lighter weights for endurance.",
             "Strength Week 6": "Strength Training: Week 6\nLower reps and heavier weights for strength.",
-            // Specialized Running Plan
             "Running Week 1": "Specialized Running: Week 1\n8 x 400 meters with 3 minutes jog between runs.",
             "Running Week 2": "Specialized Running: Week 2\n8 x 400 meters with 2:45 jog between runs.",
             "Running Week 3": "Specialized Running: Week 3\n8 x 400 meters with 2:30 jog between runs.",
             "Running Week 4": "Specialized Running: Week 4\n8 x 400 meters with 2:15 jog between runs.",
             "Running Week 5": "Specialized Running: Week 5\n8 x 400 meters with 2:00 jog between runs.",
             "Running Week 6": "Specialized Running: Week 6\n8 x 400 meters with 1:45 jog between runs.",
-            // Additional Running Plans
             "Endurance Week 1": "Increase Endurance for 10K to Half-Marathon: Week 1\nRun out for 40 minutes and run back in 38 minutes. Run at a slow pace for 40 minutes out, turn around and run back in progressively less time.",
             "Endurance Week 2": "Increase Endurance for 10K to Half-Marathon: Week 2\nRun out for 40 minutes and run back in 36 minutes.",
             "Endurance Week 3": "Increase Endurance for 10K to Half-Marathon: Week 3\nRun out for 40 minutes and run back in 34 minutes.",
@@ -143,6 +132,5 @@ document.addEventListener("DOMContentLoaded", function() {
         return details[day] || "No details found for: " + day;
     }
 
-    // Expose showModal to global scope
     window.showModal = showModal;
 });
