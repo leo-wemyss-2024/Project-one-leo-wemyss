@@ -5,6 +5,7 @@
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
+/* Body Styling */
 body {
     font-family: 'Lato', 'Oswald', sans-serif; /* Font styles for body */
     background-color: #e0ebea; /* Background color */
@@ -13,6 +14,7 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* Header Styling */
 header {
     text-align: center; /* Center text */
     background: url(/assets/images/military\ combat\ workout.jpg) no-repeat center center/cover; /* Background image */
@@ -33,6 +35,7 @@ header::before {
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
 }
 
+/* Navigation Styling */
 nav ul {
     list-style: none; /* Remove default list styling */
     display: flex; /* Flexbox layout */
@@ -60,6 +63,7 @@ nav ul li a:hover {
     background: #e96c36; /* Background color on hover */
 }
 
+/* Hero Content Styling */
 .hero-content {
     color: white; /* Text color */
     position: relative; /* Position relative for z-index */
@@ -75,6 +79,7 @@ nav ul li a:hover {
     font-size: 1.2em; /* Font size */
 }
 
+/* CTA Button Styling */
 .cta-button {
     display: inline-block; /* Inline-block element */
     padding: 10px 20px; /* Padding */
@@ -91,6 +96,7 @@ nav ul li a:hover {
     transform: translateY(-3px); /* Move up on hover */
 }
 
+/* Content Section Styling */
 .content-section {
     padding: 40px 20px; /* Padding */
     text-align: center; /* Center text */
@@ -101,6 +107,7 @@ nav ul li a:hover {
     animation: fadeInUp 0.5s ease-in-out; /* Fade-in animation */
 }
 
+/* Plan Container Styling */
 .plan-container {
     display: flex; /* Flexbox layout */
     flex-direction: column; /* Column layout */
@@ -115,6 +122,7 @@ nav ul li a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
 }
 
+/* Days Container Styling */
 .days-container {
     display: flex; /* Flexbox layout */
     flex-wrap: wrap; /* Wrap items */
@@ -123,6 +131,7 @@ nav ul li a:hover {
     margin-top: 20px; /* Margin above */
 }
 
+/* Day Box Styling */
 .day-box {
     width: 150px; /* Fixed width */
     height: 150px; /* Fixed height */
@@ -140,7 +149,7 @@ nav ul li a:hover {
     transform: scale(1.05); /* Scale up on hover */
 }
 
-/* Modal Styles */
+/* Modal Styling */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -177,6 +186,7 @@ nav ul li a:hover {
     cursor: pointer; /* Pointer cursor */
 }
 
+/* Intro Section Styling */
 .intro {
     display: flex; /* Flexbox layout */
     flex-direction: column; /* Column layout */
@@ -185,6 +195,7 @@ nav ul li a:hover {
     align-items: center; /* Center align items */
 }
 
+/* Image Container Styling */
 .image-container {
     position: relative; /* Position relative */
     display: flex; /* Flexbox layout */
@@ -201,6 +212,7 @@ nav ul li a:hover {
     object-fit: cover; /* Cover object fit */
 }
 
+/* Image Text Styling */
 .image-text {
     background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
     padding: 20px; /* Padding */
@@ -220,6 +232,7 @@ nav ul li a:hover {
     color: #333; /* Text color */
 }
 
+/* About Section Styling */
 .about-section {
     padding: 60px 20px; /* Padding */
     background-color: #f9f9f9; /* Background color */
@@ -266,6 +279,7 @@ nav ul li a:hover {
     text-align: left; /* Left align text */
 }
 
+/* Footer Content Styling */
 .footer-content {
     display: flex; /* Flexbox layout */
     align-items: center; /* Center align items */
@@ -282,6 +296,7 @@ nav ul li a:hover {
     margin: 0; /* No margin */
 }
 
+/* Social Media Links Styling */
 .social-media {
     display: flex; /* Flexbox layout */
     gap: 20px; /* Space between items */
