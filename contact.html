@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitness with Wemyss Workouts</title>
-    <meta name="description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
-    <meta name="keywords" content="fitness, personal trainer, about, Leo Wemyss">
+    <title>Contact - Fitness with Wemyss Workouts</title>
+    <meta name="description" content="Get in touch with Leo Wemyss to learn more about fitness classes and personalized training programs.">
+    <meta name="keywords" content="fitness, contact, personal trainer, Leo Wemyss">
     <meta name="author" content="Leo Wemyss">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
 
-    <meta property="og:title" content="About - Fitness with Wemyss Workouts">
-    <meta property="og:description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
-    <meta property="og:image" content="path/to/your-photo.jpg">
-    <meta property="og:url" content="http://www.yourwebsite.com/about.html">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact - Fitness with Wemyss Workouts">
+    <meta property="og:description" content="Get in touch with Leo Wemyss to learn more about fitness classes and personalized training programs.">
+    <meta property="og:image" content="assets/images/your-image.jpg">
+    <meta property="og:url" content="http://www.yourwebsite.com/contact.html">
     <meta property="og:type" content="website">
 
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About - Fitness with Wemyss Workouts">
-    <meta name="twitter:description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
-    <meta name="twitter:image" content="path/to/your-photo.jpg">
+    <meta name="twitter:title" content="Contact - Fitness with Wemyss Workouts">
+    <meta name="twitter:description" content="Get in touch with Leo Wemyss to learn more about fitness classes and personalized training programs.">
+    <meta name="twitter:image" content="assets/images/your-image.jpg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="assets/style.css">
 
     <link rel="android-chrome" sizes="192x192" href="assets/favicon_io/android-chrome-192x192.png">
@@ -36,17 +38,160 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="classes.html">Classes</a></li>
                 <li><a href="workout-plans.html">Workout Plans</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
         <div class="hero-content">
-            <h1>Contact Us</h1>
+            <h1 class="typing-animation">Contact Us</h1>
             <p>We'd love to hear from you. Reach out with any questions or to get started!</p>
         </div>
     </header>
-
     <main>
+        <div class="container">
+            <h1>Gym Registration Form</h1>
+            <p>Join our gym and start your fitness journey today! Please fill out the form to register.</p>
+
+            <form id="registration-form">
+                <!-- Personal Information -->
+                <section class="form-section">
+                    <h2>Personal Information</h2>
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Please Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </section>
+                <!-- Address -->
+                <section class="form-section">
+                    <h2>Address</h2>
+                    <div class="form-group">
+                        <label for="street">Street Address</label>
+                        <input type="text" id="street" name="street" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="street2">Street Address Line 2</label>
+                        <input type="text" id="street2" name="street2">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State / Province</label>
+                        <input type="text" id="state" name="state" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="postal">Postal / Zip Code</label>
+                        <input type="text" id="postal" name="postal" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" name="country" required>
+                            <option value="">Please Select</option>
+                            <option value="ireland">Ireland</option>
+                            <!-- Add more countries here -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="county">County</label>
+                        <select id="county" name="county">
+                            <option value="">Please Select</option>
+                            <!-- Counties of Ireland will be dynamically added here -->
+                        </select>
+                    </div>
+                </section>
+                <!-- Fitness Information -->
+                <section class="form-section">
+                    <h2>Fitness Information</h2>
+                    <div class="form-group">
+                        <label for="current-weight">Current Weight</label>
+                        <input type="number" id="current-weight" name="current_weight" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="height">Height</label>
+                        <input type="number" id="height" name="height" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bmi">BMI</label>
+                        <input type="number" id="bmi" name="bmi" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="goal-weight">Goal Weight</label>
+                        <input type="number" id="goal-weight" name="goal_weight" required>
+                    </div>
+                </section>
+                <!-- Emergency Contact Information -->
+                <section class="form-section">
+                    <h2>Emergency Contact Information</h2>
+                    <div class="form-group">
+                        <label for="emergency-name">Emergency Contact Name</label>
+                        <input type="text" id="emergency-name" name="emergency_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="relationship">Relationship</label>
+                        <input type="text" id="relationship" name="relationship" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emergency-phone">Emergency Contact Phone Number</label>
+                        <input type="tel" id="emergency-phone" name="emergency_phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                    </div>
+                </section>
+                <!-- Medical Information -->
+                <section class="form-section">
+                    <h2>Medical Information</h2>
+                    <div class="form-group">
+                        <label for="medical-conditions">Do you have any medical conditions or allergies?</label>
+                        <textarea id="medical-conditions" name="medical_conditions" required></textarea>
+                    </div>
+                </section>
+                <!-- Membership Information -->
+                <section class="form-section">
+                    <h2>Membership Information</h2>
+                    <div class="form-group">
+                        <label for="membership-type">Choose Membership Type</label>
+                        <select id="membership-type" name="membership_type" required>
+                            <option value="">Please Select</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="quarterly">Quarterly</option>
+                            <option value="yearly">Yearly</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="start-date">Preferred Start Date</label>
+                        <input type="date" id="start-date" name="start_date" required>
+                    </div>
+                </section>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+
         <section class="contact content-section">
             <h2>Contact Form</h2>
             <form id="contact-form">
@@ -65,6 +210,7 @@
                 <button type="submit">Submit</button>
             </form>
         </section>
+
         <section class="additional-contact-info content-section">
             <h2>Additional Contact Information</h2>
             <p><strong>Address:</strong> 123 Fitness St, Workout City, Gym State, 12345</p>

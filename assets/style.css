@@ -1,8 +1,8 @@
-/* Basic Reset */
+/* Basic Reset & Body Styling */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
 }
 
 body {
@@ -13,6 +13,7 @@ body {
     overflow-x: hidden;
 }
 
+/* Header Styling */
 header {
     text-align: center;
     background: url(/assets/images/military\ combat\ workout.jpg) no-repeat center center/cover;
@@ -33,6 +34,7 @@ header::before {
     background: rgba(0, 0, 0, 0.5);
 }
 
+/* Navigation Menu */
 nav ul {
     list-style: none;
     display: flex;
@@ -60,6 +62,7 @@ nav ul li a:hover {
     background: #e96c36;
 }
 
+/* Hero Section */
 .hero-content {
     color: white;
     position: relative;
@@ -91,6 +94,7 @@ nav ul li a:hover {
     transform: translateY(-3px);
 }
 
+/* Content Section */
 .content-section {
     padding: 40px 20px;
     text-align: center;
@@ -101,6 +105,7 @@ nav ul li a:hover {
     animation: fadeInUp 0.5s ease-in-out;
 }
 
+/* Plan Container */
 .plan-container {
     display: flex;
     flex-direction: column;
@@ -150,7 +155,6 @@ nav ul li a:hover {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
@@ -177,6 +181,7 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
+/* Intro Section */
 .intro {
     display: flex;
     flex-direction: column;
@@ -220,14 +225,15 @@ nav ul li a:hover {
     color: #333;
 }
 
+/* About Section */
 .about-section {
     padding: 60px 20px;
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* Light gray background */
 }
 
 .about-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Wraps items */
     justify-content: center;
     align-items: center;
     gap: 40px;
@@ -248,17 +254,17 @@ nav ul li a:hover {
 .about-content h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #333;
+    color: #333; /* Dark text */
 }
 
 .about-content p {
     margin-bottom: 20px;
-    color: #666;
+    color: #666; /* Gray text */
 }
 
 /* Styles for alternating image and text layout */
 .image-container:nth-child(odd) {
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; /* Reverses the order */
     text-align: right;
 }
 
@@ -266,6 +272,7 @@ nav ul li a:hover {
     text-align: left;
 }
 
+/* Footer Styles */
 .footer-content {
     display: flex;
     align-items: center;
@@ -274,8 +281,8 @@ nav ul li a:hover {
     margin: 0 auto;
     padding: 20px;
     width: 100%;
-    background-color: #333;
-    color: white;
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
 }
 
 .footer-content p {
@@ -289,15 +296,15 @@ nav ul li a:hover {
 
 .social-media a {
     color: white;
-    transition: transform 0.3s;
+    transition: transform 0.3s; /* Smooth transform transition */
 }
 
 .social-media a:hover {
-    transform: scale(1.2);
+    transform: scale(1.2); /* Enlarges on hover */
 }
 
 .social-media a i {
-    font-size: 24px;
+    font-size: 24px; /* Icon size */
 }
 
 /* Responsive Design */
@@ -389,4 +396,47 @@ nav ul li a:hover {
 .typing-animation::after {
     content: '';
     animation: none; /* No blinking */
+}
+
+/* Form Styling */
+.form-section {
+    margin-bottom: 20px;
+}
+
+.form-section h2 {
+    margin-bottom: 10px;
+    color: #e96c36; /* Same color as other headings */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group button {
+    background-color: #e96c36;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form-group button:hover {
+    background-color: #d85a29;
 }
