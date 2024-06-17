@@ -1,23 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Smooth scrolling for navigation links
     const anchors = document.querySelectorAll('a[href^="#"]');
-
     anchors.forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            const href = this.getAttribute('href');
-            if (href && href.length > 1) {
-                const targetId = href.substring(1);
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                } else {
-                    console.error('Element with id ' + targetId + ' not found');
-                }
-            } else {
-                console.error('Invalid href attribute', href);
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
@@ -32,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }, observerOptions);
-
     const sections = document.querySelectorAll('.fade-in');
     sections.forEach(section => observer.observe(section));
 
@@ -41,36 +30,21 @@ document.addEventListener("DOMContentLoaded", function() {
     const modalClose = document.querySelector('.modal-close');
     const modalTitle = document.getElementById('modal-plan-title');
     const modalDetails = document.getElementById('modal-plan-details');
-
-    if (modal && modalClose && modalTitle && modalDetails) {
-        window.showModal = function(day) {
-            const planDetails = getPlanDetails(day);
-            if (modalTitle && modalDetails) {
-                modalTitle.textContent = day;
-                modalDetails.innerHTML = planDetails;
-                modal.style.display = 'flex';
-            } else {
-                console.error('Modal elements not found');
-            }
-        }
-
-        modalClose.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-    } else {
-        console.error('Modal elements not found');
+    window.showModal = function(day) {
+        const planDetails = getPlanDetails(day);
+        modalTitle.textContent = day;
+        modalDetails.innerHTML = planDetails;
+        modal.style.display = 'flex';
     }
+    modalClose.addEventListener('click', () => modal.style.display = 'none');
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
 
     function getPlanDetails(day) {
         const details = {
-            "Day 1 (Beginner)": "Beginner Plan: Day 1<br>Light Cardio - 30 minutes of walking or easy jogging.",
-            "Day 2 (Beginner)": "Beginner Plan: Day 2<br>Bodyweight Exercises - 20 minutes of exercises like squats, push-ups, and lunges.",
             "Day 3 (Beginner)": "Beginner Plan: Day 3<br>Rest day.",
             "Day 4 (Beginner)": "Beginner Plan: Day 4<br>Light Cardio - 30 minutes of walking or easy jogging.",
             "Day 5 (Beginner)": "Beginner Plan: Day 5<br>Flexibility Training - 20 minutes of stretching or yoga.",
@@ -116,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
             "Running Week 6": "Specialized Running: Week 6<br>8 x 400 meters with 1:45 jog between runs."
         };
 
+        };
         return details[day] || 'No details found for this day.';
     }
 
@@ -127,44 +102,114 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // List of counties
     const counties = {
-        "Ireland": [
-            "Carlow", "Cavan", "Clare", "Cork", "Donegal", "Dublin", "Galway",
-            "Kerry", "Kildare", "Kilkenny", "Laois", "Leitrim", "Limerick", "Longford",
-            "Louth", "Mayo", "Meath", "Monaghan", "Offaly", "Roscommon", "Sligo",
-            "Tipperary", "Waterford", "Westmeath", "Wexford", "Wicklow"
-        ],
-        "Northern Ireland": [
-            "Antrim", "Armagh", "Derry", "Down", "Fermanagh", "Tyrone"
-        ]
+        "Ireland": ["Carlow", "Cavan", "Clare", "Cork", "Donegal", "Dublin", "Galway", "Kerry", "Kildare", "Kilkenny", "Laois", "Leitrim", "Limerick", "Longford", "Louth", "Mayo", "Meath", "Monaghan", "Offaly", "Roscommon", "Sligo", "Tipperary", "Waterford", "Westmeath", "Wexford", "Wicklow"],
+        "Northern Ireland": ["Antrim", "Armagh", "Derry", "Down", "Fermanagh", "Tyrone"]
     };
 
     // Populate counties based on country selection
     const countrySelect = document.getElementById('country');
     const countySelect = document.getElementById('county');
-
-    if (countrySelect && countySelect) {
-        countrySelect.addEventListener('change', function() {
-            const selectedCountry = this.value;
-            const countyOptions = counties[selectedCountry] || [];
-            
-            // Clear previous options
-            countySelect.innerHTML = '<option value="">Please Select</option>';
-            
-            // Add new options
-            countyOptions.forEach(function(county) {
-                const option = document.createElement('option');
-                option.value = county;
-                option.textContent = county;
-                countySelect.appendChild(option);
-            });
+    countrySelect.addEventListener('change', function() {
+        const selectedCountry = this.value;
+        const countyOptions = counties[selectedCountry] || [];
+        countySelect.innerHTML = '<option value="">Please Select</option>';
+        countyOptions.forEach(county => {
+            const option = document.createElement('option');
+            option.value = county;
+            option.textContent = county;
+            countySelect.appendChild(option);
         });
-    } else {
-        console.error('Country or County select element not found');
-    }
+    });
 
     // BMI Calculator functionality
     const bmiForm = document.getElementById('bmi-form');
     const bmiResult = document.getElementById('bmi-result');
+    if (bmiForm) {
+        bmiForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const height = parseFloat(document.getElementById('bmi-height').value);
+            const weight = parseFloat(document.getElementById('bmi-weight').value);
+            const heightUnit = document.getElementById('bmi-height-unit').value;
+            const weightUnit = document.getElementById('bmi-weight-unit').value;
 
-    bmiForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+            let heightInMeters;
+            if (heightUnit === 'cm') {
+                heightInMeters = height / 100;
+            } else if (heightUnit === 'meters') {
+                heightInMeters = height;
+            } else if (heightUnit === 'inches') {
+                heightInMeters = height * 0.0254;
+            } else {
+                bmiResult.textContent = 'Please select a valid height unit.';
+                return;
+            }
+
+            let weightInKg;
+            if (weightUnit === 'kg') {
+                weightInKg = weight;
+            } else if (weightUnit === 'lbs') {
+                weightInKg = weight * 0.453592;
+            } else {
+                bmiResult.textContent = 'Please select a valid weight unit.';
+                return;
+            }
+
+            if (!isNaN(heightInMeters) && !isNaN(weightInKg) && heightInMeters > 0 && weightInKg > 0) {
+                const bmi = (weightInKg / (heightInMeters ** 2)).toFixed(2);
+                bmiResult.textContent = `Your BMI is ${bmi}`;
+            } else {
+                bmiResult.textContent = 'Please enter valid height and weight.';
+            }
+        });
+    } else {
+        console.error('BMI form not found');
+    }
+
+    // Function to show the blog modal with the relevant content
+    function showBlogModal(title, content) {
+        const modal = document.getElementById('blog-modal');
+        const modalContent = modal.querySelector('.modal-content');
+        const modalTitle = document.createElement('h2');
+        const modalText = document.createElement('p');
+        const closeButton = modal.querySelector('.modal-close');
+
+        modalTitle.textContent = title;
+        modalText.textContent = content;
+
+        modalContent.innerHTML = '';
+        modalContent.appendChild(closeButton);
+        modalContent.appendChild(modalTitle);
+        modalContent.appendChild(modalText);
+
+        modal.style.display = 'block';
+
+        closeButton.onclick = function() {
+            modal.style.display = 'none';
+        };
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+    }
+
+    // Example usage (replace these with actual blog post data)
+    const blogPosts = [
+        {
+            title: '5 Tips to Improve Your Cardio',
+            content: 'Learn the best techniques to boost your cardiovascular fitness...'
+        },
+        {
+            title: 'The Benefits of Strength Training',
+            content: 'Discover why strength training is crucial for your overall health...'
+        }
+    ];
+
+    // Adding event listeners to the "Read More" buttons
+    document.querySelectorAll('.read-more').forEach((button, index) => {
+        button.addEventListener('click', () => {
+            showBlogModal(blogPosts[index].title, blogPosts[index].content);
+        });
+    });
+});
