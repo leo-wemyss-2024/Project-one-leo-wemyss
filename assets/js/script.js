@@ -204,17 +204,95 @@ function showBlogModal(title, content) {
     };
 }
 
-// Example blog post data
+/ // Array holding blog posts with titles and expanded content
 const blogPosts = [
     {
         title: '5 Heart-Pumping Hacks: Elevate Your Cardio Endurance and Torch Calories Faster!',
-        content: 'Are you ready to take your cardio workouts to the next level? Whether you\'re a seasoned runner or just starting your fitness journey, these five expert tips will help you boost your cardiovascular health, burn more calories, and unlock your full potential. HIIT It Up: High-Intensity Interval Training (HIIT) is your secret weapon for maximizing results in minimal time. Learn how to structure your HIIT sessions for optimal fat burning and endurance gains. Embrace Variety: Ditch the treadmill boredom! Explore a variety of cardio exercises, from dancing to swimming, to keep your workouts exciting and engage different muscle groups. Fuel Your Fire: Discover the best pre- and post-workout nutrition strategies to fuel your cardio sessions and optimize recovery. Listen to Your Body: Learn how to monitor your heart rate and other key metrics to gauge your effort and avoid overtraining. Progress Gradually: Don\'t rush into intense workouts. Start with manageable goals and gradually increase the duration and intensity over time. Ready to transform your cardio workouts? Join our community for personalized guidance and support on your journey to a healthier heart and a fitter you!'
+        content: `
+            <p>Are you ready to take your cardio workouts to the next level? Whether you're a seasoned runner or just starting your fitness journey, these five expert tips will help you boost your cardiovascular health, burn more calories, and unlock your full potential.</p>
+            <h3>HIIT It Up</h3>
+            <p>High-Intensity Interval Training (HIIT) is your secret weapon for maximizing results in minimal time. By alternating between intense bursts of activity and short rest periods, you can burn more calories in a shorter amount of time. HIIT also improves your cardiovascular endurance and metabolic rate. Here's how to structure your HIIT sessions:</p>
+            <ul>
+                <li>Warm-up for 5-10 minutes with light cardio.</li>
+                <li>Perform 30 seconds of high-intensity exercise (like sprinting) followed by 30 seconds of rest.</li>
+                <li>Repeat for 20-30 minutes.</li>
+                <li>Cool down for 5-10 minutes.</li>
+            </ul>
+            <h3>Embrace Variety</h3>
+            <p>Ditch the treadmill boredom! Explore a variety of cardio exercises to keep your workouts exciting and engage different muscle groups. Some fun and effective cardio options include:</p>
+            <ul>
+                <li>Dancing: Great for coordination and fun.</li>
+                <li>Swimming: A full-body workout that's easy on the joints.</li>
+                <li>Cycling: Excellent for lower body strength and endurance.</li>
+                <li>Jump Rope: Perfect for improving agility and cardiovascular health.</li>
+            </ul>
+            <h3>Fuel Your Fire</h3>
+            <p>Discover the best pre- and post-workout nutrition strategies to fuel your cardio sessions and optimize recovery. Proper nutrition ensures you have the energy to perform and recover efficiently:</p>
+            <ul>
+                <li><strong>Pre-Workout:</strong> Consume a balanced meal with carbs, protein, and a little fat about 2-3 hours before exercising. Try a banana with peanut butter or a smoothie.</li>
+                <li><strong>Post-Workout:</strong> Replenish glycogen stores and repair muscles with a meal high in protein and carbs within 30 minutes after your workout. Think grilled chicken with quinoa and veggies.</li>
+            </ul>
+            <h3>Listen to Your Body</h3>
+            <p>Learn how to monitor your heart rate and other key metrics to gauge your effort and avoid overtraining. Tools like heart rate monitors and fitness trackers can provide valuable insights. Aim to keep your heart rate within your target zone to ensure you're working hard enough without risking injury. Pay attention to signs of overtraining, such as:</p>
+            <ul>
+                <li>Persistent fatigue</li>
+                <li>Decreased performance</li>
+                <li>Mood swings</li>
+                <li>Trouble sleeping</li>
+            </ul>
+            <h3>Progress Gradually</h3>
+            <p>Don't rush into intense workouts. Start with manageable goals and gradually increase the duration and intensity over time. This approach helps prevent injuries and burnout. Follow these tips for progressive training:</p>
+            <ul>
+                <li>Increase workout time by 5-10% each week.</li>
+                <li>Introduce new exercises slowly.</li>
+                <li>Incorporate rest days to allow your body to recover.</li>
+            </ul>
+            <p>Ready to transform your cardio workouts? Join our community for personalized guidance and support on your journey to a healthier heart and a fitter you!</p>
+        `
     },
     {
         title: 'More Than Just Muscle: Unleash the Power of Strength Training for a Total Body Transformation',
-        content: 'Think strength training is just for bodybuilders? Think again! Discover the incredible benefits that go far beyond bulging biceps. Whether you\'re a woman aiming to sculpt a toned physique or a man looking to boost performance, strength training can revolutionize your health and fitness. Burn Fat, Build Muscle: Strength training isn\'t just about gaining muscle. It also fires up your metabolism, helping you shed unwanted fat and create a leaner, more defined body. Boost Bone Health: Protect yourself from osteoporosis and fractures as you age. Strength training helps build and maintain strong bones, reducing your risk of injury. Enhance Mood and Energy: Get a natural mood lift and increased energy levels with regular strength workouts. Endorphins, the "feel-good" hormones, will leave you feeling empowered. Improve Functional Fitness: Move with ease and confidence in your everyday life. Strength training enhances your ability to perform daily activities, from carrying groceries to playing with your kids. Reduce Chronic Disease Risk: Strength training has been shown to lower the risk of chronic conditions like heart disease, type 2 diabetes, and some types of cancer. Don\'t miss out on the life-changing benefits of strength training! Sign up for our expert-led classes or get a personalized plan to start your transformation today.'
+        content: `
+            <p>Think strength training is just for bodybuilders? Think again! Discover the incredible benefits that go far beyond bulging biceps. Whether you're a woman aiming to sculpt a toned physique or a man looking to boost performance, strength training can revolutionize your health and fitness.</p>
+            <h3>Burn Fat, Build Muscle</h3>
+            <p>Strength training isn't just about gaining muscle. It also fires up your metabolism, helping you shed unwanted fat and create a leaner, more defined body. Resistance exercises like weightlifting increase muscle mass, which in turn burns more calories at rest. Here's how to optimize your strength training routine:</p>
+            <ul>
+                <li>Focus on compound movements (squats, deadlifts, bench press) that engage multiple muscle groups.</li>
+                <li>Incorporate both heavy lifting with low reps and lighter weights with high reps.</li>
+                <li>Ensure proper form to prevent injuries and maximize effectiveness.</li>
+            </ul>
+            <h3>Boost Bone Health</h3>
+            <p>Protect yourself from osteoporosis and fractures as you age. Strength training helps build and maintain strong bones, reducing your risk of injury. Weight-bearing exercises stimulate bone growth and increase bone density. Include exercises such as:</p>
+            <ul>
+                <li>Weighted squats</li>
+                <li>Deadlifts</li>
+                <li>Lunges</li>
+                <li>Overhead presses</li>
+            </ul>
+            <h3>Enhance Mood and Energy</h3>
+            <p>Get a natural mood lift and increased energy levels with regular strength workouts. Endorphins, the "feel-good" hormones, will leave you feeling empowered and energized. Additionally, strength training improves sleep quality, which further boosts your mood and energy.</p>
+            <h3>Improve Functional Fitness</h3>
+            <p>Move with ease and confidence in your everyday life. Strength training enhances your ability to perform daily activities, from carrying groceries to playing with your kids. Functional exercises that mimic everyday movements are particularly beneficial:</p>
+            <ul>
+                <li>Squats for sitting and standing</li>
+                <li>Deadlifts for lifting objects</li>
+                <li>Push-ups for pushing strength</li>
+                <li>Rows for pulling strength</li>
+            </ul>
+            <h3>Reduce Chronic Disease Risk</h3>
+            <p>Strength training has been shown to lower the risk of chronic conditions like heart disease, type 2 diabetes, and some types of cancer. By improving insulin sensitivity, reducing inflammation, and promoting cardiovascular health, strength training plays a crucial role in disease prevention. Incorporate a balanced routine that targets all major muscle groups to maximize these benefits.</p>
+            <p>Don't miss out on the life-changing benefits of strength training! Sign up for our expert-led classes or get a personalized plan to start your transformation today.</p>
+        `
     }
 ];
+
+// Function to show the blog modal
+function showBlogModal(title, content) {
+    const modal = document.getElementById('blogModal'); // Get the modal element
+    document.getElementById('modalTitle').innerHTML = title; // Set the modal title
+    document.getElementById('modalContent').innerHTML = content; // Set the modal content
+    modal.style.display = "block"; // Display the modal
+}
 
 // Add event listeners to the "Read More" buttons
 document.querySelectorAll('.read-more').forEach((button, index) => {
@@ -224,7 +302,15 @@ document.querySelectorAll('.read-more').forEach((button, index) => {
     });
 });
 
-// Ensuring the script runs after the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", function() {
-    // Your code that needs to run after the DOM is fully loaded can go here
-});
+// Close the modal when the user clicks on <span> (x)
+document.querySelector('.close').onclick = function() {
+    document.getElementById('blogModal').style.display = "none"; // Hide the modal
+}
+
+// Close the modal when the user clicks anywhere outside of the modal
+window.onclick = function(event) {
+    const modal = document.getElementById('blogModal');
+    if (event.target == modal) {
+        modal.style.display = "none"; // Hide the modal
+    }
+}};
