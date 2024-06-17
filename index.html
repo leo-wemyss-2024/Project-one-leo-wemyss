@@ -115,20 +115,20 @@
         </section>
         
         <!-- Blog Section -->
-        <section class="content-section blog" id="blog">
-            <h2>Latest Blog Posts</h2>
-            <div class="blog-post">
-                <h3>5 Tips to Improve Your Cardio</h3>
-                <p>Learn the best techniques to boost your cardiovascular fitness...</p>
-                <button class="read-more" onclick="showBlogModal('5 Tips to Improve Your Cardio', 'Learn the best techniques to boost your cardiovascular fitness...')">Read More</button>
-            </div>
-            <div class="blog-post">
-                <h3>The Benefits of Strength Training</h3>
-                <p>Discover why strength training is crucial for your overall health...</p>
-                <button class="read-more" onclick="showBlogModal('The Benefits of Strength Training', 'Discover why strength training is crucial for your overall health...')">Read More</button>
-            </div>
-            <div id="blog-container"></div> <!-- Container for dynamically loaded blog posts -->
-        </section>
+<section class="content-section blog" id="blog">
+    <h2>Latest Blog Posts</h2>
+    <div class="blog-post">
+        <h3>5 Tips to Improve Your Cardio</h3>
+        <p>Learn the best techniques to boost your cardiovascular fitness...</p>
+        <button class="read-more">Read More</button>
+    </div>
+    <div class="blog-post">
+        <h3>The Benefits of Strength Training</h3>
+        <p>Discover why strength training is crucial for your overall health...</p>
+        <button class="read-more">Read More</button>
+    </div>
+</section>
+
     </main>
 
     <!-- Footer Section -->
@@ -153,16 +153,15 @@
         </div>
     </div>
     
-    <!-- Blog Modal -->
-    <div id="blog-modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <h2 id="blog-modal-title">Blog Title</h2>
-            <div id="blog-modal-content"></div>
-        </div>
+    <!-- Blog Modal Structure -->
+<div id="blog-modal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
     </div>
+</div>
 
-    <!-- Link to JavaScript file -->
-    <script src="assets/js/script.js"></script>
+<!-- Link to JavaScript file -->
+<script src="assets/js/script.js"></script>
+
 </body>
 </html>
