@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +9,26 @@
     <meta name="keywords" content="fitness, personal trainer, about, Leo Wemyss">
     <meta name="author" content="Leo Wemyss">
 
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap">
 
+    <!-- Social Media Metadata -->
     <meta property="og:title" content="About - Fitness with Wemyss Workouts">
     <meta property="og:description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
     <meta property="og:image" content="path/to/your-photo.jpg">
     <meta property="og:url" content="http://www.yourwebsite.com/about.html">
     <meta property="og:type" content="website">
-
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="About - Fitness with Wemyss Workouts">
     <meta name="twitter:description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
     <meta name="twitter:image" content="path/to/your-photo.jpg">
 
+    <!-- Link to CSS file -->
     <link rel="stylesheet" href="assets/style.css">
 
+    <!-- Favicon Links -->
     <link rel="icon" sizes="192x192" href="assets/favicon_io/android-chrome-192x192.png">
     <link rel="icon" sizes="512x512" href="assets/favicon_io/android-chrome-512x512.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
@@ -30,6 +36,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon_io/site.webmanifest">
 </head>
+
 <body>
     <header>
         <nav>
@@ -123,82 +130,47 @@
                         <input type="text" id="postal" name="postal" autocomplete="postal-code" required>
                     </div>
                 </section>
-                <!-- Fitness Information -->
                 <section class="form-section">
-                    <h2>Fitness Information</h2>
-                    <div class="form-group">
-                        <label for="current-weight">Current Weight</label>
-                        <input type="number" id="current-weight" name="current_weight" autocomplete="off" required>
-                        <select id="weight-unit" name="weight_unit" autocomplete="off" required>
-                            <option value="kg">kg</option>
-                            <option value="lbs">lbs</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="height">Height</label>
-                        <input type="number" id="height" name="height" autocomplete="off" required>
-                        <select id="height-unit" name="height_unit" autocomplete="off" required>
-                            <option value="cm">cm</option>
-                            <option value="meters">meters</option>
-                            <option value="inches">inches</option>
-                        </select>
-                    </div>
 
-                    <!-- BMI Calculator Section -->
-                    <section class="bmi-calculator">
-                        <h2>BMI Calculator</h2>
-                        <form id="bmi-form">
-                            <div class="form-group">
-                                <label for="bmi-height">Height</label>
-                                <input type="number" id="bmi-height" name="height" autocomplete="off" required placeholder="Enter your height">
-                                <select id="bmi-height-unit" name="height_unit" autocomplete="off" required>
-                                    <option value="cm">cm</option>
-                                    <option value="meters">meters</option>
-                                    <option value="inches">inches</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="bmi-weight">Weight</label>
-                                <input type="number" id="bmi-weight" name="weight" autocomplete="off" required placeholder="Enter your weight">
-                                <select id="bmi-weight-unit" name="weight_unit" autocomplete="off" required>
-                                    <option value="kg">kg</option>
-                                    <option value="lbs">lbs</option>
-                                </select>
-                            </div>
-                            <button type="submit">Calculate BMI</button>
-                        </form>
-                        <div id="bmi-result"></div>
-                    </section>
-
-                    <div class="form-group">
-                        <label for="goal-weight">Goal Weight</label>
-                        <input type="number" id="goal-weight" name="goal_weight" autocomplete="weight" required>
-                    </div>
-                </section>
-                <!-- Emergency Contact Information -->
-                <section class="form-section">
-                    <h2>Emergency Contact Information</h2>
-                    <div class="form-group">
-                        <label for="emergency-name">Emergency Contact Name</label>
-                        <input type="text" id="emergency-name" name="emergency_name" autocomplete="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="relationship">Relationship</label>
-                        <input type="text" id="relationship" name="relationship" autocomplete="off" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="emergency-phone">Emergency Contact Phone Number</label>
-                        <input type="tel" id="emergency-phone" name="emergency_phone" autocomplete="tel" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-                    </div>
-                </section>
-                <!-- Medical Information -->
-                <section class="form-section">
-                    <h2>Medical Information</h2>
-                    <div class="form-group">
-                        <label for="medical-conditions">Do you have any medical conditions or allergies?</label>
-                        <textarea id="medical-conditions" name="medical_conditions" autocomplete="off" required></textarea>
-                    </div>
-                </section>
+                    <h2>Calculate Your Body Mass Index (BMI)</h2>
+                  
+                    <p>Body Mass Index (BMI) is a common measure of weight-to-height ratio used to assess health risks associated with weight. This calculator will help you determine your BMI and provide additional information.</p>
+                  
+                    <form id="bmi-form">
+                  
+                      <div class="form-group">
+                        <label for="bmi-height">Height:</label>
+                        <input type="number" id="bmi-height" name="height" autocomplete="off" required placeholder="Enter your height">
+                        <select id="bmi-height-unit" name="height_unit" autocomplete="off" required>
+                          <option value="cm">Centimeters (cm)</option>
+                          <option value="meters">Meters (m)</option>
+                          <option value="inches">Inches (in)</option>
+                        </select>
+                      </div>
+                  
+                      <div class="form-group">
+                        <label for="bmi-weight">Weight:</label>
+                        <input type="number" id="bmi-weight" name="weight" autocomplete="off" required placeholder="Enter your weight">
+                        <select id="bmi-weight-unit" name="weight_unit" autocomplete="off" required>
+                          <option value="kg">Kilograms (kg)</option>
+                          <option value="lbs">Pounds (lbs)</option>
+                        </select>
+                      </div>
+                  
+                      <div class="form-group">
+                        <label for="goal-weight">Goal Weight (Optional):</label>
+                        <input type="number" id="goal-weight" name="goal_weight" autocomplete="weight">
+                        <p>Enter your desired weight for personalized recommendations.</p>
+                      </div>
+                  
+                      <button type="submit">Calculate BMI</button>
+                  
+                    </form>
+                  
+                    <div id="bmi-result"></div>
+                  
+                  </section>
+                  
                 <!-- Membership Information -->
                 <section class="form-section">
                     <h2>Membership Information</h2>
@@ -221,7 +193,6 @@
                 </div>
             </form>
         </div>
-
         <section class="contact content-section">
             <h2>Contact Form</h2>
             <form id="contact-form">
@@ -245,8 +216,7 @@
             <h2>Additional Contact Information</h2>
             <p><strong>Address:</strong> 123 Fitness St, Workout City, Gym State, 12345</p>
             <p><strong>Phone:</strong> +1 (234) 567-890</p>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.836058944787!2d144.95605431531663!3d-37.816218979751664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577c121134d1a10!2s123%20Fitness%20St%2C%20Workout%20City%2C%20Gym%20State%2C%2012345!5e0!3m2!1sen!2sau!4v1618380609711!5m2!1sen!2sau"
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.836058944787!2d144.95605431531663!3d-37.816218979751664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577c121134d1a10!2s123%20Fitness%20St%2C%20Workout%20City%2C%20Gym%20State%2C%2012345!5e0!3m2!1sen!2sau!4v1618380609711!5m2!1sen!2sau"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </section>
     </main>
@@ -267,10 +237,11 @@
     <div class="modal">
         <div class="modal-content">
             <span class="modal-close">&times;</span>
-            <h2 id="modal-plan-title">Plan Title</h2>
-            <div id="modal-plan-details"></div>
-        </div>
+            <h2 id="modal-plan-title">Plan Details</h2>
+            <p id="modal-plan-details">Click a plan below to view its details.</p> </div>
     </div>
+    
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

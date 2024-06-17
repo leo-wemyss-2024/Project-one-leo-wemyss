@@ -30,7 +30,9 @@
     <link rel="manifest" href="assets/favicon_io/site.webmanifest">
 </head>
 <body>
+    <!-- Header section with a parallax effect -->
     <header class="parallax">
+        <!-- Navigation menu -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -40,6 +42,7 @@
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
+        <!-- Hero content with a typing animation effect -->
         <div class="hero-content">
             <h1 class="typing-animation">Customised Workout Plans</h1>
             <p>Achieve your fitness goals with our personalized workout plans.</p>
@@ -47,14 +50,18 @@
         </div>
     </header>
 
+    <!-- Main content area -->
     <main>
+        <!-- Section for displaying workout plans -->
         <section id="plans" class="plans content-section">
             <h2>Workout Plans</h2>
             <div class="plan-container">
+                <!-- Beginner workout plan -->
                 <div class="plan-item">
                     <h3>Beginner Plan</h3>
                     <p>This plan is perfect for those who are new to fitness and want to build a strong foundation.</p>
                     <div class="days-container">
+                        <!-- Day boxes to display daily plans in a modal -->
                         <div class="day-box" onclick="showModal('Day 1 (Beginner)')">Day 1 (Beginner)</div>
                         <div class="day-box" onclick="showModal('Day 2 (Beginner)')">Day 2 (Beginner)</div>
                         <div class="day-box" onclick="showModal('Day 3 (Beginner)')">Day 3 (Beginner)</div>
@@ -64,6 +71,7 @@
                         <div class="day-box" onclick="showModal('Day 7 (Beginner)')">Day 7 (Beginner)</div>
                     </div>
                 </div>
+                <!-- Intermediate workout plan -->
                 <div class="plan-item">
                     <h3>Intermediate Plan</h3>
                     <p>Designed for those with some experience, looking to take their fitness to the next level.</p>
@@ -77,6 +85,7 @@
                         <div class="day-box" onclick="showModal('Day 7 (Intermediate)')">Day 7 (Intermediate)</div>
                     </div>
                 </div>
+                <!-- Advanced workout plan -->
                 <div class="plan-item">
                     <h3>Advanced Plan</h3>
                     <p>For seasoned athletes aiming to push their limits and achieve peak performance.</p>
@@ -90,6 +99,7 @@
                         <div class="day-box" onclick="showModal('Day 7 (Advanced)')">Day 7 (Advanced)</div>
                     </div>
                 </div>
+                <!-- Nutrition advice plan -->
                 <div class="plan-item">
                     <h3>Nutrition Advice</h3>
                     <p>Get tailored nutrition plans to complement your fitness journey.</p>
@@ -102,6 +112,7 @@
                         <div class="day-box" onclick="showModal('Nutrition Week 6')">Week 6</div>
                     </div>
                 </div>
+                <!-- Rest and recovery plan -->
                 <div class="plan-item">
                     <h3>Rest and Recovery</h3>
                     <p>Learn the importance of rest and recovery in your training regimen.</p>
@@ -114,11 +125,13 @@
                         <div class="day-box" onclick="showModal('Rest Week 6')">Week 6</div>
                     </div>
                 </div>
-                <div class="plan-item">
+                <!-- Strength training plan -->
+                <div class="plan-item resistance-training">
                     <h3>Strength Training</h3>
                     <p>Enhance your strength with our comprehensive strength training program.</p>
                     <div class="resistance-training-container">
-                        <div class="resistance-training">
+                        <!-- Example exercise details in a table -->
+                        <div class="resistance-training-exercise">
                             <h4>Exercise 1: Squats</h4>
                             <table>
                                 <tr>
@@ -141,7 +154,7 @@
                                 </tr>
                             </table>
                         </div>
-                        <div class="resistance-training">
+                        <div class="resistance-training-exercise">
                             <h4>Exercise 2: Deadlifts</h4>
                             <table>
                                 <tr>
@@ -164,7 +177,7 @@
                                 </tr>
                             </table>
                         </div>
-                        <div class="resistance-training">
+                        <div class="resistance-training-exercise">
                             <h4>Exercise 3: Bench Press</h4>
                             <table>
                                 <tr>
@@ -187,9 +200,9 @@
                                 </tr>
                             </table>
                         </div>
-                        <!-- Add more exercises as needed -->
                     </div>
                 </div>
+                <!-- Specialized running plan -->
                 <div class="plan-item">
                     <h3>Specialized Running</h3>
                     <p>Improve your running performance with our specialized running plans.</p>
@@ -206,6 +219,7 @@
         </section>
     </main>
 
+    <!-- Footer section with social media links -->
     <footer>
         <div class="footer-content">
             <p>Fitness with Wemyss Workouts. All rights reserved.</p>
@@ -218,6 +232,7 @@
         </div>
     </footer>
 
+    <!-- Modal structure for displaying plan details -->
     <div id="planModal" class="modal">
         <div class="modal-content">
             <span class="modal-close">&times;</span>
@@ -226,6 +241,7 @@
         </div>
     </div>
 
+    <!-- Link to JavaScript file -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>

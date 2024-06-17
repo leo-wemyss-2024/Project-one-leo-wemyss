@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Smooth scrolling for navigation links
     const anchors = document.querySelectorAll('a[href^="#"]');
-
     anchors.forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -10,9 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 const targetId = href.substring(1);
                 const targetElement = document.getElementById(targetId);
                 if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
                 } else {
                     console.error('Element with id ' + targetId + ' not found');
                 }
@@ -52,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 console.error('Modal elements not found');
             }
-        }
+        };
 
         modalClose.addEventListener('click', () => {
             modal.style.display = 'none';
@@ -115,7 +112,6 @@ document.addEventListener("DOMContentLoaded", function() {
             "Running Week 5": "Specialized Running: Week 5<br>8 x 400 meters with 2:00 jog between runs.",
             "Running Week 6": "Specialized Running: Week 6<br>8 x 400 meters with 1:45 jog between runs."
         };
-
         return details[day] || 'No details found for this day.';
     }
 
@@ -200,6 +196,53 @@ document.addEventListener("DOMContentLoaded", function() {
             bmiResult.textContent = `Your BMI is ${bmi}`;
         } else {
             bmiResult.textContent = 'Please enter valid height and weight.';
+        }
+    });
+
+    // Client-side Form Validation
+    const registrationForm = document.getElementById('registration-form');
+
+    registrationForm.addEventListener('submit', function(event) {
+        // Validate required fields
+        const requiredFields = ['first-name', 'last-name', 'email1', 'phone', 'dob', 'gender',
+                                'street', 'city', 'country', 'county', 'state', 'postal',
+                                'membership-type', 'start-date'];
+        let hasEmptyFields = false;
+
+        for (const field of requiredFields) {
+            const input = document.getElementById(field);
+            if (!input.value.trim()) {
+                input.classList.add('error'); // Add error class for styling
+                hasEmptyFields = true;
+            } else {
+                input.classList.remove('error'); // Remove error class if valid
+            }
+        }
+
+        // Validate email format
+        const email = document.getElementById('email1');
+        const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!emailRegex.test(email.value)) {
+            email.classList.add('error'); // Add error class for styling
+            hasEmptyFields = true;
+        } else {
+            email.classList.remove('error'); // Remove error class if valid
+        }
+
+        // Validate phone number format (basic example)
+        const phone = document.getElementById('phone');
+        const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
+        if (!phoneRegex.test(phone.value)) {
+            phone.classList.add('error'); // Add error class for styling
+            hasEmptyFields = true;
+        } else {
+            phone.classList.remove('error'); // Remove error class if valid
+        }
+
+        // Prevent form submission if there are errors
+        if (hasEmptyFields) {
+            event.preventDefault();
+            alert('Please fill out all required fields and ensure valid email and phone format.');
         }
     });
 });
