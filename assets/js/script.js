@@ -250,67 +250,70 @@ const blogPosts = [
             <p>Ready to transform your cardio workouts? Join our community for personalized guidance and support on your journey to a healthier heart and a fitter you!</p>
         `
     },
-    {
-        title: 'More Than Just Muscle: Unleash the Power of Strength Training for a Total Body Transformation',
-        content: `
-            <p>Think strength training is just for bodybuilders? Think again! Discover the incredible benefits that go far beyond bulging biceps. Whether you're a woman aiming to sculpt a toned physique or a man looking to boost performance, strength training can revolutionize your health and fitness.</p>
-            <h3>Burn Fat, Build Muscle</h3>
-            <p>Strength training isn't just about gaining muscle. It also fires up your metabolism, helping you shed unwanted fat and create a leaner, more defined body. Resistance exercises like weightlifting increase muscle mass, which in turn burns more calories at rest. Here's how to optimize your strength training routine:</p>
-            <ul>
-                <li>Focus on compound movements (squats, deadlifts, bench press) that engage multiple muscle groups.</li>
-                <li>Incorporate both heavy lifting with low reps and lighter weights with high reps.</li>
-                <li>Ensure proper form to prevent injuries and maximize effectiveness.</li>
-            </ul>
-            <h3>Boost Bone Health</h3>
-            <p>Protect yourself from osteoporosis and fractures as you age. Strength training helps build and maintain strong bones, reducing your risk of injury. Weight-bearing exercises stimulate bone growth and increase bone density. Include exercises such as:</p>
-            <ul>
-                <li>Weighted squats</li>
-                <li>Deadlifts</li>
-                <li>Lunges</li>
-                <li>Overhead presses</li>
-            </ul>
-            <h3>Enhance Mood and Energy</h3>
-            <p>Get a natural mood lift and increased energy levels with regular strength workouts. Endorphins, the "feel-good" hormones, will leave you feeling empowered and energized. Additionally, strength training improves sleep quality, which further boosts your mood and energy.</p>
-            <h3>Improve Functional Fitness</h3>
-            <p>Move with ease and confidence in your everyday life. Strength training enhances your ability to perform daily activities, from carrying groceries to playing with your kids. Functional exercises that mimic everyday movements are particularly beneficial:</p>
-            <ul>
-                <li>Squats for sitting and standing</li>
-                <li>Deadlifts for lifting objects</li>
-                <li>Push-ups for pushing strength</li>
-                <li>Rows for pulling strength</li>
-            </ul>
-            <h3>Reduce Chronic Disease Risk</h3>
-            <p>Strength training has been shown to lower the risk of chronic conditions like heart disease, type 2 diabetes, and some types of cancer. By improving insulin sensitivity, reducing inflammation, and promoting cardiovascular health, strength training plays a crucial role in disease prevention. Incorporate a balanced routine that targets all major muscle groups to maximize these benefits.</p>
-            <p>Don't miss out on the life-changing benefits of strength training! Sign up for our expert-led classes or get a personalized plan to start your transformation today.</p>
-        `
+     // Array holding blog posts with titles and expanded content
+    const blogPosts = [
+        {
+            title: '5 Tips to Improve Your Cardio',
+            content: `
+                <p>Learn the best techniques to boost your cardiovascular fitness...</p>
+                <h3>HIIT It Up</h3>
+                <p>High-Intensity Interval Training (HIIT) is your secret weapon for maximizing results in minimal time...</p>
+                <h3>Embrace Variety</h3>
+                <p>Ditch the treadmill boredom! Explore a variety of cardio exercises...</p>
+                <h3>Fuel Your Fire</h3>
+                <p>Discover the best pre- and post-workout nutrition strategies to fuel your cardio sessions and optimize recovery...</p>
+                <h3>Listen to Your Body</h3>
+                <p>Learn how to monitor your heart rate and other key metrics to gauge your effort and avoid overtraining...</p>
+                <h3>Progress Gradually</h3>
+                <p>Don't rush into intense workouts. Start with manageable goals and gradually increase the duration and intensity over time...</p>
+            `
+        },
+        {
+            title: 'The Benefits of Strength Training',
+            content: `
+                <p>Discover why strength training is crucial for your overall health...</p>
+                <h3>Burn Fat, Build Muscle</h3>
+                <p>Strength training isn't just about gaining muscle. It also fires up your metabolism, helping you shed unwanted fat...</p>
+                <h3>Boost Bone Health</h3>
+                <p>Protect yourself from osteoporosis and fractures as you age. Strength training helps build and maintain strong bones...</p>
+                <h3>Enhance Mood and Energy</h3>
+                <p>Get a natural mood lift and increased energy levels with regular strength workouts...</p>
+                <h3>Improve Functional Fitness</h3>
+                <p>Move with ease and confidence in your everyday life. Strength training enhances your ability to perform daily activities...</p>
+                <h3>Reduce Chronic Disease Risk</h3>
+                <p>Strength training has been shown to lower the risk of chronic conditions like heart disease, type 2 diabetes, and some types of cancer...</p>
+            `
+        }
+    ];
+
+    // Function to show the blog modal
+    function showBlogModal(title, content) {
+        const modal = document.getElementById('blog-modal'); // Get the modal element
+        document.getElementById('modalTitle').innerHTML = title; // Set the modal title
+        document.getElementById('modalContent').innerHTML = content; // Set the modal content
+        modal.style.display = "block"; // Display the modal
     }
-];
 
-// Function to show the blog modal
-function showBlogModal(title, content) {
-    const modal = document.getElementById('blogModal'); // Get the modal element
-    document.getElementById('modalTitle').innerHTML = title; // Set the modal title
-    document.getElementById('modalContent').innerHTML = content; // Set the modal content
-    modal.style.display = "block"; // Display the modal
-}
-
-// Add event listeners to the "Read More" buttons
-document.querySelectorAll('.read-more').forEach((button, index) => {
-    button.addEventListener('click', () => {
-        // Show the blog modal with the relevant title and content
-        showBlogModal(blogPosts[index].title, blogPosts[index].content);
+    // Add event listeners to the "Read More" buttons
+    document.querySelectorAll('.read-more').forEach((button, index) => {
+        button.addEventListener('click', () => {
+            // Show the blog modal with the relevant title and content
+            showBlogModal(blogPosts[index].title, blogPosts[index].content);
+        });
     });
-});
 
-// Close the modal when the user clicks on <span> (x)
-document.querySelector('.close').onclick = function() {
-    document.getElementById('blogModal').style.display = "none"; // Hide the modal
-}
+    // Close the modal when the user clicks on <span> (x)
+    document.querySelectorAll('.modal-close').forEach(closeButton => {
+        closeButton.addEventListener('click', () => {
+            document.getElementById('blog-modal').style.display = "none"; // Hide the modal
+        });
+    });
 
-// Close the modal when the user clicks anywhere outside of the modal
-window.onclick = function(event) {
-    const modal = document.getElementById('blogModal');
-    if (event.target == modal) {
-        modal.style.display = "none"; // Hide the modal
+    // Close the modal when the user clicks anywhere outside of the modal
+    window.onclick = function(event) {
+        const modal = document.getElementById('blog-modal');
+        if (event.target == modal) {
+            modal.style.display = "none"; // Hide the modal
+        }
     }
-}};
+});
