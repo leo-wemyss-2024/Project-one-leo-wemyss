@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap'); /* Import Google Fonts */
 
 /* Basic Reset */
 * {
@@ -10,144 +9,144 @@
 
 /* Body Styling */
 body {
-    font-family: 'Lato', 'Oswald', sans-serif; /* Font styles for body */
-    background-color: #e0ebea; /* Background color */
-    color: #333; /* Text color */
-    line-height: 1.6; /* Line height for better readability */
+    font-family: 'Lato', 'Oswald', sans-serif; /* Set font styles for the body */
+    background-color: #e0ebea; /* Set background color */
+    color: #333; /* Set text color */
+    line-height: 1.6; /* Set line height for better readability */
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Header Styling */
 header {
     text-align: center; /* Center text */
-    background: url('/assets/images/military\ combat\ workout.jpg') no-repeat center center/cover; /* Background image */
-    height: 700px; /* Fixed height */
-    display: flex; /* Flexbox layout */
+    background: url('/assets/images/military\ combat\ workout.jpg') no-repeat center center/cover; /* Set background image */
+    height: 700px; /* Set fixed height */
+    display: flex; /* Use Flexbox layout */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
     position: relative; /* Position relative for overlay */
 }
 
 header::before {
-    content: ''; /* Empty content for overlay */
-    position: absolute; /* Absolute positioning */
+    content: ''; /* Add empty content for overlay */
+    position: absolute; /* Position absolute for overlay */
     top: 0; /* Align to top */
     left: 0; /* Align to left */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    width: 100%; /* Set full width */
+    height: 100%; /* Set full height */
+    background: rgba(0, 0, 0, 0.5); /* Add semi-transparent background */
 }
 
 /* Navigation Styling */
 nav {
-    width: 100%; /* Full width */
-    position: absolute; /* Absolute positioning */
+    width: 100%; /* Set full width */
+    position: absolute; /* Position absolute */
     top: 0; /* Align to top */
 }
 
 nav ul {
     list-style: none; /* Remove default list styling */
-    display: flex; /* Flexbox layout */
+    display: flex; /* Use Flexbox layout */
     justify-content: center; /* Center content */
-    background: rgba(109, 101, 101, 0.7); /* Semi-transparent background */
-    padding: 10px 0; /* Padding */
+    background: rgba(109, 101, 101, 0.7); /* Add semi-transparent background */
+    padding: 10px 0; /* Add padding */
 }
 
 nav ul li {
-    margin: 0 20px; /* Horizontal margin */
+    margin: 0 20px; /* Add horizontal margin */
 }
 
 nav ul li a {
-    color: #fff; /* Text color */
+    color: #fff; /* Set text color */
     text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Bold text */
-    padding: 10px; /* Padding */
+    font-weight: bold; /* Set bold text */
+    padding: 10px; /* Add padding */
     transition: background 0.3s; /* Smooth background transition */
 }
 
 nav ul li a:hover {
-    background: #e96c36; /* Background color on hover */
+    background: #e96c36; /* Change background color on hover */
 }
 
 /* Hero Content Styling */
 .hero-content {
-    color: white; /* Text color */
+    color: white; /* Set text color */
     position: relative; /* Position relative for z-index */
     z-index: 1; /* Ensure above overlay */
 }
 
 .hero-content h1 {
-    font-size: 3em; /* Large font size */
-    margin-bottom: 20px; /* Space below heading */
+    font-size: 3em; /* Set large font size */
+    margin-bottom: 20px; /* Add space below heading */
 }
 
 .hero-content p {
-    font-size: 1.2em; /* Font size */
+    font-size: 1.2em; /* Set font size */
 }
 
 /* CTA Button Styling */
 .cta-button {
-    display: inline-block; /* Inline-block element */
-    padding: 10px 20px; /* Padding */
-    background-color: #e96c36; /* Background color */
-    color: white; /* Text color */
+    display: inline-block; /* Display as inline-block */
+    padding: 10px 20px; /* Add padding */
+    background-color: #e96c36; /* Set background color */
+    color: white; /* Set text color */
     text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Bold text */
-    border-radius: 5px; /* Rounded corners */
+    font-weight: bold; /* Set bold text */
+    border-radius: 5px; /* Add rounded corners */
     transition: background 0.3s, transform 0.3s; /* Smooth transitions */
 }
 
 .cta-button:hover {
-    background-color: #d85a29; /* Background color on hover */
+    background-color: #d85a29; /* Change background color on hover */
     transform: translateY(-3px); /* Move up on hover */
 }
 
 /* Content Section Styling */
 .content-section {
-    padding: 40px 20px; /* Padding */
+    padding: 40px 20px; /* Add padding */
     text-align: center; /* Center text */
-    background-color: #fff; /* Background color */
-    margin: 20px 0; /* Vertical margin */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+    background-color: #fff; /* Set background color */
+    margin: 20px 0; /* Add vertical margin */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
 }
 
 /* Class Item Styling */
 .class-item {
-    margin-bottom: 20px; /* Margin below each class item */
+    margin-bottom: 20px; /* Add margin below each class item */
 }
 
 .class-item h3 {
-    color: #e96c36; /* Text color */
-    margin-bottom: 10px; /* Margin below heading */
+    color: #e96c36; /* Set text color */
+    margin-bottom: 10px; /* Add margin below heading */
 }
 
 .class-item p {
-    color: #666; /* Text color */
+    color: #666; /* Set text color */
 }
 
 /* Video Section Styling */
 .video-container {
-    display: flex; /* Flexbox layout */
+    display: flex; /* Use Flexbox layout */
     justify-content: center; /* Center align items */
-    gap: 20px; /* Space between videos */
+    gap: 20px; /* Add space between videos */
     flex-wrap: wrap; /* Allow wrapping for responsive design */
 }
 
 .video-container iframe {
-    width: 100%; /* Full width */
-    max-width: 560px; /* Maximum width for larger screens */
-    height: 315px; /* Fixed height */
-    border: none; /* No border */
+    width: 100%; /* Set full width */
+    max-width: 560px; /* Set maximum width for larger screens */
+    height: 315px; /* Set fixed height */
+    border: none; /* Remove border */
 }
 
 /* Plan Item Styling */
 .plan-item {
-    background: #f9f9f9; /* Background color */
-    padding: 20px; /* Padding */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
-    flex: 1 1 300px; /* Flex-grow, flex-shrink, base width */
+    background: #f9f9f9; /* Set background color */
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    flex: 1 1 300px; /* Set flex-grow, flex-shrink, base width */
     transition: transform 0.3s; /* Smooth transform transition */
 }
 
@@ -156,42 +155,42 @@ nav ul li a:hover {
 }
 
 .plan-item h3 {
-    margin-bottom: 15px; /* Space below heading */
-    color: #e96c36; /* Text color */
+    margin-bottom: 15px; /* Add space below heading */
+    color: #e96c36; /* Set text color */
 }
 
 .plan-item p {
-    margin-bottom: 15px; /* Space below paragraph */
-    color: #666; /* Text color */
+    margin-bottom: 15px; /* Add space below paragraph */
+    color: #666; /* Set text color */
 }
 
 /* Plan Container Styling */
 .plan-container {
-    display: flex; /* Flexbox layout */
-    flex-direction: column; /* Column layout */
-    gap: 40px; /* Space between items */
+    display: flex; /* Use Flexbox layout */
+    flex-direction: column; /* Arrange items in a column */
+    gap: 40px; /* Add space between items */
 }
 
 /* Days Container Styling */
 .days-container {
-    display: flex; /* Flexbox layout */
+    display: flex; /* Use Flexbox layout */
     flex-wrap: wrap; /* Wrap items */
     justify-content: center; /* Center items */
-    gap: 20px; /* Space between items */
-    margin-top: 20px; /* Margin above */
+    gap: 20px; /* Add space between items */
+    margin-top: 20px; /* Add margin above */
 }
 
 /* Day Box Styling */
 .day-box {
-    width: 150px; /* Fixed width */
-    height: 150px; /* Fixed height */
-    background-color: #fff; /* Background color */
-    border: 2px solid #e96c36; /* Border color */
-    display: flex; /* Flexbox layout */
+    width: 150px; /* Set fixed width */
+    height: 150px; /* Set fixed height */
+    background-color: #fff; /* Set background color */
+    border: 2px solid #e96c36; /* Set border color */
+    display: flex; /* Use Flexbox layout */
     align-items: center; /* Center align items */
     justify-content: center; /* Center align items */
-    font-weight: bold; /* Bold text */
-    font-size: 1.2em; /* Font size */
+    font-weight: bold; /* Set bold text */
+    font-size: 1.2em; /* Set font size */
     transition: transform 0.3s; /* Smooth transform transition */
 }
 
@@ -201,82 +200,82 @@ nav ul li a:hover {
 
 /* Modal Styling */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    display: none; /* Hide by default */
+    position: fixed; /* Fixed position */
     z-index: 1; /* Sit on top */
     left: 0; /* Align to left */
     top: 0; /* Align to top */
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black with opacity */
+    background-color: rgb(0,0,0); /* Fallback background color */
+    background-color: rgba(0,0,0,0.4); /* Background color with opacity */
 }
 
 .modal-content {
-    background-color: #fefefe; /* Background color */
+    background-color: #fefefe; /* Set background color */
     margin: 15% auto; /* Center vertically and horizontally */
-    padding: 20px; /* Padding */
-    border: 1px solid #888; /* Border */
-    width: 80%; /* Width */
-    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Add padding */
+    border: 1px solid #888; /* Add border */
+    width: 80%; /* Set width */
+    border-radius: 10px; /* Add rounded corners */
 }
 
 .modal-close {
-    color: #aaa; /* Text color */
+    color: #aaa; /* Set text color */
     float: right; /* Float to right */
-    font-size: 28px; /* Font size */
-    font-weight: bold; /* Bold text */
+    font-size: 28px; /* Set font size */
+    font-weight: bold; /* Set bold text */
 }
 
 .modal-close:hover,
 .modal-close:focus {
-    color: black; /* Text color on hover/focus */
+    color: black; /* Change text color on hover/focus */
     text-decoration: none; /* Remove underline */
-    cursor: pointer; /* Pointer cursor */
+    cursor: pointer; /* Change cursor to pointer */
 }
 
 /* Resistance Training Container Styling */
 .resistance-training-container {
-    margin-top: 20px; /* Margin above */
+    margin-top: 20px; /* Add margin above */
 }
 
 .resistance-training h4 {
-    margin-bottom: 10px; /* Space below heading */
-    color: #e96c36; /* Text color */
+    margin-bottom: 10px; /* Add space below heading */
+    color: #e96c36; /* Set text color */
 }
 
 /* Resistance Training Table Styling */
 .resistance-training table {
-    width: 100%; /* Full width */
+    width: 100%; /* Set full width */
     border-collapse: collapse; /* Collapse borders */
 }
 
 .resistance-training th,
 .resistance-training td {
-    border: 1px solid #ccc; /* Border */
-    padding: 10px; /* Padding */
+    border: 1px solid #ccc; /* Set border */
+    padding: 10px; /* Add padding */
     text-align: center; /* Center align text */
 }
 
 .resistance-training th {
-    background-color: #e96c36; /* Background color */
-    color: white; /* Text color */
+    background-color: #e96c36; /* Set background color */
+    color: white; /* Set text color */
 }
 
 /* Styles for alternating image and text layout */
 .image-container {
-    display: flex;
+    display: flex; /* Use Flexbox layout */
     flex-direction: column; /* Stack images vertically by default */
     align-items: center; /* Center text horizontally */
-    margin: 20px 0;
+    margin: 20px 0; /* Add vertical margin */
     position: relative; /* Needed for absolute positioning of text */
 }
 
 .image-container img {
     width: 100%; /* Images take full container width */
     object-fit: cover; /* Maintain aspect ratio and cover container */
-    height: 500px; /* Set a fixed height for consistency */
+    height: 500px; /* Set fixed height for consistency */
 }
 
 .image-text {
@@ -297,6 +296,7 @@ nav ul li a:hover {
     flex-direction: column; /* Normal order for right containers */
 }
 
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     .image-container img {
         height: 200px; /* Adjust height for smaller screens */
@@ -305,29 +305,29 @@ nav ul li a:hover {
 
 /* Footer Content Styling */
 .footer-content {
-    display: flex; /* Flexbox layout */
+    display: flex; /* Use Flexbox layout */
     align-items: center; /* Center align items */
     justify-content: space-between; /* Space between items */
-    max-width: 1200px; /* Maximum width */
+    max-width: 1200px; /* Set maximum width */
     margin: 0 auto; /* Center horizontally */
-    padding: 20px; /* Padding */
-    width: 100%; /* Full width */
-    background-color: #333; /* Background color */
-    color: white; /* Text color */
+    padding: 20px; /* Add padding */
+    width: 100%; /* Set full width */
+    background-color: #333; /* Set background color */
+    color: white; /* Set text color */
 }
 
 .footer-content p {
-    margin: 0; /* No margin */
+    margin: 0; /* Remove default margin */
 }
 
 /* Social Media Links Styling */
 .social-media {
-    display: flex; /* Flexbox layout */
-    gap: 20px; /* Space between items */
+    display: flex; /* Use Flexbox layout */
+    gap: 20px; /* Add space between items */
 }
 
 .social-media a {
-    color: white; /* Text color */
+    color: white; /* Set text color */
     transition: transform 0.3s; /* Smooth transform transition */
 }
 
@@ -336,20 +336,20 @@ nav ul li a:hover {
 }
 
 .social-media a i {
-    font-size: 24px; /* Font size */
+    font-size: 24px; /* Set font size */
 }
 
-/* Responsive Design */
+/* Responsive Design Adjustments */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Column layout */
+        flex-direction: column; /* Stack navigation links vertically */
         align-items: center; /* Center align items */
     }
 
     .footer-content {
-        flex-direction: column; /* Column layout */
+        flex-direction: column; /* Stack footer content vertically */
         align-items: center; /* Center align items */
-        text-align: center; /* Center align text */
+        text-align: center; /* Center text */
     }
 
     .social-media {
@@ -357,56 +357,56 @@ nav ul li a:hover {
     }
 
     .image-container {
-        flex-direction: column; /* Column layout */
+        flex-direction: column; /* Stack images and text vertically */
         height: auto; /* Auto height */
     }
 
     .image-container img, .image-text {
-        width: 100%; /* Full width */
+        width: 100%; /* Set full width */
         height: auto; /* Auto height */
     }
 
     .image-text {
-        order: 2; /* Order */
+        order: 2; /* Change order */
     }
 
     .image-container:nth-child(odd), .image-container:nth-child(even) {
-        flex-direction: column; /* Column layout */
+        flex-direction: column; /* Stack items vertically */
     }
 }
 
 /* Form Section Styling */
 .form-section {
     background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
-    padding: 20px; /* Padding */
-    margin: 20px 0; /* Vertical margin */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    padding: 20px; /* Add padding */
+    margin: 20px 0; /* Add vertical margin */
 }
 
 .form-section h2 {
-    margin-bottom: 20px; /* Space below heading */
-    color: #e96c36; /* Text color */
+    margin-bottom: 20px; /* Add space below heading */
+    color: #e96c36; /* Set text color */
 }
 
 .form-group {
-    margin-bottom: 15px; /* Space between groups */
+    margin-bottom: 15px; /* Add space between groups */
 }
 
 .form-group label {
-    display: block; /* Block display */
-    margin-bottom: 5px; /* Space below label */
-    color: #333; /* Text color */
+    display: block; /* Display as block */
+    margin-bottom: 5px; /* Add space below label */
+    color: #333; /* Set text color */
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-    width: 100%; /* Full width */
-    padding: 10px; /* Padding */
-    border: 2px solid #ccc; /* Border */
-    border-radius: 5px; /* Rounded corners */
-    color: #333; /* Text color */
+    width: 100%; /* Set full width */
+    padding: 10px; /* Add padding */
+    border: 2px solid #ccc; /* Set border */
+    border-radius: 5px; /* Add rounded corners */
+    color: #333; /* Set text color */
 }
 
 .form-group textarea {
@@ -414,120 +414,119 @@ nav ul li a:hover {
 }
 
 .form-section button {
-    padding: 10px 20px; /* Padding */
-    background-color: #e96c36; /* Background color */
-    color: white; /* Text color */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor */
+    padding: 10px 20px; /* Add padding */
+    background-color: #e96c36; /* Set background color */
+    color: white; /* Set text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
     transition: background 0.3s; /* Smooth background transition */
 }
 
 .form-section button:hover {
-    background-color: #d85a29; /* Background color on hover */
+    background-color: #d85a29; /* Change background color on hover */
 }
 
-
-/* About Section Styles */
+/* About Section Styling */
 .about-content {
-    padding: 3rem; /* Padding */
-    max-width: 800px; /* Maximum width */
-    margin: 0 auto; /* Center content */
+    padding: 3rem; /* Add padding */
+    max-width: 800px; /* Set maximum width */
+    margin: 0 auto; /* Center horizontally */
 }
 
 .about-content h2 {
     text-align: center; /* Center text */
-    font-size: 2em; /* Font size */
-    margin-bottom: 1rem; /* Margin below heading */
+    font-size: 2em; /* Set font size */
+    margin-bottom: 1rem; /* Add space below heading */
 }
 
 .about-content h3 {
-    font-weight: bold; /* Bold text */
-    margin-bottom: 1rem; /* Margin below heading */
+    font-weight: bold; /* Set bold text */
+    margin-bottom: 1rem; /* Add space below heading */
 }
 
 .about-content p {
-    line-height: 1.5; /* Line height */
-    margin-bottom: 1.5rem; /* Margin below paragraph */
+    line-height: 1.5; /* Set line height */
+    margin-bottom: 1.5rem; /* Add space below paragraph */
 }
 
 /* Optional: Style the subheadings (h4) if needed */
 .about-content h4 {
-    margin-top: 2rem; /* Margin above subheadings */
+    margin-top: 2rem; /* Add space above subheadings */
 }
 
 /* Style for images within the about content */
 .about-img {
-    width: 100%; /* Full width */
-    max-width: 400px; /* Maximum width */
+    width: 100%; /* Set full width */
+    max-width: 400px; /* Set maximum width */
     margin: 1.5rem auto; /* Center image with margin */
-    display: block; /* Display as block element */
-    border-radius: 10px; /* Rounded corners */
+    display: block; /* Display as block */
+    border-radius: 10px; /* Add rounded corners */
 }
 
 /* Style for icons */
 .icon {
-    width: 24px; /* Width */
-    height: 24px; /* Height */
-    margin-right: 10px; /* Margin to the right */
+    width: 24px; /* Set width */
+    height: 24px; /* Set height */
+    margin-right: 10px; /* Add space to the right */
     vertical-align: middle; /* Align vertically in the middle */
 }
 
 /* Blog Modal Styling */
 #blog-modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    display: none; /* Hide by default */
+    position: fixed; /* Fixed position */
     z-index: 1000; /* Sit on top */
-    left: 0;
-    top: 0;
+    left: 0; /* Align to left */
+    top: 0; /* Align to top */
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgb(0,0,0); /* Fallback background color */
+    background-color: rgba(0,0,0,0.4); /* Background color with opacity */
 }
 
 #blog-modal .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    border-radius: 10px;
+    background-color: #fefefe; /* Set background color */
+    margin: 15% auto; /* Center vertically and horizontally */
+    padding: 20px; /* Add padding */
+    border: 1px solid #888; /* Add border */
+    width: 80%; /* Set width */
+    border-radius: 10px; /* Add rounded corners */
 }
 
 #blog-modal .modal-close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+    color: #aaa; /* Set text color */
+    float: right; /* Float to right */
+    font-size: 28px; /* Set font size */
+    font-weight: bold; /* Set bold text */
 }
 
 #blog-modal .modal-close:hover,
 #blog-modal .modal-close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+    color: black; /* Change text color on hover/focus */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Change cursor to pointer */
 }
 
 /* Parallax Effect */
 .parallax {
-    background-image: url('/assets/images/Group\ Run.JPG'); /* Background image */
-    height: 500px; /* Fixed height */
-    background-attachment: fixed; /* Fixed attachment */
-    background-position: center; /* Center position */
+    background-image: url('/assets/images/Group\ Run.JPG'); /* Set background image */
+    height: 500px; /* Set fixed height */
+    background-attachment: fixed; /* Fixed background attachment */
+    background-position: center; /* Center background */
     background-repeat: no-repeat; /* No repeat */
     background-size: cover; /* Cover background size */
 }
 
 /* Fade-In Effect */
 .fade-in {
-    opacity: 0; /* Hidden */
+    opacity: 0; /* Set opacity to 0 (hidden) */
     transition: opacity 2s ease-in; /* Smooth fade-in transition */
 }
 
 .fade-in-visible {
-    opacity: 1; /* Visible */
+    opacity: 1; /* Set opacity to 1 (visible) */
 }
 
 /* Hover Effect */
@@ -543,7 +542,7 @@ nav ul li a:hover {
 }
 
 .slide-in-visible {
-    transform: translateX(0); /* No transform */
+    transform: translateX(0); /* Reset transform */
 }
 
 /* Typing Animation */
@@ -553,13 +552,13 @@ nav ul li a:hover {
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: orange; }
+    from, to { border-color: transparent; } /* Start and end with transparent */
+    50% { border-color: orange; } /* Blink to orange */
 }
 
 .typing-animation {
     width: 100%; /* Full width */
-    overflow: hidden; /* Hidden overflow */
+    overflow: hidden; /* Hide overflow */
     white-space: nowrap; /* No wrap */
     border-right: 0.10em solid orange; /* Blinking cursor */
     animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite; /* Typing animation */
