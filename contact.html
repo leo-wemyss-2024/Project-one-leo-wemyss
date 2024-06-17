@@ -39,7 +39,7 @@
 
 <body>
     <header>
-        <nav>x
+        <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="classes.html">Classes</a></li>
@@ -131,46 +131,37 @@
                     </div>
                 </section>
                 <section class="form-section">
-
                     <h2>Calculate Your Body Mass Index (BMI)</h2>
-                  
                     <p>Body Mass Index (BMI) is a common measure of weight-to-height ratio used to assess health risks associated with weight. This calculator will help you determine your BMI and provide additional information.</p>
-                  
                     <form id="bmi-form">
-                  
-                      <div class="form-group">
-                        <label for="bmi-height">Height:</label>
-                        <input type="number" id="bmi-height" name="height" autocomplete="off" required placeholder="Enter your height">
-                        <select id="bmi-height-unit" name="height_unit" autocomplete="off" required>
-                          <option value="cm">Centimeters (cm)</option>
-                          <option value="meters">Meters (m)</option>
-                          <option value="inches">Inches (in)</option>
-                        </select>
-                      </div>
-                  
-                      <div class="form-group">
-                        <label for="bmi-weight">Weight:</label>
-                        <input type="number" id="bmi-weight" name="weight" autocomplete="off" required placeholder="Enter your weight">
-                        <select id="bmi-weight-unit" name="weight_unit" autocomplete="off" required>
-                          <option value="kg">Kilograms (kg)</option>
-                          <option value="lbs">Pounds (lbs)</option>
-                        </select>
-                      </div>
-                  
-                      <div class="form-group">
-                        <label for="goal-weight">Goal Weight (Optional):</label>
-                        <input type="number" id="goal-weight" name="goal_weight" autocomplete="weight">
-                        <p>Enter your desired weight for personalized recommendations.</p>
-                      </div>
-                  
-                      <button type="submit">Calculate BMI</button>
-                  
+                        <div class="form-group">
+                            <label for="bmi-height">Height:</label>
+                            <input type="number" id="bmi-height" name="height" autocomplete="off" required placeholder="Enter your height">
+                            <select id="bmi-height-unit" name="height_unit" autocomplete="off" required>
+                                <option value="">Select Unit</option>
+                                <option value="cm">Centimeters (cm)</option>
+                                <option value="meters">Meters (m)</option>
+                                <option value="inches">Inches (in)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="bmi-weight">Weight:</label>
+                            <input type="number" id="bmi-weight" name="weight" autocomplete="off" required placeholder="Enter your weight">
+                            <select id="bmi-weight-unit" name="weight_unit" autocomplete="off" required>
+                                <option value="">Select Unit</option>
+                                <option value="kg">Kilograms (kg)</option>
+                                <option value="lbs">Pounds (lbs)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="goal-weight">Goal Weight (Optional):</label>
+                            <input type="number" id="goal-weight" name="goal_weight" autocomplete="off">
+                            <p>Enter your desired weight for personalized recommendations.</p>
+                        </div>
+                        <button type="submit">Calculate BMI</button>
                     </form>
-                  
                     <div id="bmi-result"></div>
-                  
-                  </section>
-                  
+                </section>
                 <!-- Membership Information -->
                 <section class="form-section">
                     <h2>Membership Information</h2>
@@ -233,15 +224,25 @@
         </div>
     </footer>
 
-    <!-- Modal Structure -->
-    <div class="modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <h2 id="modal-plan-title">Plan Details</h2>
-            <p id="modal-plan-details">Click a plan below to view its details.</p> </div>
+  <!-- Modal Structure for workout plans -->
+  <div class="modal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h2 id="modal-plan-title">Workout Plan Details</h2>
+        <div id="modal-plan-details"></div>
     </div>
-    
-    <script src="assets/js/script.js"></script>
+</div>
+
+<!-- Blog Modal -->
+<div id="blog-modal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <div id="blog-content"></div>
+    </div>
+</div>
+
+<!-- Link to JavaScript file -->
+<script src="assets/js/script.js"></script>
 </body>
 
 </html>
