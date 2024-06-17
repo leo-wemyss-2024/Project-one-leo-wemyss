@@ -166,50 +166,65 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Function to show the blog modal with the relevant content
-    function showBlogModal(title, content) {
-        const modal = document.getElementById('blog-modal');
-        const modalContent = modal.querySelector('.modal-content');
-        const modalTitle = document.createElement('h2');
-        const modalText = document.createElement('p');
-        const closeButton = modal.querySelector('.modal-close');
+function showBlogModal(title, content) {
+    // Get the modal element
+    const modal = document.getElementById('blog-modal');
+    // Get the content container within the modal
+    const modalContent = modal.querySelector('.modal-content');
+    // Create elements for the modal title and text content
+    const modalTitle = document.createElement('h2');
+    const modalText = document.createElement('p');
+    // Get the close button inside the modal
+    const closeButton = modal.querySelector('.modal-close');
 
-        modalTitle.textContent = title;
-        modalText.textContent = content;
+    // Set the text content for the title and text elements
+    modalTitle.textContent = title;
+    modalText.textContent = content;
 
-        modalContent.innerHTML = '';
-        modalContent.appendChild(closeButton);
-        modalContent.appendChild(modalTitle);
-        modalContent.appendChild(modalText);
+    // Clear any existing content in the modal content container
+    modalContent.innerHTML = '';
+    // Append the close button, title, and text elements to the modal content container
+    modalContent.appendChild(closeButton);
+    modalContent.appendChild(modalTitle);
+    modalContent.appendChild(modalText);
 
-        modal.style.display = 'block';
+    // Display the modal by setting its display style to 'block'
+    modal.style.display = 'block';
 
-        closeButton.onclick = function() {
+    // Event listener for the close button to hide the modal
+    closeButton.onclick = function() {
+        modal.style.display = 'none';
+    };
+
+    // Event listener to hide the modal when clicking outside of it
+    window.onclick = function(event) {
+        if (event.target === modal) {
             modal.style.display = 'none';
-        };
-
-        window.onclick = function(event) {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        };
-    }
-
-    // Example usage (replace these with actual blog post data)
-    const blogPosts = [
-        {
-            title: '5 Tips to Improve Your Cardio',
-            content: 'Learn the best techniques to boost your cardiovascular fitness...'
-        },
-        {
-            title: 'The Benefits of Strength Training',
-            content: 'Discover why strength training is crucial for your overall health...'
         }
-    ];
+    };
+}
 
-    // Adding event listeners to the "Read More" buttons
-    document.querySelectorAll('.read-more').forEach((button, index) => {
-        button.addEventListener('click', () => {
-            showBlogModal(blogPosts[index].title, blogPosts[index].content);
-        });
+// Example blog post data
+const blogPosts = [
+    {
+        title: '5 Heart-Pumping Hacks: Elevate Your Cardio Endurance and Torch Calories Faster!',
+        content: 'Are you ready to take your cardio workouts to the next level? Whether you\'re a seasoned runner or just starting your fitness journey, these five expert tips will help you boost your cardiovascular health, burn more calories, and unlock your full potential. HIIT It Up: High-Intensity Interval Training (HIIT) is your secret weapon for maximizing results in minimal time. Learn how to structure your HIIT sessions for optimal fat burning and endurance gains. Embrace Variety: Ditch the treadmill boredom! Explore a variety of cardio exercises, from dancing to swimming, to keep your workouts exciting and engage different muscle groups. Fuel Your Fire: Discover the best pre- and post-workout nutrition strategies to fuel your cardio sessions and optimize recovery. Listen to Your Body: Learn how to monitor your heart rate and other key metrics to gauge your effort and avoid overtraining. Progress Gradually: Don\'t rush into intense workouts. Start with manageable goals and gradually increase the duration and intensity over time. Ready to transform your cardio workouts? Join our community for personalized guidance and support on your journey to a healthier heart and a fitter you!'
+    },
+    {
+        title: 'More Than Just Muscle: Unleash the Power of Strength Training for a Total Body Transformation',
+        content: 'Think strength training is just for bodybuilders? Think again! Discover the incredible benefits that go far beyond bulging biceps. Whether you\'re a woman aiming to sculpt a toned physique or a man looking to boost performance, strength training can revolutionize your health and fitness. Burn Fat, Build Muscle: Strength training isn\'t just about gaining muscle. It also fires up your metabolism, helping you shed unwanted fat and create a leaner, more defined body. Boost Bone Health: Protect yourself from osteoporosis and fractures as you age. Strength training helps build and maintain strong bones, reducing your risk of injury. Enhance Mood and Energy: Get a natural mood lift and increased energy levels with regular strength workouts. Endorphins, the "feel-good" hormones, will leave you feeling empowered. Improve Functional Fitness: Move with ease and confidence in your everyday life. Strength training enhances your ability to perform daily activities, from carrying groceries to playing with your kids. Reduce Chronic Disease Risk: Strength training has been shown to lower the risk of chronic conditions like heart disease, type 2 diabetes, and some types of cancer. Don\'t miss out on the life-changing benefits of strength training! Sign up for our expert-led classes or get a personalized plan to start your transformation today.'
+    }
+];
+
+// Add event listeners to the "Read More" buttons
+document.querySelectorAll('.read-more').forEach((button, index) => {
+    button.addEventListener('click', () => {
+        // Show the blog modal with the relevant title and content
+        showBlogModal(blogPosts[index].title, blogPosts[index].content);
     });
+});
+
+// Ensuring the script runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Your code that needs to run after the DOM is fully loaded can go here
 });
