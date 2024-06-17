@@ -427,30 +427,47 @@ nav ul li a:hover {
 
 /* About Section Styles */
 .about-content {
-    padding: 3rem;
-    max-width: 800px;
-    margin: 0 auto;
+    padding: 3rem; /* Padding */
+    max-width: 800px; /* Maximum width */
+    margin: 0 auto; /* Center content */
 }
 
 .about-content h2 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 1rem; 
+    text-align: center; /* Center text */
+    font-size: 2em; /* Font size */
+    margin-bottom: 1rem; /* Margin below heading */
 }
 
 .about-content h3 {
-    font-weight: bold;
-    margin-bottom: 1rem;
+    font-weight: bold; /* Bold text */
+    margin-bottom: 1rem; /* Margin below heading */
 }
 
 .about-content p {
-    line-height: 1.5;
-    margin-bottom: 1.5rem; /* Added space between paragraphs */
+    line-height: 1.5; /* Line height */
+    margin-bottom: 1.5rem; /* Margin below paragraph */
 }
 
 /* Optional: Style the subheadings (h4) if needed */
 .about-content h4 {
-    margin-top: 2rem; /* Added spacing above subheadings */
+    margin-top: 2rem; /* Margin above subheadings */
+}
+
+/* Style for images within the about content */
+.about-img {
+    width: 100%; /* Full width */
+    max-width: 400px; /* Maximum width */
+    margin: 1.5rem auto; /* Center image with margin */
+    display: block; /* Display as block element */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Style for icons */
+.icon {
+    width: 24px; /* Width */
+    height: 24px; /* Height */
+    margin-right: 10px; /* Margin to the right */
+    vertical-align: middle; /* Align vertically in the middle */
 }
 
 /* Blog Modal Styling */
