@@ -109,6 +109,35 @@ nav {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
 }
 
+/* Class Item Styling */
+.class-item {
+    margin-bottom: 20px; /* Margin below each class item */
+}
+
+.class-item h3 {
+    color: #e96c36; /* Text color */
+    margin-bottom: 10px; /* Margin below heading */
+}
+
+.class-item p {
+    color: #666; /* Text color */
+}
+
+/* Video Section Styling */
+.video-container {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center align items */
+    gap: 20px; /* Space between videos */
+    flex-wrap: wrap; /* Allow wrapping for responsive design */
+}
+
+.video-container iframe {
+    width: 100%; /* Full width */
+    max-width: 560px; /* Maximum width for larger screens */
+    height: 315px; /* Fixed height */
+    border: none; /* No border */
+}
+
 /* Plan Item Styling */
 .plan-item {
     background: #f9f9f9; /* Background color */

@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Smooth scrolling for navigation links
     const anchors = document.querySelectorAll('a[href^="#"]');
+
     anchors.forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -165,67 +166,40 @@ document.addEventListener("DOMContentLoaded", function() {
     const bmiForm = document.getElementById('bmi-form');
     const bmiResult = document.getElementById('bmi-result');
 
-    if (bmiForm) {
-        bmiForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const height = parseFloat(document.getElementById('bmi-height').value);
-            const weight = parseFloat(document.getElementById('bmi-weight').value);
-            const heightUnit = document.getElementById('bmi-height-unit').value;
-            const weightUnit = document.getElementById('bmi-weight-unit').value;
+    bmiForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const height = parseFloat(document.getElementById('bmi-height').value);
+        const weight = parseFloat(document.getElementById('bmi-weight').value);
+        const heightUnit = document.getElementById('bmi-height-unit').value;
+        const weightUnit = document.getElementById('bmi-weight-unit').value;
 
-            let heightInMeters;
-            if (heightUnit === 'cm') {
-                heightInMeters = height / 100;
-            } else if (heightUnit === 'meters') {
-                heightInMeters = height;
-            } else if (heightUnit === 'inches') {
-                heightInMeters = height * 0.0254;
-            } else {
-                bmiResult.textContent = 'Please select a valid height unit.';
-                return;
-            }
-
-            let weightInKg;
-            if (weightUnit === 'kg') {
-                weightInKg = weight;
-            } else if (weightUnit === 'lbs') {
-                weightInKg = weight * 0.453592;
-            } else {
-                bmiResult.textContent = 'Please select a valid weight unit.';
-                return;
-            }
-
-            if (!isNaN(heightInMeters) && !isNaN(weightInKg) && heightInMeters > 0 && weightInKg > 0) {
-                const bmi = (weightInKg / (heightInMeters ** 2)).toFixed(2);
-                bmiResult.textContent = `Your BMI is ${bmi}`;
-            } else {
-                bmiResult.textContent = 'Please enter valid height and weight.';
-            }
-        });
-    }
-
-    // Blog Modal Functionality
-    const blogModal = document.getElementById('blog-modal');
-    const blogModalContent = blogModal.querySelector('.modal-content');
-    const blogModalClose = blogModal.querySelector('.modal-close');
-
-    if (blogModal && blogModalContent && blogModalClose) {
-        window.showBlogModal = function(title, content) {
-            blogModalContent.innerHTML = `<span class="modal-close">&times;</span><h2>${title}</h2><p>${content}</p>`;
-            blogModal.style.display = 'block';
-
-            const closeModal = blogModalContent.querySelector('.modal-close');
-            closeModal.addEventListener('click', () => {
-                blogModal.style.display = 'none';
-            });
-
-            window.addEventListener('click', (e) => {
-                if (e.target === blogModal) {
-                    blogModal.style.display = 'none';
-                }
-            });
+        let heightInMeters;
+        if (heightUnit === 'cm') {
+            heightInMeters = height / 100;
+        } else if (heightUnit === 'meters') {
+            heightInMeters = height;
+        } else if (heightUnit === 'inches') {
+            heightInMeters = height * 0.0254;
+        } else {
+            bmiResult.textContent = 'Please select a valid height unit.';
+            return;
         }
-    } else {
-        console.error('Blog modal elements not found');
-    }
+
+        let weightInKg;
+        if (weightUnit === 'kg') {
+            weightInKg = weight;
+        } else if (weightUnit === 'lbs') {
+            weightInKg = weight * 0.453592;
+        } else {
+            bmiResult.textContent = 'Please select a valid weight unit.';
+            return;
+        }
+
+        if (!isNaN(heightInMeters) && !isNaN(weightInKg) && heightInMeters > 0 && weightInKg > 0) {
+            const bmi = (weightInKg / (heightInMeters ** 2)).toFixed(2);
+            bmiResult.textContent = `Your BMI is ${bmi}`;
+        } else {
+            bmiResult.textContent = 'Please enter valid height and weight.';
+        }
+    });
 });
