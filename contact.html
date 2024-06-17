@@ -3,29 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Fitness with Wemyss Workouts</title>
-    <meta name="description" content="Get in touch with Leo Wemyss to learn more about fitness classes and personalized training programs.">
-    <meta name="keywords" content="fitness, contact, personal trainer, Leo Wemyss">
+    <title>Fitness with Wemyss Workouts</title>
+    <meta name="description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
+    <meta name="keywords" content="fitness, personal trainer, about, Leo Wemyss">
     <meta name="author" content="Leo Wemyss">
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Contact - Fitness with Wemyss Workouts">
-    <meta property="og:description" content="Get in touch with Leo Wemyss to learn more about fitness classes and personalized training programs.">
-    <meta property="og:image" content="assets/images/your-image.jpg">
-    <meta property="og:url" content="http://www.yourwebsite.com/contact.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <meta property="og:title" content="About - Fitness with Wemyss Workouts">
+    <meta property="og:description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
+    <meta property="og:image" content="path/to/your-photo.jpg">
+    <meta property="og:url" content="http://www.yourwebsite.com/about.html">
     <meta property="og:type" content="website">
 
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contact - Fitness with Wemyss Workouts">
-    <meta name="twitter:description" content="Get in touch with Leo Wemyss to learn more about fitness classes and personalized training programs.">
-    <meta name="twitter:image" content="assets/images/your-image.jpg">
+    <meta name="twitter:title" content="About - Fitness with Wemyss Workouts">
+    <meta name="twitter:description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
+    <meta name="twitter:image" content="path/to/your-photo.jpg">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="assets/style.css">
 
-    <link rel="android-chrome" sizes="192x192" href="assets/favicon_io/android-chrome-192x192.png">
-    <link rel="android-chrome" sizes="512x512" href="assets/favicon_io/android-chrome-512x512.png">
+    <link rel="icon" sizes="192x192" href="assets/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" sizes="512x512" href="assets/favicon_io/android-chrome-512x512.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
@@ -38,7 +37,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="classes.html">Classes</a></li>
                 <li><a href="workout-plans.html">Workout Plans</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
@@ -58,27 +57,27 @@
                     <h2>Personal Information</h2>
                     <div class="form-group">
                         <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" name="first_name" required>
+                        <input type="text" id="first-name" name="first_name" autocomplete="given-name" required>
                     </div>
                     <div class="form-group">
                         <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" name="last_name" required>
+                        <input type="text" id="last-name" name="last_name" autocomplete="family-name" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="email1">Email Address</label>
+                        <input type="email" id="email1" name="email" autocomplete="email" required>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
                     </div>
                     <div class="form-group">
                         <label for="dob">Date of Birth</label>
-                        <input type="date" id="dob" name="dob" required>
+                        <input type="date" id="dob" name="dob" autocomplete="bday" required>
                     </div>
                     <div class="form-group">
                         <label for="gender">Gender</label>
-                        <select id="gender" name="gender" required>
+                        <select id="gender" name="gender" autocomplete="sex" required>
                             <option value="">Please Select</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
@@ -91,19 +90,19 @@
                     <h2>Address</h2>
                     <div class="form-group">
                         <label for="street">Street Address</label>
-                        <input type="text" id="street" name="street" required>
+                        <input type="text" id="street" name="street" autocomplete="address-line1" required>
                     </div>
                     <div class="form-group">
                         <label for="street2">Street Address Line 2</label>
-                        <input type="text" id="street2" name="street2">
+                        <input type="text" id="street2" name="street2" autocomplete="address-line2">
                     </div>
                     <div class="form-group">
                         <label for="city">City</label>
-                        <input type="text" id="city" name="city" required>
+                        <input type="text" id="city" name="city" autocomplete="address-level2" required>
                     </div>
                     <div class="form-group">
                         <label for="country">Country</label>
-                        <select id="country" name="country" required>
+                        <select id="country" name="country" autocomplete="country" required>
                             <option value="">Please Select</option>
                             <option value="Ireland">Ireland</option>
                             <option value="Northern Ireland">Northern Ireland</option>
@@ -111,17 +110,17 @@
                     </div>
                     <div class="form-group">
                         <label for="county">County</label>
-                        <select id="county" name="county" required>
+                        <select id="county" name="county" autocomplete="address-level1" required>
                             <option value="">Please Select</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="state">State / Province</label>
-                        <input type="text" id="state" name="state" required>
+                        <input type="text" id="state" name="state" autocomplete="address-level1" required>
                     </div>
                     <div class="form-group">
                         <label for="postal">Postal / Zip Code</label>
-                        <input type="text" id="postal" name="postal" required>
+                        <input type="text" id="postal" name="postal" autocomplete="postal-code" required>
                     </div>
                 </section>
                 <!-- Fitness Information -->
@@ -129,19 +128,51 @@
                     <h2>Fitness Information</h2>
                     <div class="form-group">
                         <label for="current-weight">Current Weight</label>
-                        <input type="number" id="current-weight" name="current_weight" required>
+                        <input type="number" id="current-weight" name="current_weight" autocomplete="off" required>
+                        <select id="weight-unit" name="weight_unit" autocomplete="off" required>
+                            <option value="kg">kg</option>
+                            <option value="lbs">lbs</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="height">Height</label>
-                        <input type="number" id="height" name="height" required>
+                        <input type="number" id="height" name="height" autocomplete="off" required>
+                        <select id="height-unit" name="height_unit" autocomplete="off" required>
+                            <option value="cm">cm</option>
+                            <option value="meters">meters</option>
+                            <option value="inches">inches</option>
+                        </select>
                     </div>
-                    <div class="form-group">
-                        <label for="bmi">BMI</label>
-                        <input type="number" id="bmi" name="bmi" readonly>
-                    </div>
+
+                    <!-- BMI Calculator Section -->
+                    <section class="bmi-calculator">
+                        <h2>BMI Calculator</h2>
+                        <form id="bmi-form">
+                            <div class="form-group">
+                                <label for="bmi-height">Height</label>
+                                <input type="number" id="bmi-height" name="height" autocomplete="off" required placeholder="Enter your height">
+                                <select id="bmi-height-unit" name="height_unit" autocomplete="off" required>
+                                    <option value="cm">cm</option>
+                                    <option value="meters">meters</option>
+                                    <option value="inches">inches</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="bmi-weight">Weight</label>
+                                <input type="number" id="bmi-weight" name="weight" autocomplete="off" required placeholder="Enter your weight">
+                                <select id="bmi-weight-unit" name="weight_unit" autocomplete="off" required>
+                                    <option value="kg">kg</option>
+                                    <option value="lbs">lbs</option>
+                                </select>
+                            </div>
+                            <button type="submit">Calculate BMI</button>
+                        </form>
+                        <div id="bmi-result"></div>
+                    </section>
+
                     <div class="form-group">
                         <label for="goal-weight">Goal Weight</label>
-                        <input type="number" id="goal-weight" name="goal_weight" required>
+                        <input type="number" id="goal-weight" name="goal_weight" autocomplete="weight" required>
                     </div>
                 </section>
                 <!-- Emergency Contact Information -->
@@ -149,15 +180,15 @@
                     <h2>Emergency Contact Information</h2>
                     <div class="form-group">
                         <label for="emergency-name">Emergency Contact Name</label>
-                        <input type="text" id="emergency-name" name="emergency_name" required>
+                        <input type="text" id="emergency-name" name="emergency_name" autocomplete="name" required>
                     </div>
                     <div class="form-group">
                         <label for="relationship">Relationship</label>
-                        <input type="text" id="relationship" name="relationship" required>
+                        <input type="text" id="relationship" name="relationship" autocomplete="off" required>
                     </div>
                     <div class="form-group">
                         <label for="emergency-phone">Emergency Contact Phone Number</label>
-                        <input type="tel" id="emergency-phone" name="emergency_phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                        <input type="tel" id="emergency-phone" name="emergency_phone" autocomplete="tel" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
                     </div>
                 </section>
                 <!-- Medical Information -->
@@ -165,7 +196,7 @@
                     <h2>Medical Information</h2>
                     <div class="form-group">
                         <label for="medical-conditions">Do you have any medical conditions or allergies?</label>
-                        <textarea id="medical-conditions" name="medical_conditions" required></textarea>
+                        <textarea id="medical-conditions" name="medical_conditions" autocomplete="off" required></textarea>
                     </div>
                 </section>
                 <!-- Membership Information -->
@@ -173,7 +204,7 @@
                     <h2>Membership Information</h2>
                     <div class="form-group">
                         <label for="membership-type">Choose Membership Type</label>
-                        <select id="membership-type" name="membership_type" required>
+                        <select id="membership-type" name="membership_type" autocomplete="off" required>
                             <option value="">Please Select</option>
                             <option value="monthly">Monthly</option>
                             <option value="quarterly">Quarterly</option>
@@ -182,7 +213,7 @@
                     </div>
                     <div class="form-group">
                         <label for="start-date">Preferred Start Date</label>
-                        <input type="date" id="start-date" name="start_date" required>
+                        <input type="date" id="start-date" name="start_date" autocomplete="off" required>
                     </div>
                 </section>
                 <div class="form-group">
@@ -195,16 +226,16 @@
             <h2>Contact Form</h2>
             <form id="contact-form">
                 <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="contact-email">Email Address</label>
+                    <input type="email" id="contact-email" name="email" autocomplete="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="contact-name">Name</label>
+                    <input type="text" id="contact-name" name="name" autocomplete="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" name="message" autocomplete="off" required></textarea>
                 </div>
                 <button type="submit">Submit</button>
             </form>
@@ -214,7 +245,9 @@
             <h2>Additional Contact Information</h2>
             <p><strong>Address:</strong> 123 Fitness St, Workout City, Gym State, 12345</p>
             <p><strong>Phone:</strong> +1 (234) 567-890</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.836058944787!2d144.95605431531663!3d-37.816218979751664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577c121134d1a10!2s123%20Fitness%20St%2C%20Workout%20City%2C%20Gym%20State%2C%2012345!5e0!3m2!1sen!2sau!4v1618380609711!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.836058944787!2d144.95605431531663!3d-37.816218979751664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577c121134d1a10!2s123%20Fitness%20St%2C%20Workout%20City%2C%20Gym%20State%2C%2012345!5e0!3m2!1sen!2sau!4v1618380609711!5m2!1sen!2sau"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </section>
     </main>
 
@@ -234,7 +267,7 @@
     <div class="modal">
         <div class="modal-content">
             <span class="modal-close">&times;</span>
-            <h2 id="modal-plan-title"></h2>
+            <h2 id="modal-plan-title">Plan Title</h2>
             <div id="modal-plan-details"></div>
         </div>
     </div>

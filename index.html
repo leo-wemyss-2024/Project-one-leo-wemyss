@@ -7,33 +7,48 @@
     <meta name="description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
     <meta name="keywords" content="fitness, personal trainer, about, Leo Wemyss">
     <meta name="author" content="Leo Wemyss">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
 
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap">
+
+    <!-- Social Media Metadata -->
     <meta property="og:title" content="About - Fitness with Wemyss Workouts">
     <meta property="og:description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
     <meta property="og:image" content="path/to/your-photo.jpg">
     <meta property="og:url" content="http://www.yourwebsite.com/about.html">
     <meta property="og:type" content="website">
-
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="About - Fitness with Wemyss Workouts">
     <meta name="twitter:description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
     <meta name="twitter:image" content="path/to/your-photo.jpg">
 
+    <!-- Link to CSS file -->
     <link rel="stylesheet" href="assets/style.css">
 
-    <link rel="android-chrome" sizes="192x192" href="assets/favicon_io/android-chrome-192x192.png">
-    <link rel="android-chrome" sizes="512x512" href="assets/favicon_io/android-chrome-512x512.png">
+    <!-- Favicon Links -->
+    <link rel="icon" sizes="192x192" href="assets/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" sizes="512x512" href="assets/favicon_io/android-chrome-512x512.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-XXXXXX-X');
+    </script>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <nav>
-            <ul>
+        <nav aria-label="Main Navigation">
+            <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="classes.html">Classes</a></li>
                 <li><a href="workout-plans.html">Workout Plans</a></li>
@@ -42,43 +57,81 @@
             </ul>
         </nav>
         <div class="hero-content">
-            <h1 class="typing-animation">Welcome to Wemyss Workouts</h1>
-            <p>Your Fitness Journey Starts Here.</p>
-            <a href="contact.html" class="cta-button">Get Started</a>
+            <h1 class="typing-animation">
+                <span class="above-text">Welcome</span>
+                Wemyss Workouts
+                <span class="below-text">Your Fitness Journey</span>
+            </h1>
+            <p>Your Path to a Healthier You Starts Here.</p>
+            <a href="contact.html" class="cta-button">Join Us Today</a>
         </div>
+        
+        
     </header>
+
+    <!-- Main Content Section -->
     <main>
+        <!-- Intro Section -->
         <section class="content-section intro">
-            <div class="image-container">
+            <div class="image-container left">
                 <img src="assets/images/female deadlift personl training .jpg" alt="Fitness Image 1">
                 <div class="image-text">
                     <h2>Personalized Training</h2>
                     <p>Get tailored workout plans to meet your fitness goals.</p>
                 </div>
             </div>
-            <div class="image-container">
-                <img src="assets/images/female personal training kettlebell squat.jpg" alt="Fitness Image 2">
+            <div class="image-container right">
+                <img src="assets/images/thomastown group workout.JPG" alt="Fitness Image 2">
                 <div class="image-text">
                     <h2>Group Classes</h2>
                     <p>Join our motivating group classes for a fun workout.</p>
                 </div>
             </div>
-            <div class="image-container">
+            <div class="image-container left">
                 <img src="assets/images/thomastown flexability.jpg" alt="Fitness Image 3">
                 <div class="image-text">
                     <h2>Flexibility Training</h2>
                     <p>Enhance your flexibility with targeted training sessions.</p>
                 </div>
             </div>
-            <div class="image-container">
-                <img src="assets/images/Trx female personal training .jpg" alt="Fitness Image 4">
+            <div class="image-container right">
+                <img src="assets/images/Military cooldowm currgh.jpeg" alt="Fitness Image 4">
                 <div class="image-text">
                     <h2>Strength Training</h2>
                     <p>Build your strength with our specialized programs.</p>
                 </div>
             </div>
         </section>
+        
+        <!-- Testimonials Section -->
+        <section class="content-section testimonials" id="testimonials">
+            <h2>Client Testimonials</h2>
+            <div class="testimonial">
+                <p>"Leo has completely transformed my fitness routine. Highly recommended!" - Jane Doe</p>
+            </div>
+            <div class="testimonial">
+                <p>"The group classes are so much fun and effective. Thanks, Leo!" - John Smith</p>
+            </div>
+        </section>
+        
+        <!-- Blog Section -->
+        <section class="content-section blog" id="blog">
+            <h2>Latest Blog Posts</h2>
+            <div class="blog-post">
+                <h3>5 Tips to Improve Your Cardio</h3>
+                <p>Learn the best techniques to boost your cardiovascular fitness...</p>
+                <button class="read-more" onclick="showBlogModal('5 Tips to Improve Your Cardio', 'Learn the best techniques to boost your cardiovascular fitness...')">Read More</button>
+            </div>
+            <div class="blog-post">
+                <h3>The Benefits of Strength Training</h3>
+                <p>Discover why strength training is crucial for your overall health...</p>
+                <button class="read-more" onclick="showBlogModal('The Benefits of Strength Training', 'Discover why strength training is crucial for your overall health...')">Read More</button>
+            </div>
+            <div id="blog-container"></div> <!-- Container for dynamically loaded blog posts -->
+        </section>
     </main>
+
+    <!-- Footer Section -->
     <footer>
         <div class="footer-content">
             <p>Fitness with Wemyss Workouts. All rights reserved.</p>
@@ -89,15 +142,27 @@
                 <a href="https://www.linkedin.com/in/leo-wemyss-356505b1/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
-    </footer><div class="modal">
+    </footer>
+
+    <!-- Modal Structure for Workout Plans -->
+    <div class="modal">
         <div class="modal-content">
             <span class="modal-close">&times;</span>
-            <h2 id="modal-plan-title"></h2>
+            <h2 id="modal-plan-title">Plan Title</h2>
             <div id="modal-plan-details"></div>
         </div>
     </div>
-    <script src="assets/js/script.js"></script>
     
+    <!-- Blog Modal -->
+    <div id="blog-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 id="blog-modal-title">Blog Title</h2>
+            <div id="blog-modal-content"></div>
+        </div>
+    </div>
 
+    <!-- Link to JavaScript file -->
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
