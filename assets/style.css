@@ -264,7 +264,6 @@ nav ul li a:hover {
 }
 
 /* Styles for alternating image and text layout */
-/* Styles for alternating image and text layout */
 .image-container {
     display: flex; /* Use Flexbox layout */
     flex-direction: column; /* Stack images vertically by default */
@@ -302,6 +301,56 @@ nav ul li a:hover {
 .image-container.right {
     flex-direction: row;       /* Normal order for right containers */
 }
+
+/* Testimonials Section Styling */
+.testimonial-container {
+    display: flex; /* Use Flexbox layout */
+    justify-content: space-between; /* Space between testimonials */
+    flex-wrap: wrap; /* Allow wrapping for responsive design */
+}
+
+.testimonial {
+    display: flex; /* Use Flexbox layout for testimonials */
+    align-items: center; /* Center align items */
+    background-color: #fff; /* Set background color */
+    padding: 20px; /* Add padding */
+    margin: 10px; /* Add margin */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    flex: 1 1 calc(50% - 20px); /* Flex-grow, flex-shrink, base width with margin */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.testimonial-image {
+    width: 70px; /* Set smaller width */
+    height: 70px; /* Set smaller height */
+    border-radius: 50%; /* Make image circular */
+    margin-right: 20px; /* Add margin to the right */
+}
+
+.testimonial-text {
+    flex: 1; /* Flex-grow to fill remaining space */
+}
+
+.testimonial p {
+    margin: 0; /* Remove default margin */
+    color: #666; /* Set text color */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .testimonial {
+        flex-direction: column; /* Stack testimonial content vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .testimonial-image {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Add bottom margin */
+    }
+}
+
+
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
