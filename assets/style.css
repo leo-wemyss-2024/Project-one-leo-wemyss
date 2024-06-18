@@ -264,36 +264,50 @@ nav ul li a:hover {
 }
 
 /* Styles for alternating image and text layout */
+/* Styles for alternating image and text layout */
 .image-container {
     display: flex; /* Use Flexbox layout */
     flex-direction: column; /* Stack images vertically by default */
     align-items: center; /* Center text horizontally */
-    margin: 20px 0; /* Add vertical margin */
-    position: relative; /* Needed for absolute positioning of text */
+    margin: 40px auto; /* Centered with top/bottom margin */
+    max-width: 900px; /* Limit container width for better layout */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease; /* Hover effect */
+    background-color: white; /* White background for content */
+}
+
+.image-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .image-container img {
-    width: 100%; /* Images take full container width */
-    object-fit: cover; /* Maintain aspect ratio and cover container */
-    height: 500px; /* Set fixed height for consistency */
+    flex: 1;  /* Image takes available space */
+    max-width: 50%; /* Maximum width for better proportions */
+    height: auto; 
+    margin: 0 20px; 
 }
 
 .image-text {
-    text-align: center; /* Center text vertically and horizontally */
-    padding: 10px; /* Add padding for spacing */
-    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
-    position: absolute; /* Position text absolutely within container */
-    bottom: 0; /* Align text to bottom */
-    width: 100%; /* Text takes full container width */
+    flex: 1;   /* Text takes available space */
 }
 
 /* Flexbox direction adjustments for alternating layout */
 .image-container.left {
-    flex-direction: column-reverse; /* Reverse order for left containers */
+    flex-direction: row-reverse; /* Reverse order for left containers */
 }
 
 .image-container.right {
-    flex-direction: column; /* Normal order for right containers */
+    flex-direction: row;       /* Normal order for right containers */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .image-container img {
+        height: 200px; /* Adjust height for smaller screens */
+    }
 }
 
 /* Media Queries for Responsive Design */
