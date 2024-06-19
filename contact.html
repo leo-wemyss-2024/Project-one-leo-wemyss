@@ -37,10 +37,10 @@
     <link rel="manifest" href="assets/favicon_io/site.webmanifest">
 </head>
 
-<body>
+<body class="contact-page">
     <header>
         <nav>
-            <ul>
+            <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="classes.html">Classes</a></li>
                 <li><a href="workout-plans.html">Workout Plans</a></li>
@@ -53,137 +53,80 @@
             <p>We'd love to hear from you. Reach out with any questions or to get started!</p>
         </div>
     </header>
-    <main>
-        <div class="container">
-            <h1>Gym Registration Form</h1>
-            <p>Join our gym and start your fitness journey today! Please fill out the form to register.</p>
 
-            <form id="registration-form">
-                <!-- Personal Information -->
-                <section class="form-section">
-                    <h2>Personal Information</h2>
-                    <div class="form-group">
-                        <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" name="first_name" autocomplete="given-name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" name="last_name" autocomplete="family-name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email1">Email Address</label>
-                        <input type="email" id="email1" name="email" autocomplete="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" autocomplete="tel" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-                    </div>
-                    <div class="form-group">
-                        <label for="dob">Date of Birth</label>
-                        <input type="date" id="dob" name="dob" autocomplete="bday" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="gender">Gender</label>
-                        <select id="gender" name="gender" autocomplete="sex" required>
-                            <option value="">Please Select</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                </section>
-                <!-- Address -->
-                <section class="form-section">
-                    <h2>Address</h2>
-                    <div class="form-group">
-                        <label for="street">Street Address</label>
-                        <input type="text" id="street" name="street" autocomplete="address-line1" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="street2">Street Address Line 2</label>
-                        <input type="text" id="street2" name="street2" autocomplete="address-line2">
-                    </div>
-                    <div class="form-group">
-                        <label for="city">City</label>
-                        <input type="text" id="city" name="city" autocomplete="address-level2" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="country">Country</label>
-                        <select id="country" name="country" autocomplete="country" required>
-                            <option value="">Please Select</option>
-                            <option value="Ireland">Ireland</option>
-                            <option value="Northern Ireland">Northern Ireland</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="county">County</label>
-                        <select id="county" name="county" autocomplete="address-level1" required>
-                            <option value="">Please Select</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="state">State / Province</label>
-                        <input type="text" id="state" name="state" autocomplete="address-level1" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="postal">Postal / Zip Code</label>
-                        <input type="text" id="postal" name="postal" autocomplete="postal-code" required>
-                    </div>
-                </section>
-                <section class="form-section">
-                    <h2>Calculate Your Body Mass Index (BMI)</h2>
-                    <p>Body Mass Index (BMI) is a common measure of weight-to-height ratio used to assess health risks associated with weight. This calculator will help you determine your BMI and provide additional information.</p>
-                    <form id="bmi-form">
-                        <div class="form-group">
-                            <label for="bmi-height">Height:</label>
-                            <input type="number" id="bmi-height" name="height" autocomplete="off" required placeholder="Enter your height">
-                            <select id="bmi-height-unit" name="height_unit" autocomplete="off" required>
-                                <option value="">Select Unit</option>
-                                <option value="cm">Centimeters (cm)</option>
-                                <option value="meters">Meters (m)</option>
-                                <option value="inches">Inches (in)</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="bmi-weight">Weight:</label>
-                            <input type="number" id="bmi-weight" name="weight" autocomplete="off" required placeholder="Enter your weight">
-                            <select id="bmi-weight-unit" name="weight_unit" autocomplete="off" required>
-                                <option value="">Select Unit</option>
-                                <option value="kg">Kilograms (kg)</option>
-                                <option value="lbs">Pounds (lbs)</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="goal-weight">Goal Weight (Optional):</label>
-                            <input type="number" id="goal-weight" name="goal_weight" autocomplete="off">
-                            <p>Enter your desired weight for personalized recommendations.</p>
-                        </div>
-                        <button type="submit">Calculate BMI</button>
-                    </form>
-                    <div id="bmi-result"></div>
-                </section>
-                <!-- Membership Information -->
-                <section class="form-section">
-                    <h2>Membership Information</h2>
-                    <div class="form-group">
-                        <label for="membership-type">Choose Membership Type</label>
-                        <select id="membership-type" name="membership_type" autocomplete="off" required>
-                            <option value="">Please Select</option>
-                            <option value="monthly">Monthly</option>
-                            <option value="quarterly">Quarterly</option>
-                            <option value="yearly">Yearly</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="start-date">Preferred Start Date</label>
-                        <input type="date" id="start-date" name="start_date" autocomplete="off" required>
-                    </div>
-                </section>
+    <main>
+        <section class="content-section intro">
+            <h2>Introduction</h2>
+        </section>
+
+        <section class="content-section hb-calculator">
+            <h2>Calculate Your Daily Calorie Needs (Harris-Benedict Formula)</h2>
+            <p>This calculator estimates your Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE) using the Harris-Benedict formula. This information can help you understand your calorie needs for weight management.</p>
+            <form id="harris-benedict-form">
                 <div class="form-group">
-                    <button type="submit">Submit</button>
+                    <label for="hb-gender">Gender:</label>
+                    <select id="hb-gender" name="gender" required>
+                        <option value="">Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
                 </div>
+                <div class="form-group">
+                    <label for="hb-age">Age (years):</label>
+                    <input type="number" id="hb-age" name="age" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="hb-height">Height (cm):</label>
+                    <input type="number" id="hb-height" name="height" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="hb-weight">Weight (kg):</label>
+                    <input type="number" id="hb-weight" name="weight" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="hb-activity">Activity Level:</label>
+                    <select id="hb-activity" name="activity" required>
+                        <option value="">Select</option>
+                        <option value="1.2">Sedentary (little or no exercise)</option>
+                        <option value="1.375">Lightly active (light exercise/sports 1-3 days/week)</option>
+                        <option value="1.55">Moderately active (moderate exercise/sports 3-5 days/week)</option>
+                        <option value="1.725">Very active (hard exercise/sports 6-7 days a week)</option>
+                        <option value="1.9">Extra active (very hard exercise/sports & physical job or 2x training)</option>
+                    </select>
+                </div>
+                <button type="submit">Calculate</button>
             </form>
-        </div>
+            <div id="calorie-needs-result"></div>
+        </section>
+
+        <section class="content-section bmi-calculator">
+            <h2>Calculate Your Body Mass Index (BMI)</h2>
+            <p>Body Mass Index (BMI) is a common measure of weight-to-height ratio used to assess health risks associated with weight. This calculator will help you determine your BMI and provide additional information.</p>
+            <form id="bmi-form">
+                <div class="form-group">
+                    <label for="bmi-height">Height:</label>
+                    <input type="number" id="bmi-height" name="height" autocomplete="off" required placeholder="Enter your height">
+                    <select id="bmi-height-unit" name="height_unit" autocomplete="off" required>
+                        <option value="">Select Unit</option>
+                        <option value="cm">Centimeters (cm)</option>
+                        <option value="meters">Meters (m)</option>
+                        <option value="inches">Inches (in)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="bmi-weight">Weight:</label>
+                    <input type="number" id="bmi-weight" name="weight" autocomplete="off" required placeholder="Enter your weight">
+                    <select id="bmi-weight-unit" name="weight_unit" autocomplete="off" required>
+                        <option value="">Select Unit</option>
+                        <option value="kg">Kilograms (kg)</option>
+                        <option value="lbs">Pounds (lbs)</option>
+                    </select>
+                </div>
+                <button type="submit">Calculate BMI</button>
+            </form>
+            <div id="bmi-result"></div>
+        </section>
+
         <section class="contact content-section">
             <h2>Contact Form</h2>
             <form id="contact-form">
@@ -207,8 +150,7 @@
             <h2>Additional Contact Information</h2>
             <p><strong>Address:</strong> 123 Fitness St, Workout City, Gym State, 12345</p>
             <p><strong>Phone:</strong> +1 (234) 567-890</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.836058944787!2d144.95605431531663!3d-37.816218979751664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577c121134d1a10!2s123%20Fitness%20St%2C%20Workout%20City%2C%20Gym%20State%2C%2012345!5e0!3m2!1sen!2sau!4v1618380609711!5m2!1sen!2sau"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.836058944787!2d144.95605431531663!3d-37.816218979751664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577c121134d1a10!2s123%20Fitness%20St%2C%20Workout%20City%2C%20Gym%20State%2C%2012345!5e0!3m2!1sen!2sau!4v1618380609711!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </section>
     </main>
 
@@ -224,25 +166,25 @@
         </div>
     </footer>
 
-  <!-- Modal Structure for workout plans -->
-  <div class="modal">
-    <div class="modal-content">
-        <span class="modal-close">&times;</span>
-        <h2 id="modal-plan-title">Workout Plan Details</h2>
-        <div id="modal-plan-details"></div>
+    <!-- Modal Structure for workout plans -->
+    <div class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 id="modal-plan-title">Workout Plan Details</h2>
+            <div id="modal-plan-details"></div>
+        </div>
     </div>
-</div>
 
-<!-- Blog Modal -->
-<div id="blog-modal">
-    <div class="modal-content">
-        <span class="modal-close">&times;</span>
-        <div id="blog-content"></div>
+    <!-- Blog Modal -->
+    <div id="blog-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div id="blog-content"></div>
+        </div>
     </div>
-</div>
 
-<!-- Link to JavaScript file -->
-<script src="assets/js/script.js"></script>
+    <!-- Link to JavaScript file -->
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
