@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
     'use strict';
 
@@ -29,16 +28,18 @@ document.addEventListener("DOMContentLoaded", function () {
     sections.forEach(section => observer.observe(section));
 
     // Modal for workout plans and guides
-    const modal = document.querySelector('.modal');
-    const modalClose = document.querySelector('.modal-close');
+    const modal = document.getElementById('planModal');
+    const modalClose = modal.querySelector('.modal-close');
     const modalTitle = document.getElementById('modal-plan-title');
     const modalDetails = document.getElementById('modal-plan-details');
+
     window.showModal = function (day) {
         const planDetails = getPlanDetails(day);
         modalTitle.textContent = day;
         modalDetails.innerHTML = planDetails;
-        modal.style.display = 'flex';
+        modal.style.display = 'block';
     };
+
     modalClose.addEventListener('click', () => modal.style.display = 'none');
     window.addEventListener('click', (e) => {
         if (e.target === modal) {
@@ -49,6 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
     function getPlanDetails(day) {
         const details = {
             // Add your plan details here
+            'Day 1 (Beginner)': 'Details for Day 1 of the Beginner Plan...',
+            'Day 2 (Beginner)': 'Details for Day 2 of the Beginner Plan...',
+            'Day 3 (Beginner)': 'Details for Day 3 of the Beginner Plan...',
+            // Add more details as needed
         };
         return details[day] || 'No details found for this day.';
     }
@@ -58,27 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (heroText) {
         heroText.classList.add('typing-animation-visible');
     }
-
-    // List of counties
-    const counties = {
-        "Ireland": ["Carlow", "Cavan", "Clare", "Cork", "Donegal", "Dublin", "Galway", "Kerry", "Kildare", "Kilkenny", "Laois", "Leitrim", "Limerick", "Longford", "Louth", "Mayo", "Meath", "Monaghan", "Offaly", "Roscommon", "Sligo", "Tipperary", "Waterford", "Westmeath", "Wexford", "Wicklow"],
-        "Northern Ireland": ["Antrim", "Armagh", "Derry", "Down", "Fermanagh", "Tyrone"]
-    };
-
-    // Populate counties based on country selection
-    const countrySelect = document.getElementById('country');
-    const countySelect = document.getElementById('county');
-    countrySelect.addEventListener('change', function () {
-        const selectedCountry = this.value;
-        const countyOptions = counties[selectedCountry] || [];
-        countySelect.innerHTML = '<option value="">Please Select</option>';
-        countyOptions.forEach(county => {
-            const option = document.createElement('option');
-            option.value = county;
-            option.textContent = county;
-            countySelect.appendChild(option);
-        });
-    });
 
     // BMI Calculator functionality
     const bmiForm = document.getElementById('bmi-form');
@@ -124,8 +108,29 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error('BMI form not found');
     }
 
-    document.addEventListener("DOMContentLoaded", function () {
-        'use strict';
+    // Harris-Benedict Calculator functionality
+    const hbForm = document.getElementById('harris-benedict-form');
+    const hbResult = document.getElementById('calorie-needs-result');
+    if (hbForm) {
+        hbForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const gender = document.getElementById('hb-gender').value;
+            const age = parseInt(document.getElementById('hb-age').value);
+            const height = parseInt(document.getElementById('hb-height').value);
+            const weight = parseInt(document.getElementById('hb-weight').value);
+            const activity = parseFloat(document.getElementById('hb-activity').value);
+
+            let bmr;
+            if (gender === 'male') {
+                bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
+            } else {
+                bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
+            }
+
+            const tdee = bmr * activity;
+            hbResult.textContent = `Your daily calorie needs: ${Math.round(tdee)} calories`;
+        });
+    }
 
     // Blog posts data
     const blogPosts = [
@@ -193,4 +198,24 @@ document.addEventListener("DOMContentLoaded", function () {
             modal.style.display = "none";
         }
     };
+
+    // Populate counties based on country selection
+    const counties = {
+        "Ireland": ["Carlow", "Cavan", "Clare", "Cork", "Donegal", "Dublin", "Galway", "Kerry", "Kildare", "Kilkenny", "Laois", "Leitrim", "Limerick", "Longford", "Louth", "Mayo", "Meath", "Monaghan", "Offaly", "Roscommon", "Sligo", "Tipperary", "Waterford", "Westmeath", "Wexford", "Wicklow"],
+        "Northern Ireland": ["Antrim", "Armagh", "Derry", "Down", "Fermanagh", "Tyrone"]
+    };
+
+    const countrySelect = document.getElementById('country');
+    const countySelect = document.getElementById('county');
+    countrySelect.addEventListener('change', function () {
+        const selectedCountry = this.value;
+        const countyOptions = counties[selectedCountry] || [];
+        countySelect.innerHTML = '<option value="">Please Select</option>';
+        countyOptions.forEach(county => {
+            const option = document.createElement('option');
+            option.value = county;
+            option.textContent = county;
+            countySelect.appendChild(option);
+        });
+    });
 });
