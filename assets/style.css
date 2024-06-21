@@ -19,7 +19,7 @@ body {
 /* Header Styling */
 header {
     text-align: center; /* Center text */
-    background: url('/assets/images/military\ combat\ workout.jpg') no-repeat center center/cover; /* Set background image */
+    background: url('/assets/images/military combat workout.jpg') no-repeat center center/cover; /* Set background image */
     height: 700px; /* Set fixed height */
     display: flex; /* Use Flexbox layout */
     justify-content: center; /* Center content horizontally */
@@ -149,44 +149,31 @@ nav ul li a:hover {
 .form-section button:hover {
     background-color: #d85a29; /* Change background color on hover */
 }
-/* ... (Your existing styles) ... */
 
-.map-container { /* Styles for the map container */
+/* Map Container Styling */
+.map-container {
     position: relative; /* Ensure the iframe stays within the container */
-    overflow: hidden;
+    overflow: hidden; /* Needed for Ken Burns effect */
     width: 100%; /* Make the map take full width of its container */
     padding-top: 56.25%; /* 16:9 aspect ratio (adjust as needed) */
-  }
-  
-  .map-container iframe { /* Styles for the iframe specifically */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; 
-    border: 0;
-  }
-  
-  /* Optional: Media Queries for further responsiveness */
-  @media (max-width: 768px) { /* Adjust for tablet and smaller */
-      .map-container {
-          padding-top: 75%; /* A different aspect ratio for smaller screens (adjust as needed) */
-      }
-  }
-  
-  @media (max-width: 480px) { /* Adjust for mobile phones */
-      .map-container {
-          height: 300px; /* Set a fixed height for very small screens (adjust as needed) */
-      }
-  }
-  
+}
+
+.map-container iframe {
+    position: absolute; /* Position the iframe absolutely within the container */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    width: 100%; /* Set full width */
+    height: 100%; /* Set full height */
+    border: 0; /* Remove border */
+}
+
 /* Footer Content Styling */
 .footer-content {
     display: flex; /* Use Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center align items */
-    justify-content: space-between; /* Space between items */
-    max-width: 1200px; /* Set maximum width */
-    margin: 0 auto; /* Center horizontally */
+    max-width: 1200px; /* Set max width */
+    margin: 0 auto; /* Center container */
     padding: 20px; /* Add padding */
     width: 100%; /* Set full width */
     background-color: #333; /* Set background color */
@@ -197,69 +184,129 @@ nav ul li a:hover {
     margin: 0; /* Remove default margin */
 }
 
-/* Social Media Links Styling */
 .social-media {
     display: flex; /* Use Flexbox layout */
-    gap: 20px; /* Add space between items */
+    gap: 20px; /* Add gap between items */
+    margin-top: 10px; /* Add space above social media icons */
 }
 
 .social-media a {
     color: white; /* Set text color */
-    transition: transform 0.3s; /* Smooth transform transition */
+    transition: transform 0.3s, color 0.3s; /* Smooth transitions */
 }
 
 .social-media a:hover {
     transform: scale(1.2); /* Scale up on hover */
+    color: #e96c36; /* Change color on hover */
 }
 
-.social-media a i {
-    font-size: 24px; /* Set font size */
-}
-
-/* Responsive Design Adjustments */
+/* Responsive Design Adjustments for Footer */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Stack navigation links vertically */
+        flex-direction: column; /* Stack nav items vertically */
         align-items: center; /* Center align items */
     }
 
     .footer-content {
-        flex-direction: column; /* Stack footer content vertically */
-        align-items: center; /* Center align items */
         text-align: center; /* Center text */
     }
 
     .social-media {
-        justify-content: center; /* Center align items */
+        justify-content: center; /* Center social media icons */
     }
 }
 
-/* Image-Text Layout Styles (Enhanced) */
-/* ... (Your existing styles for body, header, navigation, etc.) ... */
+/* Typing Animation */
+@keyframes typing {
+    from { width: 0; } /* Start with 0 width */
+    to { width: 100%; } /* Expand to full width */
+}
 
+@keyframes blink-caret {
+    from, to { border-color: transparent; } /* Transparent border */
+    50% { border-color: orange; } /* Orange border at 50% */
+}
+
+.typing-animation {
+    width: 100%; /* Full width */
+    overflow: hidden; /* Hide overflow */
+    white-space: nowrap; /* Prevent text wrap */
+    border-right: 0.10em solid orange; /* Add right border */
+    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite; /* Apply animations */
+    font-size: 2em; /* Set font size */
+    padding: 10px; /* Add padding */
+    display: flex; /* Use Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+    text-align: center; /* Center text */
+}
+
+/* Additional styles for the above and below text */
+.typing-animation .above-text,
+.typing-animation .below-text {
+    display: block; /* Display as block */
+    font-size: 0.5em; /* Set font size */
+    margin: 0.2em 0; /* Add margin */
+}
+
+/* Adjustments for different screen sizes */
+@media (max-width: 768px) {
+    .typing-animation {
+        font-size: 1.5em; /* Adjust font size for tablets */
+        padding: 8px; /* Adjust padding */
+    }
+    .typing-animation .above-text,
+    .typing-animation .below-text {
+        font-size: 0.6em; /* Adjust size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .typing-animation {
+        font-size: 1.2em; /* Adjust font size for mobile phones */
+        padding: 5px; /* Adjust padding */
+    }
+    .typing-animation .above-text,
+    .typing-animation .below-text {
+        font-size: 0.7em; /* Adjust size for smaller screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .typing-animation {
+        font-size: 2.5em; /* Adjust font size for desktops */
+        padding: 12px; /* Adjust padding */
+    }
+    .typing-animation .above-text,
+    .typing-animation .below-text {
+        font-size: 0.4em; /* Adjust size for larger screens */
+    }
+}
+
+/* Image-Text Layout Styles */
 .image-container {
-    display: flex;
-    align-items: center;
-    margin: 40px auto;
-    max-width: 900px; 
-    padding: 20px;
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Use Flexbox layout */
+    align-items: center; /* Center align items */
+    margin: 40px auto; /* Center container */
+    max-width: 900px; /* Set max width */
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add box shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
     perspective: 1000px; /* Create 3D space for parallax effect */
     overflow: hidden; /* Needed for Ken Burns effect */
 }
 
 .image-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transform: translateY(-5px); /* Move up on hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Add larger shadow on hover */
 }
 
 .image-container img {
-    flex: 1;  
-    max-width: 50%;
-    height: auto; 
-    margin: 0 20px; 
+    flex: 1; /* Allow image to grow/shrink */
+    max-width: 50%; /* Set max width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 20px; /* Add horizontal margin */
     transform: translateZ(-100px) scale(1.1); /* Initial transform for parallax effect */
     transition: transform 0.3s ease; /* Smooth transition on hover */
 }
@@ -270,7 +317,7 @@ nav ul li a:hover {
 }
 
 .image-text {
-    flex: 1;   
+    flex: 1; /* Allow text to grow/shrink */
     background: linear-gradient(to bottom right, #f8f8f8, #ffffff); /* Subtle gradient */
     animation: pulseBackground 5s infinite; /* Background pulse animation */
     transition: background-color 0.3s ease; /* Smooth transition for background color change */
@@ -282,55 +329,196 @@ nav ul li a:hover {
 
 .image-text h2 {
     color: #333; /* Darker heading color */
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Add space below heading */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
 }
 
 .image-text p {
-    line-height: 1.6;
+    line-height: 1.6; /* Set line height */
 }
 
 /* Animations */
 @keyframes kenburns {
     0% {
-        transform: scale(1) translate(0, 0);
-        transform-origin: 16% 84%;
+        transform: scale(1) translate(0, 0); /* Initial transform */
+        transform-origin: 16% 84%; /* Set transform origin */
     }
     100% {
-        transform: scale(1.25) translate(-10%, -15%);
-        transform-origin: left top;
+        transform: scale(1.25) translate(-10%, -15%); /* Final transform */
+        transform-origin: left top; /* Set transform origin */
     }
 }
 
 @keyframes pulseBackground {
-    0% { background-color: rgba(255, 255, 255, 0.9); }
-    50% { background-color: rgba(255, 255, 255, 0.95); }
-    100% { background-color: rgba(255, 255, 255, 0.9); }
+    0% { background-color: rgba(255, 255, 255, 0.9); } /* Initial color */
+    50% { background-color: rgba(255, 255, 255, 0.95); } /* Midpoint color */
+    100% { background-color: rgba(255, 255, 255, 0.9); } /* Final color */
 }
 
 /* Flexbox direction adjustments for alternating layout */
 .image-container.left {
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; /* Reverse flex direction */
 }
 
 .image-container.right {
-    flex-direction: row; 
+    flex-direction: row; /* Normal flex direction */
 }
 
-/* Media Queries for Responsive Design */
+/* Responsive Design Adjustments for Image-Text Layout */
 @media (max-width: 768px) {
     .image-container {
-        flex-direction: column;
+        flex-direction: column; /* Stack items vertically */
     }
     .image-container img {
-        height: 200px;
+        height: 200px; /* Adjust image height */
     }
     .image-container::before,
     .image-container::after {
-        display: none;
+        display: none; /* Remove pseudo-elements */
     }
 }
-q
+
+/* Workout Page Specific Styling */
+#workout-page .content-section {
+    padding: 40px 20px; /* Add padding */
+    text-align: center; /* Center text */
+    background-color: #fff; /* Set background color */
+    margin: 20px 0; /* Add vertical margin */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+/* Form Group Styling */
+#workout-page .form-group {
+    margin-bottom: 15px; /* Add space between groups */
+}
+
+#workout-page .form-group label {
+    display: block; /* Display as block */
+    margin-bottom: 5px; /* Add space below label */
+    color: #333; /* Set text color */
+}
+
+#workout-page .form-group input,
+#workout-page .form-group select,
+#workout-page .form-group textarea {
+    width: 100%; /* Set full width */
+    padding: 10px; /* Add padding */
+    border: 2px solid #ccc; /* Set border */
+    border-radius: 5px; /* Add rounded corners */
+    color: #333; /* Set text color */
+}
+
+#workout-page .form-group textarea {
+    resize: vertical; /* Allow vertical resize */
+}
+
+#workout-page button {
+    padding: 10px 20px; /* Add padding */
+    background-color: #e96c36; /* Set background color */
+    color: white; /* Set text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+#workout-page button:hover {
+    background-color: #d85a29; /* Change background color on hover */
+}
+
+/* Plan Container Styling */
+#workout-page .plan-grid {
+    display: grid; /* Use Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid columns */
+    gap: 20px; /* Add gap between items */
+    justify-content: center; /* Center the items */
+}
+
+/* Plan Item Styling */
+#workout-page .plan-item {
+    background-color: #fff; /* Set background color */
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    text-align: center; /* Center text */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+#workout-page .plan-item:hover {
+    transform: translateY(-5px); /* Move up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Add larger shadow on hover */
+}
+
+#workout-page .plan-item h3 {
+    color: #e96c36; /* Set heading color */
+    margin-bottom: 15px; /* Add space below heading */
+}
+
+#workout-page .plan-item p {
+    margin-bottom: 15px; /* Add space below description */
+}
+
+/* Fixed Image Sizes for Plan Items */
+#workout-page .plan-item img {
+    width: 100%; /* Set full width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensure image covers the space without stretching */
+    border-radius: 10px; /* Add rounded corners */
+    margin-bottom: 15px; /* Add space below image */
+}
+
+/* Center Content Styling */
+.center-content {
+    display: flex; /* Use Flexbox layout */
+    justify-content: center; /* Center content */
+    align-items: center; /* Center align items */
+    flex-direction: column; /* Stack items vertically */
+}
+
+/* Day Boxes Styling */
+#workout-page .days-container {
+    display: flex; /* Use Flexbox layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center content */
+    gap: 10px; /* Add gap between items */
+    margin-top: 15px; /* Add space above container */
+}
+
+#workout-page .day-box {
+    background-color: #f0f0f0; /* Set background color */
+    border: 1px solid #ddd; /* Set border */
+    padding: 10px 15px; /* Add padding */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+    width: calc(33.33% - 10px); /* Set width */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+#workout-page .day-box:hover {
+    background-color: #ddd; /* Change background color on hover */
+}
+
+/* Resistance Training Table Styling */
+#workout-page .resistance-training table {
+    width: 100%; /* Set full width */
+    border-collapse: collapse; /* Collapse borders */
+    margin-top: 20px; /* Add space above table */
+}
+
+#workout-page .resistance-training th,
+#workout-page .resistance-training td {
+    border: 1px solid #ddd; /* Set border */
+    padding: 8px; /* Add padding */
+    text-align: left; /* Align text to the left */
+}
+
+#workout-page .resistance-training th {
+    background-color: #f2f2f2; /* Set background color */
+}
+
 /* Testimonials Section Styling */
 .testimonial-container {
     display: flex; /* Use Flexbox layout */
@@ -366,7 +554,7 @@ q
     color: #666; /* Set text color */
 }
 
-/* Responsive Design Adjustments */
+/* Responsive Design Adjustments for Testimonials */
 @media (max-width: 768px) {
     .testimonial {
         flex-direction: column; /* Stack testimonial content vertically */
@@ -416,72 +604,227 @@ q
     cursor: pointer; /* Change cursor to pointer */
 }
 
-/* Typing Animation */
-@keyframes typing {
-    from { width: 0; } /* Start width */
-    to { width: 100%; } /* End width */
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent; } /* Start and end with transparent */
-    50% { border-color: orange; } /* Blink to orange */
-}
-
-.typing-animation {
+/* Modal Styling Specific to Workout Page */
+#workout-page .modal {
+    display: none; /* Hide by default */
+    position: fixed; /* Fixed position */
+    z-index: 1; /* Sit on top */
+    left: 0; /* Align to left */
+    top: 0; /* Align to top */
     width: 100%; /* Full width */
-    overflow: hidden; /* Hide overflow */
-    white-space: nowrap; /* No wrap */
-    border-right: 0.10em solid orange; /* Blinking cursor */
-    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite; /* Typing animation */
-    font-size: 2em; /* Default font size */
-    padding: 10px; /* Default padding */
-    display: flex; /* Flex layout */
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center children horizontally */
-    text-align: center; /* Center text */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback background color */
+    background-color: rgba(0,0,0,0.4); /* Background color with opacity */
 }
 
-/* Additional styles for the above and below text */
-.typing-animation .above-text,
-.typing-animation .below-text {
-    display: block; /* Ensure full line */
-    font-size: 0.5em; /* Adjust size relative to the main text */
-    margin: 0.2em 0; /* Add some spacing */
+#workout-page .modal-content {
+    background-color: #fefefe; /* Set background color */
+    margin: 15% auto; /* Center vertically and horizontally */
+    padding: 20px; /* Add padding */
+    border: 1px solid #888; /* Add border */
+    width: 80%; /* Set width */
+    border-radius: 10px; /* Add rounded corners */
 }
 
-/* Adjustments for different screen sizes */
+#workout-page .modal-close {
+    color: #aaa; /* Set text color */
+    float: right; /* Float to right */
+    font-size: 28px; /* Set font size */
+    font-weight: bold; /* Set bold text */
+}
+
+#workout-page .modal-close:hover,
+#workout-page .modal-close:focus {
+    color: black; /* Change text color on hover/focus */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Fade-in Animation */
+#workout-page #bmi-result,
+#workout-page #calorie-needs-result {
+    opacity: 0; /* Initial opacity */
+    transform: translateY(20px); /* Initial transform */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transitions */
+}
+
+#workout-page #bmi-result.fade-in-visible,
+#workout-page #calorie-needs-result.fade-in-visible {
+    opacity: 1; /* Final opacity */
+    transform: translateY(0); /* Final transform */
+}
+
+/* Media Queries for Workout Page */
 @media (max-width: 768px) {
-    .typing-animation {
-        font-size: 1.5em; /* Smaller font size for tablets */
-        padding: 8px; /* Adjust padding */
+    #workout-page .days-container .day-box {
+        width: calc(50% - 10px); /* Adjust day-box width for smaller screens */
     }
-    .typing-animation .above-text,
-    .typing-animation .below-text {
-        font-size: 0.6em; /* Adjust size for smaller screens */
+
+    #workout-page .plan-item img {
+        height: 150px; /* Adjust height for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
-    .typing-animation {
-        font-size: 1.2em; /* Smaller font size for mobile phones */
-        padding: 5px; /* Adjust padding */
+    #workout-page .days-container .day-box {
+        width: 100%; /* Adjust day-box width for very small screens */
     }
-    .typing-animation .above-text,
-    .typing-animation .below-text {
-        font-size: 0.7em; /* Adjust size for smaller screens */
+
+    #workout-page .plan-item img {
+        height: 120px; /* Adjust height for very small screens */
     }
 }
 
-@media (min-width: 1024px) {
-    .typing-animation {
-        font-size: 2.5em; /* Larger font size for desktops */
-        padding: 12px; /* Adjust padding */
+/* Scoped Styles */
+#classes-page .nav-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+#classes-page .nav-list li {
+    margin: 0 15px;
+}
+
+#classes-page .nav-list a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Header */
+#classes-page header {
+    text-align: center;
+    background: url('path/to/your-header-background.jpg') no-repeat center center/cover;
+    padding: 100px 20px;
+    color: #fff;
+}
+
+#classes-page .hero-content {
+    max-width: 600px;
+    margin: auto;
+}
+
+#classes-page .typing-animation {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    position: relative;
+    animation: typing 2s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
     }
-    .typing-animation .above-text,
-    .typing-animation .below-text {
-        font-size: 0.4em; /* Adjust size for larger screens */
+    to {
+        width: 100%;
     }
 }
 
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange;
+    }
+}
 
-  
+#classes-page .glow-animation {
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff;
+    }
+}
+
+/* Sections */
+#classes-page .content-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#classes-page h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#classes-page .class-item {
+    margin: 20px 0;
+}
+
+#classes-page .class-item h3 {
+    font-size: 1.8rem;
+    color: #ff00ff;
+}
+
+#classes-page .class-item p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Footer */
+#classes-page .footer-content {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+#classes-page .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/* Modal */
+#classes-page .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#classes-page .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+#classes-page .modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#classes-page .modal-close:hover,
+#classes-page .modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Glow Animation */
+.glow {
+    box-shadow: rgba(72, 135, 202, 0.8) 0 0 90px 33px;
+}

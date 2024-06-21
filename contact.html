@@ -38,13 +38,13 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+   
 </head>
 
 <body class="contact-page">
-    <header>
+    <header class="parallax">
         <nav>
-            <ul class="nav-list">
+            <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="classes.html">Classes</a></li>
                 <li><a href="workout-plans.html">Workout Plans</a></li>
@@ -61,15 +61,17 @@
     <main>
         <section class="content-section intro">
             <h2>Introduction</h2>
+            <p>Welcome to Fitness with Wemyss Workouts. We're here to help you achieve your fitness goals with personalized workout plans and dedicated support.</p>
         </section>
 
         <section class="content-section hb-calculator">
             <h2>Calculate Your Daily Calorie Needs (Harris-Benedict Formula)</h2>
+            <p>This calculator estimates your Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE) using the Harris-Benedict formula. This information can help you understand your calorie needs for weight management.</p>
+
             <form id="harris-benedict-form">
                 <div class="form-group">
                     <label for="hb-gender">Gender:</label>
                     <select id="hb-gender" name="gender" required>
-                        <option value="">Select</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                     </select>
@@ -89,29 +91,28 @@
                 <div class="form-group">
                     <label for="hb-activity">Activity Level:</label>
                     <select id="hb-activity" name="activity" required>
-                        <option value="">Select</option>
                         <option value="1.2">Sedentary (little or no exercise)</option>
                         <option value="1.375">Lightly active (light exercise/sports 1-3 days/week)</option>
                         <option value="1.55">Moderately active (moderate exercise/sports 3-5 days/week)</option>
                         <option value="1.725">Very active (hard exercise/sports 6-7 days a week)</option>
-                        <option value="1.9">Extra active (very hard exercise/sports & physical job or 2x training)
-                        </option>
+                        <option value="1.9">Extra active (very hard exercise/sports & physical job or 2x training)</option>
                     </select>
                 </div>
                 <button type="submit">Calculate</button>
             </form>
-            <div id="calorie-needs-result"></div>
+            <div id="calorie-needs-result"></div> 
         </section>
+
 
 
         <section class="content-section bmi-calculator">
             <h2>Calculate Your Body Mass Index (BMI)</h2>
+            <p>Body Mass Index (BMI) is a common measure of weight-to-height ratio used to assess health risks associated with weight. This calculator will help you determine your BMI and provide additional information.</p>
             <form id="bmi-form">
                 <div class="form-group">
                     <label for="bmi-height">Height:</label>
                     <input type="number" id="bmi-height" name="height" required placeholder="Enter your height">
                     <select id="bmi-height-unit" name="height_unit" required>
-                        <option value="">Select Unit</option>
                         <option value="cm">Centimeters (cm)</option>
                         <option value="meters">Meters (m)</option>
                         <option value="inches">Inches (in)</option>
@@ -121,88 +122,71 @@
                     <label for="bmi-weight">Weight:</label>
                     <input type="number" id="bmi-weight" name="weight" required placeholder="Enter your weight">
                     <select id="bmi-weight-unit" name="weight_unit" required>
-                        <option value="">Select Unit</option>
                         <option value="kg">Kilograms (kg)</option>
                         <option value="lbs">Pounds (lbs)</option>
                     </select>
                 </div>
                 <button type="submit">Calculate BMI</button>
             </form>
-            <div id="bmi-result"></div>
+            <div id="bmi-result"></div> 
         </section>
 
-
-        <section class="contact content-section">
+        <section class="content-section contact">
             <h2>Contact Form</h2>
             <form id="contact-form">
                 <div class="form-group">
-                    <label for="contact-email">Email Address</label>
-                    <input type="email" id="contact-email" name="email" autocomplete="email" required>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="contact-name">Name</label>
-                    <input type="text" id="contact-name" name="name" autocomplete="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="contact-message">Message</label>
-                    <textarea id="contact-message" name="message" autocomplete="off" required></textarea>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit">Send Message</button>
             </form>
         </section>
+
         <section class="additional-contact-info content-section">
             <h2>Additional Contact Information</h2>
             <p><strong>Address:</strong> 123 Fitness St, Workout City, Gym State, 12345</p>
             <p><strong>Phone:</strong> +1 (234) 567-890</p>
-          
-            <div class="map-container"> <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.836058944787!2d144.95605431531663!3d-37.816218979751664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577c121134d1a0!2s123%20Fitness%20St%2C%20Workout%20City%2C%20Gym%20State%2C%2012345!5e0!3m2!1sen!2sau!4v1618380609711!5m2!1sen!2sau"
-                width="100%" /* Changed width to 100% */
-                height="450" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-              </iframe>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.836058944787!2d144.95605431531663!3d-37.816218979751664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577c121134d1a10!2s123%20Fitness%20St%2C%20Workout%20City%2C%20Gym%20State%2C%2012345!5e0!3m2!1sen!2sau!4v1618380609711!5m2!1sen!2sau"
+                    allowfullscreen="" loading="lazy"></iframe>
             </div>
-          </section>
-          
+        </section>
     </main>
 
     <footer>
         <div class="footer-content">
             <p>Fitness with Wemyss Workouts. All rights reserved.</p>
             <div class="social-media">
-                <a href="https://twitter.com/wemyssworkouts" target="_blank" aria-label="Twitter"><i
-                        class="fab fa-twitter"></i></a>
-                <a href="https://facebook.com/wemyssworkouts" target="_blank" aria-label="Facebook"><i
-                        class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com/wemyssworkouts" target="_blank" aria-label="Instagram"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/leo-wemyss-356505b1/" target="_blank" aria-label="LinkedIn"><i
-                        class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/wemyssworkouts" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://facebook.com/wemyssworkouts" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/wemyssworkouts" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/leo-wemyss-356505b1/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </footer>
+    
 
-    <!-- Modal Structure for workout plans -->
-    <div class="modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <h2 id="modal-plan-title">Workout Plan Details</h2>
-            <div id="modal-plan-details"></div>
-        </div>
+ <!-- Modal Structure for workout plans -->
+ <div class="modal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h2 id="modal-plan-title">Contact</h2>
+        <div id="modal-plan-details"></div>
     </div>
+</div>
 
-    <!-- Blog Modal -->
-    <div id="blog-modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <div id="blog-content"></div>
-        </div>
-    </div>
 
-    <!-- Link to JavaScript file -->
-    <script src="assets/js/script.js"></script>
+<!-- Link to JavaScript file -->
+<script src="assets/js/script.js"></script>
 </body>
 
 </html>

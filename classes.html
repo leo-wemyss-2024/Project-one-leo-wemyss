@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="classes-page">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitness with Wemyss Workouts</title>
-    <meta name="description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
-    <meta name="keywords" content="fitness, personal trainer, about, Leo Wemyss">
+    <title>Classes - Fitness with Wemyss Workouts</title>
+    <meta name="description" content="Explore the variety of fitness classes offered by Wemyss Workouts.">
+    <meta name="keywords" content="fitness, classes, HIIT, strength, cardio, personal training">
     <meta name="author" content="Leo Wemyss">
 
     <!-- Font Awesome for icons -->
@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap">
 
     <!-- Social Media Metadata -->
-    <meta property="og:title" content="About - Fitness with Wemyss Workouts">
-    <meta property="og:description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
+    <meta property="og:title" content="Classes - Fitness with Wemyss Workouts">
+    <meta property="og:description" content="Explore the variety of fitness classes offered by Wemyss Workouts.">
     <meta property="og:image" content="path/to/your-photo.jpg">
-    <meta property="og:url" content="http://www.yourwebsite.com/about.html">
+    <meta property="og:url" content="http://www.yourwebsite.com/classes.html">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About - Fitness with Wemyss Workouts">
-    <meta name="twitter:description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
+    <meta name="twitter:title" content="Classes - Fitness with Wemyss Workouts">
+    <meta name="twitter:description" content="Explore the variety of fitness classes offered by Wemyss Workouts.">
     <meta name="twitter:image" content="path/to/your-photo.jpg">
 
     <!-- Link to CSS file -->
@@ -35,6 +35,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXXX-X');
+    </script>
 </head>
 
 <body>
@@ -49,19 +57,19 @@
             </ul>
         </nav>
         <div class="hero-content">
-            <h1 class="typing-animation">
+            <h1 class="typing-animation glow">
                 <span class="above-text">Explore</span>
                 Our Fitness Classes
                 <span class="below-text">Join Us Today!</span>
             </h1>
-            <p>Join our variety of classes to stay fit and healthy.</p>
+            <p class="glow-animation">Join our variety of classes to stay fit and healthy.</p>
         </div>
     </header>
 
     <main>
-        <section class="classes content-section">
+        <section class="content-section">
             <h2>Available Classes</h2>
-            <div class="class-item">
+            <div class="class-item glow">
                 <h3>HIIT Training</h3>
                 <p>High-Intensity Interval Training to boost your cardiovascular fitness.</p>
             </div>
@@ -84,41 +92,31 @@
         </section>
 
         <!-- Video Section -->
-        <section class="videos content-section">
+        <section class="content-section">
             <h2>Watch Our Fitness Videos</h2>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Fitness Video 1" style="border:0;" allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" title="Fitness Video 2" style="border:0;" allowfullscreen></iframe>
+                <iframe src="assets/videos/cardio video St Mullins .mp4" title="Fitness Video 1" style="border:0;" allowfullscreen></iframe>
+                <iframe src="assets/videos/Mixed Circuit St Mullins .mp4" title="Fitness Video 2" style="border:0;" allowfullscreen></iframe>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>Fitness with Wemyss Workouts. All rights reserved.</p>
-            <div class="social-media">
-                <a href="https://twitter.com/wemyssworkouts" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://facebook.com/wemyssworkouts" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com/wemyssworkouts" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/leo-wemyss-356505b1/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            </div>
+    <footer class="footer-content">
+        <p>Fitness with Wemyss Workouts. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://twitter.com/wemyssworkouts" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://facebook.com/wemyssworkouts" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/wemyssworkouts" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/leo-wemyss-356505b1/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
     </footer>
 
-     <!-- Modal Structure for workout plans -->
-     <div class="modal">
+    <!-- Modal Structure for workout plans -->
+    <div class="modal">
         <div class="modal-content">
             <span class="modal-close">&times;</span>
             <h2 id="modal-plan-title">Workout Plan Details</h2>
             <div id="modal-plan-details"></div>
-        </div>
-    </div>
-
-    <!-- Blog Modal -->
-    <div id="blog-modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <div id="blog-content"></div>
         </div>
     </div>
 
