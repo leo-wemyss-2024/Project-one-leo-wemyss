@@ -715,6 +715,29 @@ nav ul li a:hover {
     animation: typing 2s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
+.about-item {
+    margin-bottom: 40px;
+}
+
+.about-item h4 {
+    font-size: 1.5em;
+    color: #e96c36;
+    margin-bottom: 10px;
+}
+
+.about-item p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.about-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 @keyframes typing {
     from {
         width: 0;
