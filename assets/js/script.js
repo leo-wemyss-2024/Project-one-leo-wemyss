@@ -1,14 +1,3 @@
-// Function to show the modal with plan details
-function displayPlanModal(planName, planDetails) {
-    const modal = document.getElementById('planModal');
-    modal.style.display = "block"; // Show the modal
-
-    const modalTitle = modal.querySelector('#modal-plan-title');
-    modalTitle.textContent = planName;
-    const modalDetails = modal.querySelector('#modal-plan-details');
-    modalDetails.innerHTML = planDetails;
-}
-
 document.addEventListener("DOMContentLoaded", function () {
     'use strict';
 
@@ -150,6 +139,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const weight = parseInt(document.getElementById('hb-weight').value);
             const activity = parseFloat(document.getElementById('hb-activity').value);
 
+            console.log('Gender:', gender, 'Age:', age, 'Height:', height, 'Weight:', weight, 'Activity:', activity);
+
             let bmr;
             if (gender === 'male') {
                 bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
@@ -158,7 +149,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             const tdee = bmr * activity;
-            hbResult.textContent = `Your daily calorie needs: ${Math.round(tdee)} calories`;
+            console.log('BMR:', bmr, 'TDEE:', tdee);
+
+            hbResult.querySelector('#hb-result-text').textContent = `Your daily calorie needs: ${Math.round(tdee)} calories`;
         });
     }
 
@@ -176,6 +169,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const height = parseFloat(heightInput.value);
             const weight = parseFloat(weightInput.value);
+
+            console.log('Height:', height, 'Weight:', weight, 'Height Unit:', heightUnit, 'Weight Unit:', weightUnit);
 
             if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
                 alert('Please enter valid height and weight values.');
@@ -195,7 +190,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-            bmiResult.textContent = `Your BMI is: ${bmi.toFixed(2)}`;
+            console.log('BMI:', bmi);
+
+            bmiResult.querySelector('#bmi-result-text').textContent = `Your BMI is: ${bmi.toFixed(2)}`;
         });
     }
 });

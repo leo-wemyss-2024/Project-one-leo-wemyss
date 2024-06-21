@@ -7,16 +7,13 @@
     <meta name="description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
     <meta name="keywords" content="fitness, personal trainer, about, Leo Wemyss">
     <meta name="author" content="Leo Wemyss">
-
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap">
-    <!-- Link to CSS file -->
     <link rel="stylesheet" href="assets/style.css">
     <script src="assets/js/script.js" defer></script>
 </head>
 <body class="contact-page">
+
     <header class="parallax">
         <nav>
             <ul class="nav-list">
@@ -33,7 +30,7 @@
         </div>
     </header>
 
-    <main>
+    <main class="container">
         <section class="content-section intro">
             <h2>Introduction</h2>
             <p>Welcome to Fitness with Wemyss Workouts. We're here to help you achieve your fitness goals with personalized workout plans and dedicated support.</p>
@@ -74,7 +71,7 @@
                 </div>
                 <button type="submit">Calculate</button>
             </form>
-            <div id="calorie-needs-result"></div> 
+            <div id="calorie-needs-result"></div>
         </section>
 
         <section class="content-section bmi-calculator">
@@ -100,7 +97,7 @@
                 </div>
                 <button type="submit">Calculate BMI</button>
             </form>
-            <div id="bmi-result"></div> 
+            <div id="bmi-result"></div>
         </section>
 
         <section class="content-section contact">
@@ -108,15 +105,15 @@
             <form id="contact-form">
                 <div class="form-group">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" autocomplete="name" required> 
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
                 </div>
                 <div class="form-group">
                     <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
+                    <textarea id="message" name="message" autocomplete="off" required></textarea>
                 </div>
                 <button type="submit">Send Message</button>
             </form>
@@ -127,23 +124,21 @@
             <p><strong>Address:</strong> 123 Fitness St, Workout City, Gym State, 12345</p>
             <p><strong>Phone:</strong> +1 (234) 567-890</p>
             <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.836058944787!2d144.95605431531663!3d-37.816218979751664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577c121134d1a10!2s123%20Fitness%20St%2C%20Workout%20City%2C%20Gym%20State%2C%2012345!5e0!3m2!1sen!2sau!4v1618380609711!5m2!1sen!2sau"
-                    allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.836058944787!2d144.95605431531663!3d-37.816218979751664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577c121134d1a10!2s123%20Fitness%20St%2C%20Workout%20City%20Gym%20State%2012345!5e0!3m2!1sen!2sau!4v1618380609711!5m2!1sen!2sau"
+                        allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>Fitness with Wemyss Workouts. All rights reserved.</p>
-            <div class="social-media">
-                <a href="https://twitter.com/wemyssworkouts" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://facebook.com/wemyssworkouts" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com/wemyssworkouts" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/leo-wemyss-356505b1/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            </div>
+    <footer class="footer-content">
+        <p>Fitness with Wemyss Workouts. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://twitter.com/wemyssworkouts" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://facebook.com/wemyssworkouts" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/wemyssworkouts" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/leo-wemyss-356505b1/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
     </footer>
+
 </body>
 </html>
