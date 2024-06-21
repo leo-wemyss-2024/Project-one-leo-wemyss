@@ -740,10 +740,10 @@ nav ul li a:hover {
 
 @keyframes glow {
     from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
+        text-shadow: 0 0 10px #fff, 0 0 20px #e8c34b, 0 0 30px #e8c34b, 0 0 40px #e8c34b, 0 0 50px #e8c34b, 0 0 60px #e8c34b, 0 0 70px #e8c34b;
     }
     to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff;
+        text-shadow: 0 0 20px #fff, 0 0 30px #e8c34b, 0 0 40px #e8c34b, 0 0 50px #e8c34b, 0 0 60px #e8c34b, 0 0 70px #e8c34b, 0 0 80px #e8c34b;
     }
 }
 
@@ -764,7 +764,7 @@ nav ul li a:hover {
 
 #classes-page .class-item h3 {
     font-size: 1.8rem;
-    color: #ff00ff;
+    color: #e8c34b;
 }
 
 #classes-page .class-item p {

@@ -1,32 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="classes-page">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness with Wemyss Workouts</title>
-    <meta name="description"
-        content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
+    <meta name="description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
     <meta name="keywords" content="fitness, personal trainer, about, Leo Wemyss">
     <meta name="author" content="Leo Wemyss">
 
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap">
 
     <!-- Social Media Metadata -->
     <meta property="og:title" content="About - Fitness with Wemyss Workouts">
-    <meta property="og:description"
-        content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
+    <meta property="og:description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
     <meta property="og:image" content="path/to/your-photo.jpg">
     <meta property="og:url" content="http://www.yourwebsite.com/about.html">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="About - Fitness with Wemyss Workouts">
-    <meta name="twitter:description"
-        content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
+    <meta name="twitter:description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
     <meta name="twitter:image" content="path/to/your-photo.jpg">
 
     <!-- Link to CSS file -->
@@ -38,10 +34,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+</head>
 
-    <!-- Header section with a parallax effect -->
+<body>
     <header class="parallax">
-        <!-- Navigation menu -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -51,27 +47,22 @@
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
-        <!-- Hero content with a typing animation effect -->
         <div class="hero-content">
-            <h1 class="typing-animation">Customized Workout Plans</h1>
+            <h1 class="typing-animation">Customised Workout Plans</h1>
             <p>Achieve your fitness goals with our personalized workout plans.</p>
             <a href="#plans" class="cta-button">Explore Plans</a>
         </div>
     </header>
 
-    <!-- Main content area with ID for styling -->
     <main id="workout-page">
-        <!-- Section for displaying workout plans -->
         <section id="plans" class="plans content-section">
             <h2>Workout Plans</h2>
             <div class="plan-grid">
-                <!-- Beginner workout plan -->
                 <div class="plan-item">
                     <img src="assets/images/Beginners Plan.jpg" alt="Beginner Plan">
                     <h3>Beginner Plan</h3>
                     <p>This plan is perfect for those who are new to fitness and want to build a strong foundation.</p>
                     <div class="days-container">
-                        <!-- Day boxes to display daily plans in a modal -->
                         <div class="day-box" onclick="showModal('Day 1 (Beginner)')">Day 1 (Beginner)</div>
                         <div class="day-box" onclick="showModal('Day 2 (Beginner)')">Day 2 (Beginner)</div>
                         <div class="day-box" onclick="showModal('Day 3 (Beginner)')">Day 3 (Beginner)</div>
@@ -81,7 +72,6 @@
                         <div class="day-box" onclick="showModal('Day 7 (Beginner)')">Day 7 (Beginner)</div>
                     </div>
                 </div>
-                <!-- Intermediate workout plan -->
                 <div class="plan-item">
                     <img src="assets/images/intermediate trainig group.JPG" alt="Intermediate Plan">
                     <h3>Intermediate Plan</h3>
@@ -98,7 +88,6 @@
                 </div>
             </div>
             <div class="plan-grid centered-plan">
-                <!-- Advanced workout plan -->
                 <div class="plan-item">
                     <img src="assets/images/advance training.JPG" alt="Advanced Plan">
                     <h3>Advanced Plan</h3>
@@ -115,7 +104,6 @@
                 </div>
             </div>
             <div class="plan-grid">
-                <!-- Nutrition advice plan -->
                 <div class="plan-item">
                     <img src="assets/images/trout_dinner.jpg" alt="Nutrition Advice">
                     <h3>Nutrition Advice</h3>
@@ -129,7 +117,6 @@
                         <div class="day-box" onclick="showModal('Nutrition Week 6')">Week 6</div>
                     </div>
                 </div>
-                <!-- Rest and recovery plan -->
                 <div class="plan-item">
                     <img src="assets/images/stones-2778123_1280.jpg" alt="Rest and Recovery">
                     <h3>Rest and Recovery</h3>
@@ -145,80 +132,90 @@
                 </div>
             </div>
             <div class="plan-grid centered-plan">
-                <!-- Strength training plan -->
                 <div class="plan-item resistance-training">
                     <img src="assets/images/victor-freitas-vqDAUejnwKw-unsplash.jpg" alt="Strength Training">
                     <h3>Strength Training</h3>
                     <p>Enhance your strength with our comprehensive strength training program.</p>
                     <div class="resistance-training-container">
-                        <!-- Example exercise details in a table -->
                         <div class="resistance-training-exercise">
                             <h4>Exercise 1: Squats</h4>
                             <table>
-                                <tr>
-                                    <th>Exercise</th>
-                                    <th>Sets</th>
-                                    <th>Reps</th>
-                                    <th>Weight</th>
-                                    <th>Tempo</th>
-                                    <th>Rest</th>
-                                    <th>Remarks</th>
-                                </tr>
-                                <tr>
-                                    <td>Squats</td>
-                                    <td>3</td>
-                                    <td>12</td>
-                                    <td>Bodyweight</td>
-                                    <td>2-1-2</td>
-                                    <td>60s</td>
-                                    <td>Focus on form</td>
-                                </tr>
+                                <thead>
+                                    <tr>
+                                        <th>Exercise</th>
+                                        <th>Sets</th>
+                                        <th>Reps</th>
+                                        <th>Weight</th>
+                                        <th>Tempo</th>
+                                        <th>Rest</th>
+                                        <th>Remarks</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Squats</td>
+                                        <td>3</td>
+                                        <td>12</td>
+                                        <td>Bodyweight</td>
+                                        <td>2-1-2</td>
+                                        <td>60s</td>
+                                        <td>Focus on form</td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
                         <div class="resistance-training-exercise">
                             <h4>Exercise 2: Deadlifts</h4>
                             <table>
-                                <tr>
-                                    <th>Exercise</th>
-                                    <th>Sets</th>
-                                    <th>Reps</th>
-                                    <th>Weight</th>
-                                    <th>Tempo</th>
-                                    <th>Rest</th>
-                                    <th>Remarks</th>
-                                </tr>
-                                <tr>
-                                    <td>Deadlifts</td>
-                                    <td>3</td>
-                                    <td>10</td>
-                                    <td>50kg</td>
-                                    <td>3-1-3</td>
-                                    <td>90s</td>
-                                    <td>Keep back straight</td>
-                                </tr>
+                                <thead>
+                                    <tr>
+                                        <th>Exercise</th>
+                                        <th>Sets</th>
+                                        <th>Reps</th>
+                                        <th>Weight</th>
+                                        <th>Tempo</th>
+                                        <th>Rest</th>
+                                        <th>Remarks</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Deadlifts</td>
+                                        <td>3</td>
+                                        <td>10</td>
+                                        <td>50kg</td>
+                                        <td>3-1-3</td>
+                                        <td>90s</td>
+                                        <td>Keep back straight</td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
                         <div class="resistance-training-exercise">
                             <h4>Exercise 3: Bench Press</h4>
                             <table>
-                                <tr>
-                                    <th>Exercise</th>
-                                    <th>Sets</th>
-                                    <th>Reps</th>
-                                    <th>Weight</th>
-                                    <th>Tempo</th>
-                                    <th>Rest</th>
-                                    <th>Remarks</th>
-                                </tr>
-                                <tr>
-                                    <td>Bench Press</td>
-                                    <td>3</td>
-                                    <td>8</td>
-                                    <td>40kg</td>
-                                    <td>2-1-2</td>
-                                    <td>60s</td>
-                                    <td>Control the weight</td>
-                                </tr>
+                                <thead>
+                                    <tr>
+                                        <th>Exercise</th>
+                                        <th>Sets</th>
+                                        <th>Reps</th>
+                                        <th>Weight</th>
+                                        <th>Tempo</th>
+                                        <th>Rest</th>
+                                        <th>Remarks</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Bench Press</td>
+                                        <td>3</td>
+                                        <td>8</td>
+                                        <td>40kg</td>
+                                        <td>2-1-2</td>
+                                        <td>60s</td>
+                                        <td>Control the weight</td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
                     </div>
@@ -227,24 +224,16 @@
         </section>
     </main>
 
-    <!-- Footer section with social media links -->
-    <footer>
-        <div class="footer-content">
-            <p>Fitness with Wemyss Workouts. All rights reserved.</p>
-            <div class="social-media">
-                <a href="https://twitter.com/wemyssworkouts" target="_blank" aria-label="Twitter"><i
-                        class="fab fa-twitter"></i></a>
-                <a href="https://facebook.com/wemyssworkouts" target="_blank" aria-label="Facebook"><i
-                        class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com/wemyssworkouts" target="_blank" aria-label="Instagram"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/leo-wemyss-356505b1/" target="_blank" aria-label="LinkedIn"><i
-                        class="fab fa-linkedin"></i></a>
-            </div>
+    <footer class="footer-content">
+        <p>Fitness with Wemyss Workouts. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://twitter.com/wemyssworkouts" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://facebook.com/wemyssworkouts" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/wemyssworkouts" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/leo-wemyss-356505b1/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
     </footer>
 
-    <!-- Modal structure for displaying plan details -->
     <div id="planModal" class="modal">
         <div class="modal-content">
             <span class="modal-close">&times;</span>
@@ -255,6 +244,6 @@
 
     <!-- Link to JavaScript file -->
     <script src="assets/js/script.js"></script>
-    </body>
+</body>
 
 </html>
