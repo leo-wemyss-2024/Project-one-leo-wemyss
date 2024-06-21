@@ -698,7 +698,7 @@ nav ul li a:hover {
 /* Header */
 #classes-page header {
     text-align: center;
-    background: url('path/to/your-header-background.jpg') no-repeat center center/cover;
+    background: url('/assets/images/military\ combat\ workout.jpg') no-repeat center center/cover;
     padding: 100px 20px;
     color: #fff;
 }
@@ -824,7 +824,3 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-/* Glow Animation */
-.glow {
-    box-shadow: rgba(72, 135, 202, 0.8) 0 0 90px 33px;
-}
