@@ -111,6 +111,18 @@ nav ul li a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
 }
 
+/* Chart Container Styling */
+.chart-container {
+    max-width: 600px; /* Set max width */
+    margin: 0 auto; /* Center container */
+    padding: 20px; /* Add padding */
+}
+
+.chart-container canvas {
+    width: 100% !important; /* Force canvas to be full width */
+    height: auto !important; /* Maintain aspect ratio */
+}
+
 /* Form Group Styling */
 .form-group {
     margin-bottom: 15px; /* Add space between groups */
@@ -678,172 +690,153 @@ nav ul li a:hover {
 
 /* Scoped Styles */
 #classes-page .nav-list {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #333;
+    list-style-type: none; /* Remove list bullets */
+    padding: 0; /* Remove padding */
+    display: flex; /* Use Flexbox layout */
+    justify-content: center; /* Center items */
+    background-color: #333; /* Set background color */
 }
 
 #classes-page .nav-list li {
-    margin: 0 15px;
+    margin: 0 15px; /* Add horizontal margin */
 }
 
 #classes-page .nav-list a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
+    color: #fff; /* Set text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Set font size */
 }
 
 /* Header */
 #classes-page header {
-    text-align: center;
-    background: url('/assets/images/military\ combat\ workout.jpg') no-repeat center center/cover;
-    padding: 100px 20px;
-    color: #fff;
+    text-align: center; /* Center text */
+    background: url('/assets/images/military combat workout.jpg') no-repeat center center/cover; /* Set background image */
+    padding: 100px 20px; /* Add padding */
+    color: #fff; /* Set text color */
 }
 
 #classes-page .hero-content {
-    max-width: 600px;
-    margin: auto;
+    max-width: 600px; /* Set max width */
+    margin: auto; /* Center container */
 }
 
 #classes-page .typing-animation {
-    font-family: 'Oswald', sans-serif;
-    font-size: 3rem;
-    position: relative;
-    animation: typing 2s steps(30, end), blink-caret 0.5s step-end infinite;
+    font-family: 'Oswald', sans-serif; /* Set font family */
+    font-size: 3rem; /* Set font size */
+    position: relative; /* Position relative */
+    animation: typing 2s steps(30, end), blink-caret 0.5s step-end infinite; /* Typing animation */
 }
 
 .about-item {
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* Add margin below */
 }
 
 .about-item h4 {
-    font-size: 1.5em;
-    color: #e96c36;
-    margin-bottom: 10px;
+    font-size: 1.5em; /* Set font size */
+    color: #e96c36; /* Set text color */
+    margin-bottom: 10px; /* Add space below */
 }
 
 .about-item p {
-    font-size: 1.1em;
-    color: #666;
-    margin-bottom: 20px;
+    font-size: 1.1em; /* Set font size */
+    color: #666; /* Set text color */
+    margin-bottom: 20px; /* Add space below */
 }
 
 .about-img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
 }
 
 @keyframes typing {
     from {
-        width: 0;
+        width: 0; /* Start with 0 width */
     }
     to {
-        width: 100%;
+        width: 100%; /* Expand to full width */
     }
 }
 
 @keyframes blink-caret {
     from,
     to {
-        border-color: transparent;
+        border-color: transparent; /* Transparent border */
     }
     50% {
-        border-color: orange;
+        border-color: orange; /* Orange border at 50% */
     }
 }
 
 #classes-page .glow-animation {
-    animation: glow 1.5s infinite alternate;
+    animation: glow 1.5s infinite alternate; /* Glow animation */
 }
 
 @keyframes glow {
     from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #e8c34b, 0 0 30px #e8c34b, 0 0 40px #e8c34b, 0 0 50px #e8c34b, 0 0 60px #e8c34b, 0 0 70px #e8c34b;
+        text-shadow: 0 0 10px #fff, 0 0 20px #e8c34b, 0 0 30px #e8c34b, 0 0 40px #e8c34b, 0 0 50px #e8c34b, 0 0 60px #e8c34b, 0 0 70px #e8c34b; /* Initial glow */
     }
     to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #e8c34b, 0 0 40px #e8c34b, 0 0 50px #e8c34b, 0 0 60px #e8c34b, 0 0 70px #e8c34b, 0 0 80px #e8c34b;
+        text-shadow: 0 0 20px #fff, 0 0 30px #e8c34b, 0 0 40px #e8c34b, 0 0 50px #e8c34b, 0 0 60px #e8c34b, 0 0 70px #e8c34b, 0 0 80px #e8c34b; /* Final glow */
     }
 }
 
 /* Sections */
 #classes-page .content-section {
-    padding: 50px 20px;
-    text-align: center;
+    padding: 50px 20px; /* Add padding */
+    text-align: center; /* Center text */
 }
 
 #classes-page h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem; /* Set font size */
+    margin-bottom: 20px; /* Add space below */
 }
 
 #classes-page .class-item {
-    margin: 20px 0;
+    margin: 20px 0; /* Add vertical margin */
 }
 
 #classes-page .class-item h3 {
-    font-size: 1.8rem;
-    color: #e8c34b;
+    font-size: 1.8rem; /* Set font size */
+    color: #e8c34b; /* Set text color */
 }
 
 #classes-page .class-item p {
-    font-size: 1.2rem;
-    color: #666;
+    font-size: 1.2rem; /* Set font size */
+    color: #666; /* Set text color */
 }
 
 /* Footer */
 #classes-page .footer-content {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
+    background-color: #333; /* Set background color */
+    color: #fff; /* Set text color */
+    text-align: center; /* Center text */
+    padding: 20px; /* Add padding */
 }
 
 #classes-page .social-media a {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 1.5rem;
-    text-decoration: none;
+    color: #fff; /* Set text color */
+    margin: 0 10px; /* Add horizontal margin */
+    font-size: 1.5rem; /* Set font size */
+    text-decoration: none; /* Remove underline */
 }
 
 /* Modal */
 #classes-page .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    display: none; /* Hide by default */
+    position: fixed; /* Fixed position */
+    z-index: 1; /* Sit on top */
+    left: 0; /* Align to left */
+    top: 0; /* Align to top */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Background color with opacity */
 }
 
 #classes-page .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-#classes-page .modal-close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-#classes-page .modal-close:hover,
-#classes-page .modal-close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
+    background-color: #fefefe; /* Set background color */
+    margin: 15% auto; /* Center vertically and horizontally */
+    padding: 20px; /* Add padding */
+    border: 1px solid #888; /* Add border */
