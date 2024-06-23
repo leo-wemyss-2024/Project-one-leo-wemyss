@@ -31,8 +31,8 @@
 
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="assets/style.css">
-     <!-- Link to JavaScript file -->
-        <script src="assets/js/script.js"></script>
+    <!-- Link to JavaScript file -->
+    <script src="assets/js/script.js" defer></script>
 
     <!-- Favicon Links -->
     <link rel="icon" sizes="192x192" href="assets/favicon_io/android-chrome-192x192.png">
@@ -40,7 +40,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
-   
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-X"></script>
@@ -80,28 +79,28 @@
         <!-- Intro Section -->
         <section class="content-section intro">
             <div class="image-container left">
-                <img src="assets/images/female deadlift personl training .jpg" alt="Fitness Image 1">
+                <img src="assets/images/female deadlift personl training .jpg" alt="Personalized Training">
                 <div class="image-text">
                     <h2>Personalized Training</h2>
-                    <p>Get tailored workout plans to meet your fitness goals.</p>
+                    <p>Your Fitness Goals: What are you primarily aiming for?.</p>
                 </div>
             </div>
             <div class="image-container right">
-                <img src="assets/images/Thomastown group exercise .gif" alt="Fitness Image 2">
+                <img src="assets/images/Thomastown group exercise .gif" alt="Group Classes">
                 <div class="image-text">
                     <h2>Group Classes</h2>
                     <p>Join our motivating group classes for a fun workout.</p>
                 </div>
             </div>
             <div class="image-container left">
-                <img src="assets/images/thomastown flexability.jpg" alt="Fitness Image 3">
+                <img src="assets/images/thomastown flexability.jpg" alt="Flexibility Training">
                 <div class="image-text">
                     <h2>Flexibility Training</h2>
                     <p>Enhance your flexibility with targeted training sessions.</p>
                 </div>
             </div>
             <div class="image-container right">
-                <img src="assets/images/strong man competiton.jpg" alt="Fitness Image 4">
+                <img src="assets/images/strong man competiton.jpg" alt="Strength Training">
                 <div class="image-text">
                     <h2>Strength Training</h2>
                     <p>Build your strength with our specialized programs.</p>
@@ -109,26 +108,27 @@
             </div>
         </section>
 
-<!-- Testimonials Section -->
-<section class="content-section testimonials" id="testimonials">
-    <h2>Client Testimonials</h2>
-    <div class="testimonial-container">
-        <div class="testimonial">
-            <img src="assets/images/Personal traning.jpeg" alt="Annie Mcdonald" class="testimonial-image">
-            <div class="testimonial-text">
-                <p>"After working with Leo for 3 months, I lost 15 pounds and gained so much confidence. His
-                    personalized approach and constant motivation are what made the difference!" - Annie mcdonald (**5
-                    stars**)</p>
+        <!-- Testimonials Section -->
+        <section class="content-section testimonials" id="testimonials">
+            <h2>Client Testimonials</h2>
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <img src="assets/images/Personal traning.jpeg" alt="Annie Mcdonald" class="testimonial-image">
+                    <div class="testimonial-text">
+                        <p>"After working with Leo for 3 months, I lost 15 pounds and gained so much confidence. His
+                            personalized approach and constant motivation are what made the difference!" - Annie Mcdonald (**5
+                            stars**)</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <img src="assets/images/strength-men.jpg" alt="Patrick O keeffe" class="testimonial-image">
+                    <div class="testimonial-text">
+                        <p>"Leo's strength training classes are the perfect way to challenge myself and achieve a great workout.
+                            I've seen a significant improvement in my overall strength and muscle tone." - Patrick O keeffe (**4.5
+                            stars**)</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="testimonial">
-            <img src="assets/images/strength-men.jpg" alt="Patrick O keeffe" class="testimonial-image">
-            <div class="testimonial-text">
-                <p>"Leo's strength training classes are the perfect way to challenge myself and achieve a great workout.
-                    I've seen a significant improvement in my overall strength and muscle tone." - Patrick O keeffe (**4.5
-                    stars**)</p>
-            </div>
-        </div>
         </section>
 
         <!-- Blog Section -->
@@ -159,14 +159,87 @@
             </div>
         </div>
     </footer>
-    
 
-    <div id="blog-modal" class="modal">
+    <!-- Blog Modal -->
+    <div id="blog-modal" class="modal" aria-hidden="true">
         <div class="modal-content">
             <span class="modal-close">&times;</span>
-            <h2 id="modalTitle">Blog Title</h2>
-            <div id="modalContent">Blog content...</div>
+            <h2 id="modalTitle"></h2>
+            <div id="modalContent"></div>
         </div>
     </div>
+
+    <script>
+        // Blog posts data
+        const blogPosts = [
+            {
+                title: '5 Tips to Improve Your Cardio',
+                content: `
+                    <p>Learn the best techniques to boost your cardiovascular fitness...</p>
+                    <h3>HIIT It Up</h3>
+                    <p>High-Intensity Interval Training (HIIT) is your secret weapon for maximizing results in minimal time...</p>
+                    <h3>Embrace Variety</h3>
+                    <p>Ditch the treadmill boredom! Explore a variety of cardio exercises...</p>
+                    <h3>Fuel Your Fire</h3>
+                    <p>Discover the best pre- and post-workout nutrition strategies to fuel your cardio sessions and optimize recovery...</p>
+                    <h3>Listen to Your Body</h3>
+                    <p>Learn how to monitor your heart rate and other key metrics to gauge your effort and avoid overtraining...</p>
+                    <h3>Progress Gradually</h3>
+                    <p>Don't rush into intense workouts. Start with manageable goals and gradually increase the duration and intensity over time...</p>
+                `
+            },
+            {
+                title: 'The Benefits of Strength Training',
+                content: `
+                    <p>Discover why strength training is crucial for your overall health...</p>
+                    <h3>Burn Fat, Build Muscle</h3>
+                    <p>Strength training isn't just about gaining muscle. It also fires up your metabolism, helping you shed unwanted fat...</p>
+                    <h3>Boost Bone Health</h3>
+                    <p>Protect yourself from osteoporosis and fractures as you age. Strength training helps build and maintain strong bones...</p>
+                    <h3>Enhance Mood and Energy</h3>
+                    <p>Get a natural mood lift and increased energy levels with regular strength workouts...</p>
+                    <h3>Improve Functional Fitness</h3>
+                    <p>Move with ease and confidence in your everyday life. Strength training enhances your ability to perform daily activities...</p>
+                    <h3>Reduce Chronic Disease Risk</h3>
+                    <p>Strength training has been shown to lower the risk of chronic conditions like heart disease, type 2 diabetes, and some types of cancer...</p>
+                `
+            }
+        ];
+
+        // Function to show the blog modal
+        function showBlogModal(title, content) {
+            const modal = document.getElementById('blog-modal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalContent = document.getElementById('modalContent');
+
+            modalTitle.innerHTML = title;
+            modalContent.innerHTML = content;
+            modal.style.display = "block";
+            modal.setAttribute('aria-hidden', 'false');
+        }
+
+        // Add event listeners to the "Read More" buttons
+        document.querySelectorAll('.read-more').forEach((button, index) => {
+            button.addEventListener('click', () => {
+                showBlogModal(blogPosts[index].title, blogPosts[index].content);
+            });
+        });
+
+        // Close the modal when the user clicks on <span> (x)
+        document.querySelector('.modal-close').addEventListener('click', () => {
+            document.getElementById('blog-modal').style.display = "none";
+            document.getElementById('blog-modal').setAttribute('aria-hidden', 'true');
+        });
+
+        // Close the modal when the user clicks anywhere outside of the modal
+        window.onclick = function (event) {
+            const modal = document.getElementById('blog-modal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+                modal.setAttribute('aria-hidden', 'true');
+            }
+        };
+    </script>
 </body>
+
 </html>

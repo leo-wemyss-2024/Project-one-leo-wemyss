@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap">
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="assets/style.css">
-    <script src="assets/js/script.js" defer></script>
 </head>
 <body>
     <header class="parallax">
@@ -28,19 +27,19 @@
             </ul>
         </nav>
         <div class="hero-content">
-            <h1 class="typing-animation">Customised Workout Plans</h1>
+            <h1 class="typing-animation glow-text">Customized Workout Plans</h1>
             <p>Achieve your fitness goals with our personalized workout plans.</p>
-            <a href="#plans" class="cta-button">Explore Plans</a>
+            <a href="#plans" class="cta-button glow-button">Explore Plans</a>
         </div>
     </header>
 
     <main id="workout-page">
         <section id="plans" class="plans content-section">
-            <h2>Workout Plans</h2>
+            <h2 class="glow-text">Workout Plans</h2>
             <div class="plan-grid">
-                <div class="plan-item">
-                    <img src="assets/images/Beginners Plan.jpg" alt="Beginner Plan">
-                    <h3>Beginner Plan</h3>
+                <div class="plan-item" id="default">
+                    <img src="assets/images/Beginners-Plan.jpg" alt="Beginner Plan">
+                    <h3 class="glow-text">Beginner Plan</h3>
                     <p>This plan is perfect for those who are new to fitness and want to build a strong foundation.</p>
                     <div class="days-container">
                         <div class="day-box" onclick="showModal('Day 1 (Beginner)')">Day 1 (Beginner)</div>
@@ -53,8 +52,8 @@
                     </div>
                 </div>
                 <div class="plan-item">
-                    <img src="assets/images/intermediate trainig group.JPG" alt="Intermediate Plan">
-                    <h3>Intermediate Plan</h3>
+                    <img src="assets/images/intermediate-trainig-group.JPG" alt="Intermediate Plan">
+                    <h3 class="glow-text">Intermediate Plan</h3>
                     <p>Designed for those with some experience, looking to take their fitness to the next level.</p>
                     <div class="days-container">
                         <div class="day-box" onclick="showModal('Day 1 (Intermediate)')">Day 1 (Intermediate)</div>
@@ -69,8 +68,8 @@
             </div>
             <div class="plan-grid centered-plan">
                 <div class="plan-item">
-                    <img src="assets/images/advance training.JPG" alt="Advanced Plan">
-                    <h3>Advanced Plan</h3>
+                    <img src="assets/images/advance-training.JPG" alt="Advanced Plan">
+                    <h3 class="glow-text">Advanced Plan</h3>
                     <p>For seasoned athletes aiming to push their limits and achieve peak performance.</p>
                     <div class="days-container">
                         <div class="day-box" onclick="showModal('Day 1 (Advanced)')">Day 1 (Advanced)</div>
@@ -86,7 +85,7 @@
             <div class="plan-grid">
                 <div class="plan-item">
                     <img src="assets/images/trout_dinner.jpg" alt="Nutrition Advice">
-                    <h3>Nutrition Advice</h3>
+                    <h3 class="glow-text">Nutrition Advice</h3>
                     <p>Get tailored nutrition plans to complement your fitness journey.</p>
                     <div class="days-container">
                         <div class="day-box" onclick="showModal('Nutrition Week 1')">Week 1</div>
@@ -99,7 +98,7 @@
                 </div>
                 <div class="plan-item">
                     <img src="assets/images/stones-2778123_1280.jpg" alt="Rest and Recovery">
-                    <h3>Rest and Recovery</h3>
+                    <h3 class="glow-text">Rest and Recovery</h3>
                     <p>Learn the importance of rest and recovery in your training regimen.</p>
                     <div class="days-container">
                         <div class="day-box" onclick="showModal('Rest Week 1')">Week 1</div>
@@ -111,97 +110,148 @@
                     </div>
                 </div>
             </div>
-            <div class="plan-grid centered-plan">
-                <div class="plan-item resistance-training">
-                    <img src="assets/images/victor-freitas-vqDAUejnwKw-unsplash.jpg" alt="Strength Training">
-                    <h3>Strength Training</h3>
-                    <p>Enhance your strength with our comprehensive strength training program.</p>
-                    <div class="resistance-training-container">
-                        <div class="resistance-training-exercise">
-                            <h4>Exercise 1: Squats</h4>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Exercise</th>
-                                        <th>Sets</th>
-                                        <th>Reps</th>
-                                        <th>Weight</th>
-                                        <th>Tempo</th>
-                                        <th>Rest</th>
-                                        <th>Remarks</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Squats</td>
-                                        <td>3</td>
-                                        <td>12</td>
-                                        <td>Bodyweight</td>
-                                        <td>2-1-2</td>
-                                        <td>60s</td>
-                                        <td>Focus on form</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="resistance-training-exercise">
-                            <h4>Exercise 2: Deadlifts</h4>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Exercise</th>
-                                        <th>Sets</th>
-                                        <th>Reps</th>
-                                        <th>Weight</th>
-                                        <th>Tempo</th>
-                                        <th>Rest</th>
-                                        <th>Remarks</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Deadlifts</td>
-                                        <td>3</td>
-                                        <td>10</td>
-                                        <td>50kg</td>
-                                        <td>3-1-3</td>
-                                        <td>90s</td>
-                                        <td>Keep back straight</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="resistance-training-exercise">
-                            <h4>Exercise 3: Bench Press</h4>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Exercise</th>
-                                        <th>Sets</th>
-                                        <th>Reps</th>
-                                        <th>Weight</th>
-                                        <th>Tempo</th>
-                                        <th>Rest</th>
-                                        <th>Remarks</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Bench Press</td>
-                                        <td>3</td>
-                                        <td>8</td>
-                                        <td>40kg</td>
-                                        <td>2-1-2</td>
-                                        <td>60s</td>
-                                        <td>Control the weight</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+        </section>
+        <div class="center-content">
+            <!-- Strength training plan -->
+            <div class="plan-item resistance-training">
+                <img src="assets/images/victor-freitas-vqDAUejnwKw-unsplash.jpg" alt="Strength Training">
+                <h3 class="glow-text">Strength Training</h3>
+                <p>Enhance your strength with our comprehensive strength training program.</p>
+                <div class="resistance-training-container">
+                    <!-- Example exercise details in a table -->
+                    <div class="resistance-training-exercise">
+                        <h4>Exercise 1: Squats</h4>
+                        <table>
+                            <tr>
+                                <th>Exercise</th>
+                                <th>Sets</th>
+                                <th>Reps</th>
+                                <th>Weight</th>
+                                <th>Tempo</th>
+                                <th>Rest</th>
+                                <th>Remarks</th>
+                            </tr>
+                            <tr>
+                                <td>Squats</td>
+                                <td>3</td>
+                                <td>12</td>
+                                <td>Bodyweight</td>
+                                <td>2-1-2</td>
+                                <td>60s</td>
+                                <td>Focus on form</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="resistance-training-exercise">
+                        <h4>Exercise 2: Deadlifts</h4>
+                        <table>
+                            <tr>
+                                <th>Exercise</th>
+                                <th>Sets</th>
+                                <th>Reps</th>
+                                <th>Weight</th>
+                                <th>Tempo</th>
+                                <th>Rest</th>
+                                <th>Remarks</th>
+                            </tr>
+                            <tr>
+                                <td>Deadlifts</td>
+                                <td>3</td>
+                                <td>10</td>
+                                <td>50kg</td>
+                                <td>3-1-3</td>
+                                <td>90s</td>
+                                <td>Keep back straight</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="resistance-training-exercise">
+                        <h4>Exercise 3: Bench Press</h4>
+                        <table>
+                            <tr>
+                                <th>Exercise</th>
+                                <th>Sets</th>
+                                <th>Reps</th>
+                                <th>Weight</th>
+                                <th>Tempo</th>
+                                <th>Rest</th>
+                                <th>Remarks</th>
+                            </tr>
+                            <tr>
+                                <td>Bench Press</td>
+                                <td>3</td>
+                                <td>8</td>
+                                <td>40kg</td>
+                                <td>2-1-2</td>
+                                <td>60s</td>
+                                <td>Control the weight</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <!-- Cardio training plan -->
+            <div class="plan-item cardio-training">
+                <img src="assets/images/Running-group.JPG" alt="Cardio Training">
+                <h3 class="glow-text">Cardio Training</h3>
+                <p>Boost your endurance and cardiovascular health with our cardio training program.</p>
+                <div class="cardio-training-container">
+                    <!-- Example exercise details in a table -->
+                    <div class="cardio-training-exercise">
+                        <h4>Exercise 1: Running</h4>
+                        <table>
+                            <tr>
+                                <th>Exercise</th>
+                                <th>Duration</th>
+                                <th>Intensity</th>
+                                <th>Remarks</th>
+                            </tr>
+                            <tr>
+                                <td>Running</td>
+                                <td>30 minutes</td>
+                                <td>Moderate</td>
+                                <td>Maintain a steady pace</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="cardio-training-exercise">
+                        <h4>Exercise 2: Cycling</h4>
+                        <table>
+                            <tr>
+                                <th>Exercise</th>
+                                <th>Duration</th>
+                                <th>Intensity</th>
+                                <th>Remarks</th>
+                            </tr>
+                            <tr>
+                                <td>Cycling</td>
+                                <td>45 minutes</td>
+                                <td>High</td>
+                                <td>Alternate between high and low intensity</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="cardio-training-exercise">
+                        <h4>Exercise 3: HIIT</h4>
+                        <table>
+                            <tr>
+                                <th>Exercise</th>
+                                <th>Duration</th>
+                                <th>Intensity</th>
+                                <th>Remarks</th>
+                            </tr>
+                            <tr>
+                                <td>HIIT</td>
+                                <td>20 minutes</td>
+                                <td>High</td>
+                                <td>Short bursts of intense activity</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="footer-content">
@@ -221,5 +271,94 @@
             <p id="modal-plan-details"></p>
         </div>
     </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom Script -->
+    <script>
+        $(document).ready(function () {
+            function resize() {
+                if ($(window).width() < 739) {
+                    $("#default").addClass('classnew').removeClass('classold');
+                } else {
+                    $("#default").addClass('classold').removeClass('classnew');
+                }
+            }
+
+            // Call resize on page load and window resize
+            $(window).on('resize load', resize);
+
+            // Initial call
+            resize();
+
+            // Modal for workout plans and guides
+            const modal = document.getElementById('planModal');
+            const modalClose = modal.querySelector('.modal-close');
+            const modalTitle = document.getElementById('modal-plan-title');
+            const modalDetails = document.getElementById('modal-plan-details');
+
+            window.showModal = function (day) {
+                const planDetails = getPlanDetails(day);
+                modalTitle.textContent = day;
+                modalDetails.innerHTML = planDetails;
+                modal.style.display = 'block';
+                modal.setAttribute('aria-hidden', 'false');
+                modal.setAttribute('role', 'dialog');
+                modal.setAttribute('aria-modal', 'true');
+            };
+
+            modalClose.addEventListener('click', () => {
+                modal.style.display = 'none';
+                modal.setAttribute('aria-hidden', 'true');
+            });
+
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    modal.setAttribute('aria-hidden', 'true');
+                }
+            });
+
+            function getPlanDetails(day) {
+                const details = {
+                    "Day 1 (Beginner)": "Beginner Plan: Day 1<br>Light Cardio - 30 minutes of walking or easy jogging.",
+                    "Day 2 (Beginner)": "Beginner Plan: Day 2<br>Bodyweight Exercises - 20 minutes of exercises like squats, push-ups, and lunges.",
+                    "Day 3 (Beginner)": "Beginner Plan: Day 3<br>Rest day or light stretching.",
+                    "Day 4 (Beginner)": "Beginner Plan: Day 4<br>Light Cardio - 30 minutes of walking or easy jogging.",
+                    "Day 5 (Beginner)": "Beginner Plan: Day 5<br>Bodyweight Exercises - 20 minutes of exercises like squats, push-ups, and lunges.",
+                    "Day 6 (Beginner)": "Beginner Plan: Day 6<br>Rest day or light stretching.",
+                    "Day 7 (Beginner)": "Beginner Plan: Day 7<br>Light Cardio - 30 minutes of walking or easy jogging.",
+                    "Day 1 (Intermediate)": "Intermediate Plan: Day 1<br>Cardio - 45 minutes of running or cycling.",
+                    "Day 2 (Intermediate)": "Intermediate Plan: Day 2<br>Strength Training - Full body workout with weights.",
+                    "Day 3 (Intermediate)": "Intermediate Plan: Day 3<br>Cardio - 45 minutes of running or cycling.",
+                    "Day 4 (Intermediate)": "Intermediate Plan: Day 4<br>Strength Training - Upper body workout with weights.",
+                    "Day 5 (Intermediate)": "Intermediate Plan: Day 5<br>Cardio - 45 minutes of running or cycling.",
+                    "Day 6 (Intermediate)": "Intermediate Plan: Day 6<br>Strength Training - Lower body workout with weights.",
+                    "Day 7 (Intermediate)": "Intermediate Plan: Day 7<br>Rest day or light stretching.",
+                    "Day 1 (Advanced)": "Advanced Plan: Day 1<br>High-Intensity Interval Training (HIIT) - 30 minutes.",
+                    "Day 2 (Advanced)": "Advanced Plan: Day 2<br>Strength Training - Push day (chest, shoulders, triceps).",
+                    "Day 3 (Advanced)": "Advanced Plan: Day 3<br>Cardio - 60 minutes of running or cycling.",
+                    "Day 4 (Advanced)": "Advanced Plan: Day 4<br>Strength Training - Pull day (back, biceps).",
+                    "Day 5 (Advanced)": "Advanced Plan: Day 5<br>High-Intensity Interval Training (HIIT) - 30 minutes.",
+                    "Day 6 (Advanced)": "Advanced Plan: Day 6<br>Strength Training - Leg day.",
+                    "Day 7 (Advanced)": "Advanced Plan: Day 7<br>Rest day or light stretching.",
+                    "Nutrition Week 1": "Nutrition Plan: Week 1<br>Focus on balanced diet with a mix of proteins, carbs, and fats.",
+                    "Nutrition Week 2": "Nutrition Plan: Week 2<br>Increase protein intake to support muscle growth.",
+                    "Nutrition Week 3": "Nutrition Plan: Week 3<br>Incorporate more vegetables and fruits for vitamins and minerals.",
+                    "Nutrition Week 4": "Nutrition Plan: Week 4<br>Monitor portion sizes to manage calorie intake.",
+                    "Nutrition Week 5": "Nutrition Plan: Week 5<br>Stay hydrated - Drink at least 8 cups of water a day.",
+                    "Nutrition Week 6": "Nutrition Plan: Week 6<br>Review and adjust diet based on progress and goals.",
+                    "Rest Week 1": "Rest Plan: Week 1<br>Focus on getting 7-8 hours of sleep each night.",
+                    "Rest Week 2": "Rest Plan: Week 2<br>Incorporate light stretching or yoga to aid recovery.",
+                    "Rest Week 3": "Rest Plan: Week 3<br>Schedule regular rest days to prevent overtraining.",
+                    "Rest Week 4": "Rest Plan: Week 4<br>Listen to your body and rest when needed.",
+                    "Rest Week 5": "Rest Plan: Week 5<br>Maintain a consistent sleep schedule.",
+                    "Rest Week 6": "Rest Plan: Week 6<br>Evaluate your rest and recovery plan and make adjustments."
+                };
+
+                return details[day] || 'No details found for this day.';
+            }
+        });
+    </script>
 </body>
 </html>
