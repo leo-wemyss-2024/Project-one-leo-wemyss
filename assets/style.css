@@ -733,67 +733,222 @@ nav ul li a:hover {
     }
 }
 
-/* Scoped Styles */
-#classes-page .nav-list {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #333;
-}
-
-#classes-page .nav-list li {
-    margin: 0 15px;
-}
-
-#classes-page .nav-list a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-}
-
+/* Scoped Styles for Classes Page */
 #classes-page header {
     text-align: center;
-    background: url('/assets/images/Comemerical-gym-work.jpg') no-repeat center center/cover;
-    padding: 100px 20px;
-    color: #fff;
-}
-
-#classes-page .hero-content {
-    max-width: 600px;
-    margin: auto;
-}
-
-#classes-page .typing-animation {
-    font-family: 'Oswald', sans-serif;
-    font-size: 3rem;
+    background: url('/assets/images/military-combat-workout.jpg') no-repeat center center/cover;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    animation: typing 2s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
-.about-item {
-    margin-bottom: 40px;
+#classes-page header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
 }
 
-.about-item h4 {
-    font-size: 1.5em;
+/* Navigation Styling */
+#classes-page nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+#classes-page nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: rgba(109, 101, 101, 0.7);
+    padding: 10px 0;
+}
+
+#classes-page nav ul li {
+    margin: 0 20px;
+}
+
+#classes-page nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+#classes-page nav ul li a:hover {
+    background: #e96c36;
+}
+
+/* Hero Content Styling */
+#classes-page .hero-content {
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+#classes-page .hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#classes-page .hero-content p {
+    font-size: 1.2em;
+}
+
+/* CTA Button Styling */
+#classes-page .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e96c36;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#classes-page .cta-button:hover {
+    background-color: #d85a29;
+    transform: translateY(-3px);
+}
+
+/* Content Section Styling */
+#classes-page .content-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Class Item Styling */
+#classes-page .class-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#classes-page .class-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#classes-page .class-item h3 {
     color: #e96c36;
     margin-bottom: 10px;
 }
 
-.about-item p {
-    font-size: 1.1em;
+#classes-page .class-item p {
     color: #666;
-    margin-bottom: 20px;
 }
 
-.about-img {
+/* Video Container Styling */
+#classes-page .video-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#classes-page .video-container video {
     width: 100%;
-    height: auto;
+    max-width: 320px; /* Set a fixed max width for consistency */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Ensure videos cover the fixed dimensions */
 }
 
+
+/* Footer Content Styling */
+#classes-page .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    background-color: #333;
+    color: white;
+}
+
+#classes-page .footer-content p {
+    margin: 0;
+}
+
+#classes-page .social-media {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+#classes-page .social-media a {
+    color: white;
+    transition: transform 0.3s, color 0.3s;
+}
+
+#classes-page .social-media a:hover {
+    transform: scale(1.2);
+    color: #e96c36;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    #classes-page nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #classes-page .footer-content {
+        text-align: center;
+    }
+
+    #classes-page .social-media {
+        justify-content: center;
+    }
+
+    #classes-page .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    #classes-page .hero-content p {
+        font-size: 1em;
+    }
+
+    #classes-page .cta-button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #classes-page .hero-content h1 {
+        font-size: 2em;
+    }
+
+    #classes-page .hero-content p {
+        font-size: 0.9em;
+    }
+
+    #classes-page .cta-button {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+}
+
+/* Typing Animation */
 @keyframes typing {
     from {
         width: 0;
@@ -813,10 +968,28 @@ nav ul li a:hover {
     }
 }
 
-#classes-page .glow-animation {
-    animation: glow 1.5s infinite alternate;
+#classes-page .typing-animation {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.10em solid orange;
+    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+    font-size: 2em;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
+#classes-page .typing-animation .above-text,
+#classes-page .typing-animation .below-text {
+    display: block;
+    font-size: 0.5em;
+    margin: 0.2em 0;
+}
+
+/* Glow Animation */
 @keyframes glow {
     from {
         text-shadow: 0 0 10px #fff, 0 0 20px #e8c34b, 0 0 30px #e8c34b, 0 0 40px #e8c34b, 0 0 50px #e8c34b, 0 0 60px #e8c34b, 0 0 70px #e8c34b;
@@ -826,66 +999,8 @@ nav ul li a:hover {
     }
 }
 
-/* Sections */
-#classes-page .content-section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-#classes-page h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-#classes-page .class-item {
-    margin: 20px 0;
-}
-
-#classes-page .class-item h3 {
-    font-size: 1.8rem;
-    color: #e96c36;
-}
-
-#classes-page .class-item p {
-    font-size: 1.2rem;
-    color: #666;
-}
-
-/* Footer */
-#classes-page .footer-content {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-#classes-page .social-media a {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 1.5rem;
-    text-decoration: none;
-}
-
-/* Modal */
-#classes-page .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-#classes-page .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    border-radius: 10px;
+#classes-page .glow-animation {
+    animation: glow 1.5s infinite alternate;
 }
 
 /* Sections with charts and text side by side */
