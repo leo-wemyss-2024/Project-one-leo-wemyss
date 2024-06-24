@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Fitness with Wemyss Workouts</title>
-    <meta name="description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
-    <meta name="keywords" content="fitness, personal trainer, about, Leo Wemyss">
+    <meta name="description" content="Contact Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
+    <meta name="keywords" content="fitness, personal trainer, contact, Leo Wemyss">
     <meta name="author" content="Leo Wemyss">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap">
@@ -36,13 +36,14 @@
                 <div class="form-group">
                     <label for="gender">Gender:</label>
                     <select id="gender" name="gender" required>
+                        <option value="">Select Gender</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="age">Age:</label>
-                    <input type="number" id="age" name="age" required>
+                    <label for="bodyFatAge">Age:</label>
+                    <input type="number" id="bodyFatAge" name="age" required>
                 </div>
                 <div class="form-group">
                     <label for="neck">Neck (cm):</label>
@@ -53,12 +54,12 @@
                     <input type="number" id="abdomen" name="abdomen" required>
                 </div>
                 <div class="form-group">
-                    <label for="waist">Waist (cm):</label>
-                    <input type="number" id="waist" name="waist">
+                    <label for="bodyFatWaist">Waist (cm):</label>
+                    <input type="number" id="bodyFatWaist" name="waist">
                 </div>
                 <div class="form-group">
-                    <label for="hip">Hip (cm):</label>
-                    <input type="number" id="hip" name="hip">
+                    <label for="bodyFatHip">Hip (cm):</label>
+                    <input type="number" id="bodyFatHip" name="hip">
                 </div>
                 <button type="submit">Calculate</button>
             </form>
@@ -81,12 +82,12 @@
             <h2>Waist to Hip Ratio Calculator</h2>
             <form id="waistHipForm">
                 <div class="form-group">
-                    <label for="waist">Waist (cm):</label>
-                    <input type="number" id="waist" name="waist" required>
+                    <label for="waistHipWaist">Waist (cm):</label>
+                    <input type="number" id="waistHipWaist" name="waist" required>
                 </div>
                 <div class="form-group">
-                    <label for="hip">Hip (cm):</label>
-                    <input type="number" id="hip" name="hip" required>
+                    <label for="waistHipHip">Hip (cm):</label>
+                    <input type="number" id="waistHipHip" name="hip" required>
                 </div>
                 <button type="submit">Calculate</button>
             </form>
@@ -110,12 +111,13 @@
             <h2>Protein Requirement Calculator</h2>
             <form id="proteinRequirementForm">
                 <div class="form-group">
-                    <label for="weight">Weight (kg):</label>
-                    <input type="number" id="weight" name="weight" required>
+                    <label for="proteinWeight">Weight (kg):</label>
+                    <input type="number" id="proteinWeight" name="weight" required>
                 </div>
                 <div class="form-group">
-                    <label for="activityLevel">Activity Level:</label>
-                    <select id="activityLevel" name="activityLevel" required>
+                    <label for="proteinActivityLevel">Activity Level:</label>
+                    <select id="proteinActivityLevel" name="activityLevel" required>
+                        <option value="">Select Activity Level</option>
                         <option value="sedentary">Sedentary</option>
                         <option value="moderate">Moderate</option>
                         <option value="active">Active</option>
@@ -142,12 +144,13 @@
             <h2>Water Intake Calculator</h2>
             <form id="waterIntakeForm">
                 <div class="form-group">
-                    <label for="weight">Weight (kg):</label>
+                    <label for="waterWeight">Weight (kg):</label>
                     <input type="number" id="waterWeight" name="weight" required>
                 </div>
                 <div class="form-group">
-                    <label for="activityLevel">Activity Level:</label>
+                    <label for="waterActivityLevel">Activity Level:</label>
                     <select id="waterActivityLevel" name="activityLevel" required>
+                        <option value="">Select Activity Level</option>
                         <option value="sedentary">Sedentary</option>
                         <option value="moderate">Moderate</option>
                         <option value="active">Active</option>
@@ -162,4 +165,232 @@
                 <p>The Water Intake Calculator estimates the amount of water you should drink each day to stay hydrated. Proper hydration is essential for overall health, physical performance, and cognitive function.</p>
                 <p><strong>How to Use:</strong></p>
                 <ul>
-                    <li>Input your weight and
+                    <li>Input your weight and activity level into the calculator.</li>
+                    <li>The calculator will provide an estimate of your daily water needs.</li>
+                    <li>Use this information to ensure you are drinking enough water throughout the day.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Heart Rate Zone Calculator Section -->
+        <section class="content-section with-charts heart-rate-zone-calculator">
+            <h2>Heart Rate Zone Calculator</h2>
+            <form id="heartRateForm">
+                <div class="form-group">
+                    <label for="heartRateAge">Age:</label>
+                    <input type="number" id="heartRateAge" name="age" required>
+                </div>
+                <div class="form-group">
+                    <label for="restingHeartRate">Resting Heart Rate (bpm):</label>
+                    <input type="number" id="restingHeartRate" name="restingHeartRate" required>
+                </div>
+                <button type="submit">Calculate</button>
+            </form>
+            <div class="chart-container">
+                <canvas id="heartRateChart"></canvas>
+            </div>
+            <div class="image-text">
+                <p>This calculator estimates your heart rate zones based on your age and resting heart rate. It uses the Karvonen formula to calculate your target heart rate for different exercise intensities.</p>
+            </div>
+        </section>
+        <section id="disclaimer" class="disclaimer content-section">
+            <h2 class="glow-text">Disclaimer</h2>
+            <p>
+                The workout plans and information provided on this website are for educational and informational purposes only. They are not intended to be a substitute for professional medical advice. Always consult with a qualified healthcare provider before starting any new workout routine or exercise program, especially if you have any underlying health conditions.
+        
+                Wemyss Workouts is not liable for any injuries or health problems that may occur due to following these workout plans. It is essential to listen to your body and stop any exercise if you feel pain. By using this website, you acknowledge and agree to these terms and conditions.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Fitness with Wemyss Workouts. All rights reserved.</p>
+            <div class="social-media">
+                <a href="https://twitter.com/wemyssworkouts" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://facebook.com/wemyssworkouts" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/wemyssworkouts" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/leo-wemyss-356505b1/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Body Fat Calculator
+            const bodyFatForm = document.getElementById('bodyFatForm');
+            const bodyFatChartCanvas = document.getElementById('bodyFatChart');
+            let bodyFatChart;
+
+            bodyFatForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const gender = document.getElementById('gender').value;
+                const age = parseFloat(document.getElementById('bodyFatAge').value);
+                const neck = parseFloat(document.getElementById('neck').value);
+                const abdomen = parseFloat(document.getElementById('abdomen').value);
+                const waist = parseFloat(document.getElementById('bodyFatWaist').value);
+                const hip = parseFloat(document.getElementById('bodyFatHip').value);
+
+                let bodyFatPercentage;
+                if (gender === 'male') {
+                    bodyFatPercentage = 495 / (1.0324 - 0.19077 * Math.log10(abdomen - neck) + 0.15456 * Math.log10(age)) - 450;
+                } else {
+                    bodyFatPercentage = 495 / (1.29579 - 0.35004 * Math.log10(waist + hip - neck) + 0.22100 * Math.log10(age)) - 450;
+                }
+
+                if (bodyFatChart) {
+                    bodyFatChart.destroy();
+                }
+                bodyFatChart = new Chart(bodyFatChartCanvas, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Body Fat', 'Lean Mass'],
+                        datasets: [{
+                            data: [bodyFatPercentage, 100 - bodyFatPercentage],
+                            backgroundColor: ['#FF6384', '#36A2EB']
+                        }]
+                    }
+                });
+            });
+
+            // Waist-to-Hip Ratio Calculator
+            const waistHipForm = document.getElementById('waistHipForm');
+            const waistHipRatioChartCanvas = document.getElementById('waistHipRatioChart');
+            let waistHipRatioChart;
+
+            waistHipForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const waist = parseFloat(document.getElementById('waistHipWaist').value);
+                const hip = parseFloat(document.getElementById('waistHipHip').value);
+                const waistHipRatio = waist / hip;
+
+                if (waistHipRatioChart) {
+                    waistHipRatioChart.destroy();
+                }
+                waistHipRatioChart = new Chart(waistHipRatioChartCanvas, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Waist-to-Hip Ratio'],
+                        datasets: [{
+                            label: 'Your Ratio',
+                            data: [waistHipRatio],
+                            backgroundColor: '#4CAF50'
+                        }]
+                    }
+                });
+            });
+
+            // Protein Requirement Calculator
+            const proteinRequirementForm = document.getElementById('proteinRequirementForm');
+            const proteinRequirementChartCanvas = document.getElementById('proteinRequirementChart');
+            let proteinRequirementChart;
+
+            proteinRequirementForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const weight = parseFloat(document.getElementById('proteinWeight').value);
+                const activityLevel = document.getElementById('proteinActivityLevel').value;
+                let proteinRequirement;
+
+                if (activityLevel === 'sedentary') {
+                    proteinRequirement = 0.8 * weight;
+                } else if (activityLevel === 'moderate') {
+                    proteinRequirement = 1.2 * weight;
+                } else if (activityLevel === 'active') {
+                    proteinRequirement = 1.7 * weight;
+                }
+
+                if (proteinRequirementChart) {
+                    proteinRequirementChart.destroy();
+                }
+                proteinRequirementChart = new Chart(proteinRequirementChartCanvas, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Protein Requirement (g)'],
+                        datasets: [{
+                            label: 'Your Requirement',
+                            data: [proteinRequirement],
+                            backgroundColor: '#2196F3'
+                        }]
+                    }
+                });
+            });
+
+            // Water Intake Calculator
+            const waterIntakeForm = document.getElementById('waterIntakeForm');
+            const waterIntakeChartCanvas = document.getElementById('waterIntakeChart');
+            let waterIntakeChart;
+
+            waterIntakeForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const weight = parseFloat(document.getElementById('waterWeight').value);
+                const activityLevel = document.getElementById('waterActivityLevel').value;
+                let waterIntake;
+
+                if (activityLevel === 'sedentary') {
+                    waterIntake = weight * 0.035;
+                } else if (activityLevel === 'moderate') {
+                    waterIntake = weight * 0.04;
+                } else if (activityLevel === 'active') {
+                    waterIntake = weight * 0.045;
+                }
+
+                if (waterIntakeChart) {
+                    waterIntakeChart.destroy();
+                }
+                waterIntakeChart = new Chart(waterIntakeChartCanvas, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Water Intake (liters)'],
+                        datasets: [{
+                            label: 'Your Requirement',
+                            data: [waterIntake],
+                            backgroundColor: '#FFC107'
+                        }]
+                    }
+                });
+            });
+
+            // Heart Rate Zone Calculator
+            const heartRateForm = document.getElementById('heartRateForm');
+            const heartRateChartCanvas = document.getElementById('heartRateChart');
+            let heartRateChart;
+
+            heartRateForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const age = parseFloat(document.getElementById('heartRateAge').value);
+                const restingHeartRate = parseFloat(document.getElementById('restingHeartRate').value);
+
+                const maxHeartRate = 220 - age;
+                const heartRateReserve = maxHeartRate - restingHeartRate;
+
+                const zones = [
+                    { label: 'Zone 1 (Warm-up)', percentage: 0.5 },
+                    { label: 'Zone 2 (Fat Burn)', percentage: 0.6 },
+                    { label: 'Zone 3 (Aerobic)', percentage: 0.7 },
+                    { label: 'Zone 4 (Anaerobic)', percentage: 0.8 },
+                    { label: 'Zone 5 (Max Effort)', percentage: 0.9 },
+                ];
+                const zoneData = zones.map(zone => {
+                    const bpm = Math.round(restingHeartRate + (zone.percentage * heartRateReserve));
+                    return { label: zone.label, bpm: bpm };
+                });
+
+                if (heartRateChart) {
+                    heartRateChart.destroy();
+                }
+                heartRateChart = new Chart(heartRateChartCanvas, {
+                    type: 'bar',
+                    data: {
+                        labels: zoneData.map(zone => zone.label),
+                        datasets: [{
+                            label: 'Heart Rate (bpm)',
+                            data: zoneData.map(zone => zone.bpm),
+                            backgroundColor: ['#FF6384', '#FF9F40', '#FFCD56', '#4BC0C0', '#9966FF']
+                        }]
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
