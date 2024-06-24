@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="contact-page">
+    <!-- Navigation Bar -->
     <header>
         <nav>
             <ul class="nav-list">
@@ -28,6 +29,8 @@
             <p>We'd love to hear from you. Reach out with any questions or to get started!</p>
         </div>
     </header>
+
+    <!-- Main Content -->
     <main class="container">
         <!-- Body Fat Calculator Section -->
         <section class="content-section with-charts body-fat-calculator">
@@ -193,6 +196,8 @@
                 <p>This calculator estimates your heart rate zones based on your age and resting heart rate. It uses the Karvonen formula to calculate your target heart rate for different exercise intensities.</p>
             </div>
         </section>
+
+        <!-- Disclaimer Section -->
         <section id="disclaimer" class="disclaimer content-section">
             <h2 class="glow-text">Disclaimer</h2>
             <p>
@@ -203,6 +208,7 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <p>Fitness with Wemyss Workouts. All rights reserved.</p>
@@ -215,6 +221,7 @@
         </div>
     </footer>
 
+    <!-- JavaScript for Calculators -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Body Fat Calculator
@@ -385,7 +392,7 @@
                         datasets: [{
                             label: 'Heart Rate (bpm)',
                             data: zoneData.map(zone => zone.bpm),
-                            backgroundColor: ['#FF6384', '#FF9F40', '#FFCD56', '#4BC0C0', '#9966FF']
+                            backgroundColor: '#FF5722'
                         }]
                     }
                 });

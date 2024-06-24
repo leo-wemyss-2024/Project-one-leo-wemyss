@@ -1132,7 +1132,7 @@ nav ul li a:hover {
 /* About Image Styling */
 #about-page .about-img {
     width: 100%;
-    height: 250px;
+    height: 700px;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
