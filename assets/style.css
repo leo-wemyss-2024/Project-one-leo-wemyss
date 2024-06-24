@@ -1,906 +1,918 @@
 /* Basic Reset */
 * {
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Body Styling */
 body {
-    font-family: 'Lato', 'Oswald', sans-serif; 
-    background-color: #e0ebea; 
-    color: #333; 
-    line-height: 1.6; 
-    overflow-x: hidden; 
+    font-family: 'Lato', 'Oswald', sans-serif;
+    background-color: #e0ebea;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* Header Styling */
 header {
-    text-align: center; 
-    background: url('/assets/images/military-combat-workout.jpg') no-repeat center center/cover; 
-    height: 700px; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    position: relative; 
+    text-align: center;
+    background: url('/assets/images/military-combat-workout.jpg') no-repeat center center/cover;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 header::before {
-    content: ''; 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    background: rgba(0, 0, 0, 0.2); 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
 }
 
 /* Navigation Styling */
 nav {
-    width: 100%; 
-    position: absolute; 
-    top: 0; 
+    width: 100%;
+    position: absolute;
+    top: 0;
 }
 
 nav ul {
-    list-style: none; 
-    display: flex; 
-    justify-content: center; 
-    background: rgba(109, 101, 101, 0.7); 
-    padding: 10px 0; 
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: rgba(109, 101, 101, 0.7);
+    padding: 10px 0;
 }
 
 nav ul li {
-    margin: 0 20px; 
+    margin: 0 20px;
 }
 
 nav ul li a {
-    color: #fff; 
-    text-decoration: none; 
-    font-weight: bold; 
-    padding: 10px; 
-    transition: background 0.3s; 
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: background 0.3s;
 }
 
 nav ul li a:hover {
-    background: #e96c36; 
+    background: #e96c36;
 }
 
 /* Hero Content Styling */
 .hero-content {
-    color: white; 
-    position: relative; 
-    z-index: 1; 
+    color: white;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-content h1 {
-    font-size: 3em; 
-    margin-bottom: 20px; 
+    font-size: 3em;
+    margin-bottom: 20px;
 }
 
 .hero-content p {
-    font-size: 1.2em; 
+    font-size: 1.2em;
 }
 
 /* CTA Button Styling */
 .cta-button {
-    display: inline-block; 
-    padding: 10px 20px; 
-    background-color: #e96c36; 
-    color: white; 
-    text-decoration: none; 
-    font-weight: bold; 
-    border-radius: 5px; 
-    transition: background 0.3s, transform 0.3s; 
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e96c36;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .cta-button:hover {
-    background-color: #d85a29; 
-    transform: translateY(-3px); 
+    background-color: #d85a29;
+    transform: translateY(-3px);
 }
 
 /* Content Section Styling */
 .content-section {
-    padding: 40px 20px; 
-    text-align: center; 
-    background-color: #fff; 
-    margin: 20px 0; 
-    border-radius: 10px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Chart Container Styling */
 .chart-container {
-    max-width: 600px; 
-    margin: 0 auto; 
-    padding: 20px; 
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .chart-container canvas {
-    width: 100% !important; 
-    height: auto !important; 
+    width: 100% !important;
+    height: auto !important;
 }
 
 /* Form Group Styling */
 .form-group {
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
 }
 
 .form-group label {
-    display: block; 
-    margin-bottom: 5px; 
-    color: #333; 
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-    width: 100%; 
-    padding: 10px; 
-    border: 2px solid #ccc; 
-    border-radius: 5px; 
-    color: #333; 
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    color: #333;
 }
 
 .form-group textarea {
-    resize: vertical; 
+    resize: vertical;
 }
 
 .form-section button {
-    padding: 10px 20px; 
-    background-color: #e96c36; 
-    color: white; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    transition: background 0.3s; 
+    padding: 10px 20px;
+    background-color: #e96c36;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 .form-section button:hover {
-    background-color: #d85a29; 
+    background-color: #d85a29;
 }
 
 /* Map Container Styling */
 .map-container {
-    position: relative; 
-    overflow: hidden; 
-    width: 100%; 
-    padding-top: 56.25%; 
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
 }
 
 .map-container iframe {
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    border: 0; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 /* Footer Content Styling */
 .footer-content {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 20px; 
-    width: 100%; 
-    background-color: #333; 
-    color: white; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    background-color: #333;
+    color: white;
 }
 
 .footer-content p {
-    margin: 0; 
+    margin: 0;
 }
 
 .social-media {
-    display: flex; 
-    gap: 20px; 
-    margin-top: 10px; 
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
 }
 
 .social-media a {
-    color: white; 
-    transition: transform 0.3s, color 0.3s; 
+    color: white;
+    transition: transform 0.3s, color 0.3s;
 }
 
 .social-media a:hover {
-    transform: scale(1.2); 
-    color: #e96c36; 
+    transform: scale(1.2);
+    color: #e96c36;
 }
 
 /* Responsive Design Adjustments for Footer */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;
+        align-items: center;
     }
 
     .footer-content {
-        text-align: center; 
+        text-align: center;
     }
 
     .social-media {
-        justify-content: center; 
+        justify-content: center;
     }
 }
 
 /* Typing Animation */
 @keyframes typing {
-    from { width: 0; } 
-    to { width: 100%; } 
+    from { width: 0; }
+    to { width: 100%; }
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent; } 
-    50% { border-color: orange; } 
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
 }
 
 .typing-animation {
-    width: 100%; 
-    overflow: hidden; 
-    white-space: nowrap; 
-    border-right: 0.10em solid orange; 
-    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite; 
-    font-size: 2em; 
-    padding: 10px; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.10em solid orange;
+    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+    font-size: 2em;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .typing-animation .above-text,
 .typing-animation .below-text {
-    display: block; 
-    font-size: 0.5em; 
-    margin: 0.2em 0; 
+    display: block;
+    font-size: 0.5em;
+    margin: 0.2em 0;
 }
 
 @media (max-width: 768px) {
     .typing-animation {
-        font-size: 1.5em; 
-        padding: 8px; 
+        font-size: 1.5em;
+        padding: 8px;
     }
     .typing-animation .above-text,
     .typing-animation .below-text {
-        font-size: 0.6em; 
+        font-size: 0.6em;
     }
 }
 
 @media (max-width: 480px) {
     .typing-animation {
-        font-size: 1.2em; 
-        padding: 5px; 
+        font-size: 1.2em;
+        padding: 5px;
     }
     .typing-animation .above-text,
     .typing-animation .below-text {
-        font-size: 0.7em; 
+        font-size: 0.7em;
     }
 }
 
 @media (min-width: 1024px) {
     .typing-animation {
-        font-size: 2.5em; 
-        padding: 12px; 
+        font-size: 2.5em;
+        padding: 12px;
     }
     .typing-animation .above-text,
     .typing-animation .below-text {
-        font-size: 0.4em; 
+        font-size: 0.4em;
     }
 }
 
 /* Image-Text Layout Styles */
 .image-container {
-    display: flex; 
-    align-items: center; 
-    margin: 40px auto; 
-    max-width: 900px; 
-    padding: 20px; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-    perspective: 1000px; 
-    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    margin: 40px auto;
+    max-width: 900px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    perspective: 1000px;
+    overflow: hidden;
 }
 
 .image-container:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .image-container img {
-    flex: 1; 
-    max-width: 50%; 
-    height: auto; 
-    margin: 0 20px; 
-    transform: translateZ(-100px) scale(1.1); 
-    transition: transform 0.3s ease; 
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+    margin: 0 20px;
+    transform: translateZ(-100px) scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 .image-container.left:hover img,
 .image-container.right:hover img {
-    transform: translateZ(0); 
+    transform: translateZ(0);
 }
 
 .image-text {
-    flex: 1; 
-    background: linear-gradient(to bottom right, #f8f8f8, #ffffff); 
-    animation: pulseBackground 5s infinite; 
-    transition: background-color 0.3s ease; 
+    flex: 1;
+    background: linear-gradient(to bottom right, #f8f8f8, #ffffff);
+    animation: pulseBackground 5s infinite;
+    transition: background-color 0.3s ease;
 }
 
 .image-text:hover {
-    background-color: rgba(255, 255, 255, 0.9); 
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .image-text h2 {
-    color: #333; 
-    margin-bottom: 10px; 
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+    color: #333;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .image-text p {
-    line-height: 1.6; 
+    line-height: 1.6;
 }
 
 /* Styling the Read More button */
 .read-more {
-    background-color: #e96c36; 
-    border: none; 
-    color: white; 
-    padding: 10px 20px; 
-    text-align: center; 
-    text-decoration: none; 
-    display: inline-block; 
-    font-size: 16px; 
-    margin: 10px 0; 
-    cursor: pointer; 
-    border-radius: 5px; 
-    transition: background-color 0.3s ease; 
+    background-color: #e96c36;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .read-more:hover {
-    background-color: #d85a29; 
+    background-color: #d85a29;
 }
 
 /* Animations */
 @keyframes kenburns {
     0% {
-        transform: scale(1) translate(0, 0); 
-        transform-origin: 16% 84%; 
+        transform: scale(1) translate(0, 0);
+        transform-origin: 16% 84%;
     }
     100% {
-        transform: scale(1.25) translate(-10%, -15%); 
-        transform-origin: left top; 
+        transform: scale(1.25) translate(-10%, -15%);
+        transform-origin: left top;
     }
 }
 
 @keyframes pulseBackground {
-    0% { background-color: rgba(255, 255, 255, 0.9); } 
-    50% { background-color: rgba(255, 255, 255, 0.95); } 
-    100% { background-color: rgba(255, 255, 255, 0.9); } 
+    0% { background-color: rgba(255, 255, 255, 0.9); }
+    50% { background-color: rgba(255, 255, 255, 0.95); }
+    100% { background-color: rgba(255, 255, 255, 0.9); }
 }
 
 /* Flexbox direction adjustments for alternating layout */
 .image-container.left {
-    flex-direction: row-reverse; 
+    flex-direction: row-reverse;
 }
 
 .image-container.right {
-    flex-direction: row; 
+    flex-direction: row;
 }
 
 /* Responsive Design Adjustments for Image-Text Layout */
 @media (max-width: 768px) {
     .image-container {
-        flex-direction: column; 
+        flex-direction: column;
     }
     .image-container img {
-        height: 200px; 
+        height: 200px;
     }
     .image-container::before,
     .image-container::after {
-        display: none; 
+        display: none;
     }
 }
 
 /* Workout Page Specific Styling */
 #workout-page .content-section {
-    padding: 40px 20px; 
-    text-align: center; 
-    background-color: #fff; 
-    margin: 20px 0; 
-    border-radius: 10px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Form Group Styling */
 #workout-page .form-group {
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
 }
 
 #workout-page .form-group label {
-    display: block; 
-    margin-bottom: 5px; 
-    color: #333; 
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
 }
 
 #workout-page .form-group input,
 #workout-page .form-group select,
 #workout-page .form-group textarea {
-    width: 100%; 
-    padding: 10px; 
-    border: 2px solid #ccc; 
-    border-radius: 5px; 
-    color: #333; 
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    color: #333;
 }
 
 #workout-page .form-group textarea {
-    resize: vertical; 
+    resize: vertical;
 }
 
 #workout-page button {
-    padding: 10px 20px; 
-    background-color: #e96c36; 
-    color: white; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    transition: background 0.3s; 
+    padding: 10px 20px;
+    background-color: #e96c36;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 #workout-page button:hover {
-    background-color: #d85a29; 
+    background-color: #d85a29;
 }
 
 /* Plan Container Styling */
 #workout-page .plan-grid {
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 20px; 
-    justify-content: center; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
 }
 
 /* Plan Item Styling */
 #workout-page .plan-item {
-    background-color: #fff; 
-    padding: 20px; 
-    border-radius: 10px; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    text-align: center; 
-    cursor: pointer; 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #workout-page .plan-item:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 #workout-page .plan-item h3 {
-    color: #e96c36; 
-    margin-bottom: 15px; 
+    color: #e96c36;
+    margin-bottom: 15px;
 }
 
 #workout-page .plan-item p {
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
 }
 
 #workout-page .plan-item img {
-    width: 100%; 
-    height: 200px; 
-    object-fit: cover; 
-    border-radius: 10px; 
-    margin-bottom: 15px; 
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 /* Center Content Styling */
 .center-content {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    flex-direction: column; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* Day Boxes Styling */
 #workout-page .days-container {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 10px; 
-    margin-top: 15px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
 }
 
 #workout-page .day-box {
-    background-color: #f0f0f0; 
-    border: 1px solid #ddd; 
-    padding: 10px 15px; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease; 
-    width: calc(33.33% - 10px); 
-    box-sizing: border-box; 
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: calc(33.33% - 10px);
+    box-sizing: border-box;
 }
 
 #workout-page .day-box:hover {
-    background-color: #ddd; 
+    background-color: #ddd;
 }
 
 /* Resistance Training Table Styling */
+#workout-page .resistance-training {
+    border: 2px dashed #e96c36;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#workout-page .resistance-training h3 {
+    color: #e96c36;
+}
+
 #workout-page .resistance-training table {
-    width: 100%; 
-    border-collapse: collapse; 
-    margin-top: 20px; 
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
 #workout-page .resistance-training th,
 #workout-page .resistance-training td {
-    border: 1px solid #ddd; 
-    padding: 8px; 
-    text-align: left; 
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
 }
 
 #workout-page .resistance-training th {
-    background-color: #f2f2f2; 
+    background-color: #f2f2f2;
 }
 
 /* Cardio Training Styles */
 #workout-page .cardio-training {
-    border: 2px dashed #e96c36; 
-    padding: 20px; 
-    background-color: #fff; 
+    border: 2px dashed #e96c36;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
 }
 
 #workout-page .cardio-training h3 {
-    color: #d85a29; 
+    color: #d85a29;
 }
 
 #workout-page .cardio-training table {
-    width: 100%; 
-    border-collapse: collapse; 
-    margin-top: 20px; 
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
 #workout-page .cardio-training th,
 #workout-page .cardio-training td {
-    border: 1px solid #ddd; 
-    padding: 8px; 
-    text-align: left; 
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
 }
 
 #workout-page .cardio-training th {
-    background-color: #f2f2f2; 
-    color: #d85a29; 
+    background-color: #f2f2f2;
+    color: #d85a29;
 }
 
 #workout-page .cardio-training td {
-    background-color: #ffece6; 
+    background-color: #ffece6;
 }
 
 /* Testimonials Section Styling */
 .testimonial-container {
-    display: flex; 
-    justify-content: space-between; 
-    flex-wrap: wrap; 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .testimonial {
-    display: flex; 
-    align-items: center; 
-    background-color: #fff; 
-    padding: 20px; 
-    margin: 10px; 
-    border-radius: 10px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    flex: 1 1 calc(50% - 20px); 
-    box-sizing: border-box; 
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
 }
 
 .testimonial-image {
-    width: 70px; 
-    height: 70px; 
-    border-radius: 50%; 
-    margin-right: 20px; 
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 20px;
 }
 
 .testimonial-text {
-    flex: 1; 
+    flex: 1;
 }
 
 .testimonial p {
-    margin: 0; 
-    color: #666; 
+    margin: 0;
+    color: #666;
 }
 
 @media (max-width: 768px) {
     .testimonial {
-        flex-direction: column; 
-        align-items: flex-start; 
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .testimonial-image {
-        margin-right: 0; 
-        margin-bottom: 20px; 
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 }
 
 /* Modal Styling */
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    left: 0; 
-    top: 0; 
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
 }
 
 .modal-content {
-    background-color: #fefefe; 
-    margin: 15% auto; 
-    padding: 20px; 
-    border: 1px solid #888; 
-    width: 80%; 
-    border-radius: 10px; 
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
 }
 
 .modal-close {
-    color: #aaa; 
-    float: right; 
-    font-size: 28px; 
-    font-weight: bold; 
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 .modal-close:hover,
 .modal-close:focus {
-    color: black; 
-    text-decoration: none; 
-    cursor: pointer; 
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Modal Styling Specific to Workout Page */
 #workout-page .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    left: 0; 
-    top: 0; 
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
 }
 
 #workout-page .modal-content {
-    background-color: #fefefe; 
-    margin: 15% auto; 
-    padding: 20px; 
-    border: 1px solid #888; 
-    width: 80%; 
-    border-radius: 10px; 
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
 }
 
 #workout-page .modal-close {
-    color: #aaa; 
-    float: right; 
-    font-size: 28px; 
-    font-weight: bold; 
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 #workout-page .modal-close:hover,
 #workout-page .modal-close:focus {
-    color: black; 
-    text-decoration: none; 
-    cursor: pointer; 
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Media Queries for Workout Page */
 @media (max-width: 768px) {
     #workout-page .days-container .day-box {
-        width: calc(50% - 10px); 
+        width: calc(50% - 10px);
     }
 
     #workout-page .plan-item img {
-        height: 150px; 
+        height: 150px;
     }
 }
 
 @media (max-width: 480px) {
     #workout-page .days-container .day-box {
-        width: 100%; 
+        width: 100%;
     }
 
     #workout-page .plan-item img {
-        height: 120px; 
+        height: 120px;
     }
 }
 
 /* Scoped Styles */
 #classes-page .nav-list {
-    list-style-type: none; 
-    padding: 0; 
-    display: flex; 
-    justify-content: center; 
-    background-color: #333; 
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
 }
 
 #classes-page .nav-list li {
-    margin: 0 15px; 
+    margin: 0 15px;
 }
 
 #classes-page .nav-list a {
-    color: #fff; 
-    text-decoration: none; 
-    font-size: 18px; 
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 #classes-page header {
-    text-align: center; 
-    background: url('/assets/images/Comemerical-gym-work.jpg') no-repeat center center/cover; 
-    padding: 100px 20px; 
-    color: #fff; 
+    text-align: center;
+    background: url('/assets/images/Comemerical-gym-work.jpg') no-repeat center center/cover;
+    padding: 100px 20px;
+    color: #fff;
 }
 
 #classes-page .hero-content {
-    max-width: 600px; 
-    margin: auto; 
+    max-width: 600px;
+    margin: auto;
 }
 
 #classes-page .typing-animation {
-    font-family: 'Oswald', sans-serif; 
-    font-size: 3rem; 
-    position: relative; 
-    animation: typing 2s steps(30, end), blink-caret 0.5s step-end infinite; 
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    position: relative;
+    animation: typing 2s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
 .about-item {
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
 }
 
 .about-item h4 {
-    font-size: 1.5em; 
-    color: #e96c36; 
-    margin-bottom: 10px; 
+    font-size: 1.5em;
+    color: #e96c36;
+    margin-bottom: 10px;
 }
 
 .about-item p {
-    font-size: 1.1em; 
-    color: #666; 
-    margin-bottom: 20px; 
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 20px;
 }
 
 .about-img {
-    width: 100%; 
-    height: auto; 
-    border-radius: 10px; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes typing {
     from {
-        width: 0; 
+        width: 0;
     }
     to {
-        width: 100%; 
+        width: 100%;
     }
 }
 
 @keyframes blink-caret {
     from,
     to {
-        border-color: transparent; 
+        border-color: transparent;
     }
     50% {
-        border-color: orange; 
+        border-color: orange;
     }
 }
 
 #classes-page .glow-animation {
-    animation: glow 1.5s infinite alternate; 
+    animation: glow 1.5s infinite alternate;
 }
 
 @keyframes glow {
     from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #e8c34b, 0 0 30px #e8c34b, 0 0 40px #e8c34b, 0 0 50px #e8c34b, 0 0 60px #e8c34b, 0 0 70px #e8c34b; 
+        text-shadow: 0 0 10px #fff, 0 0 20px #e8c34b, 0 0 30px #e8c34b, 0 0 40px #e8c34b, 0 0 50px #e8c34b, 0 0 60px #e8c34b, 0 0 70px #e8c34b;
     }
     to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #e8c34b, 0 0 40px #e8c34b, 0 0 50px #e8c34b, 0 0 60px #e8c34b, 0 0 70px #e8c34b, 0 0 80px #e8c34b; 
+        text-shadow: 0 0 20px #fff, 0 0 30px #e8c34b, 0 0 40px #e8c34b, 0 0 50px #e8c34b, 0 0 60px #e8c34b, 0 0 70px #e8c34b, 0 0 80px #e8c34b;
     }
 }
 
 /* Sections */
 #classes-page .content-section {
-    padding: 50px 20px; 
-    text-align: center; 
+    padding: 50px 20px;
+    text-align: center;
 }
 
 #classes-page h2 {
-    font-size: 2.5rem; 
-    margin-bottom: 20px; 
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 #classes-page .class-item {
-    margin: 20px 0; 
+    margin: 20px 0;
 }
 
 #classes-page .class-item h3 {
-    font-size: 1.8rem; 
-    color: #e96c36; 
+    font-size: 1.8rem;
+    color: #e96c36;
 }
 
 #classes-page .class-item p {
-    font-size: 1.2rem; 
-    color: #666; 
+    font-size: 1.2rem;
+    color: #666;
 }
 
 /* Footer */
 #classes-page .footer-content {
-    background-color: #333; 
-    color: #fff; 
-    text-align: center; 
-    padding: 20px; 
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
 }
 
 #classes-page .social-media a {
-    color: #fff; 
-    margin: 0 10px; 
-    font-size: 1.5rem; 
-    text-decoration: none; 
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
 }
 
 /* Modal */
 #classes-page .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    left: 0; 
-    top: 0; 
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0, 0, 0, 0.4); 
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 #classes-page .modal-content {
-    background-color: #fefefe; 
-    margin: 15% auto; 
-    padding: 20px; 
-    border: 1px solid #888; 
-    width: 80%; 
-    border-radius: 10px; 
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
 }
 
 /* Sections with charts and text side by side */
 .with-charts {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: space-between; 
-    align-items: center; 
-    margin: 20px 0; 
-    gap: 20px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    gap: 20px;
 }
 
 .with-charts .chart-container {
-    flex: 1; 
-    min-width: 300px; 
-    max-width: 600px; 
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
 }
 
 .with-charts .image-text {
-    flex: 1; 
-    min-width: 300px; 
-    max-width: 600px; 
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
 }
 
 /* Responsive Design Adjustments for sections with charts and text */
 @media (max-width: 768px) {
     .with-charts {
-        flex-direction: column; 
+        flex-direction: column;
     }
 }
