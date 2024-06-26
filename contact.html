@@ -1,18 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Fitness with Wemyss Workouts</title>
-    <meta name="description" content="Contact Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
-    <meta name="keywords" content="fitness, personal trainer, contact, Leo Wemyss">
+    <title>Fitness with Wemyss Workouts</title>
+    <meta name="description"
+        content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
+    <meta name="keywords" content="fitness, personal trainer, about, Leo Wemyss">
     <meta name="author" content="Leo Wemyss">
+
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap">
-    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap">
+
+    <!-- Chart.js Library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Social Media Metadata -->
+    <meta property="og:title" content="About - Fitness with Wemyss Workouts">
+    <meta property="og:description"
+        content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
+    <meta property="og:image" content="path/to/your-photo.jpg">
+    <meta property="og:url" content="http://www.yourwebsite.com/about.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About - Fitness with Wemyss Workouts">
+    <meta name="twitter:description"
+        content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
+    <meta name="twitter:image" content="path/to/your-photo.jpg">
+
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- Favicon Links -->
+    <link rel="icon" sizes="192x192" href="assets/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" sizes="512x512" href="assets/favicon_io/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+
 </head>
-<body class="contact-page">
+
+<body class="contact-page" id="contact-page">
     <!-- Navigation Bar -->
     <header>
         <nav>
@@ -31,181 +64,218 @@
     </header>
 
     <!-- Main Content -->
-    <main class="container">
-        <!-- Body Fat Calculator Section -->
-        <section class="content-section with-charts body-fat-calculator">
-            <h2>Body Fat Percentage Calculator</h2>
-            <form id="bodyFatForm">
-                <div class="form-group">
-                    <label for="gender">Gender:</label>
-                    <select id="gender" name="gender" required>
-                        <option value="">Select Gender</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="bodyFatAge">Age:</label>
-                    <input type="number" id="bodyFatAge" name="age" required>
-                </div>
-                <div class="form-group">
-                    <label for="neck">Neck (cm):</label>
-                    <input type="number" id="neck" name="neck" required>
-                </div>
-                <div class="form-group">
-                    <label for="abdomen">Abdomen (cm):</label>
-                    <input type="number" id="abdomen" name="abdomen" required>
-                </div>
-                <div class="form-group">
-                    <label for="bodyFatWaist">Waist (cm):</label>
-                    <input type="number" id="bodyFatWaist" name="waist">
-                </div>
-                <div class="form-group">
-                    <label for="bodyFatHip">Hip (cm):</label>
-                    <input type="number" id="bodyFatHip" name="hip">
-                </div>
-                <button type="submit">Calculate</button>
-            </form>
-            <div class="chart-container">
-                <canvas id="bodyFatChart"></canvas>
+    <section class="content-section contact-details">
+        <h2>Contact Details</h2>
+        <div class="card-container">
+            <div class="info-card">
+                <h3>Leo Wemyss</h3>
+                <p><strong>Leo Wemyss</strong></p>
+                <p>Professional Fitness Instructor</p>
             </div>
-            <div class="image-text">
-                <p>The Body Fat Percentage Calculator estimates your body fat percentage using various measurements. For men, it typically uses measurements like the neck and abdomen, while for women, it includes the waist, wrist, hip, and forearm. Body fat percentage is a good indicator of overall fitness and health.</p>
-                <p><strong>How to Use:</strong></p>
-                <ul>
-                    <li>Measure the required body parts accurately using a tape measure.</li>
-                    <li>Input these measurements into the calculator along with your gender and age.</li>
-                    <li>The calculator will provide an estimate of your body fat percentage.</li>
-                </ul>
+            <div class="info-card">
+                <h3>Email</h3>
+                <p>Email: <a href="mailto:leo@example.com">leo@example.com</a></p>
             </div>
-        </section>
+            <div class="info-card">
+                <h3>Phone</h3>
+                <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+            </div>
+            <div class="info-card">
+                <h3>Address</h3>
+                <p>Address: 123 Fitness St, Workout City, Country</p>
+            </div>
+        </div>
+    </section>
 
-        <!-- Waist Hip Ratio Calculator Section -->
-        <section class="content-section with-charts waist-hip-ratio-calculator">
-            <h2>Waist to Hip Ratio Calculator</h2>
-            <form id="waistHipForm">
-                <div class="form-group">
-                    <label for="waistHipWaist">Waist (cm):</label>
-                    <input type="number" id="waistHipWaist" name="waist" required>
-                </div>
-                <div class="form-group">
-                    <label for="waistHipHip">Hip (cm):</label>
-                    <input type="number" id="waistHipHip" name="hip" required>
-                </div>
-                <button type="submit">Calculate</button>
-            </form>
-            <div class="chart-container">
-                <canvas id="waistHipRatioChart"></canvas>
+    <!-- Body Fat Calculator Section -->
+    <section class="content-section with-charts body-fat-calculator">
+        <h2>Body Fat Percentage Calculator</h2>
+        <form id="bodyFatForm">
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
             </div>
-            <div class="image-text">
-                <p>The Waist to Hip Ratio Calculator measures the circumference of your waist and hips to determine your waist-to-hip ratio. This ratio is a good indicator of body composition and potential health risks related to obesity and fat distribution.</p>
-                <p><strong>How to Use:</strong></p>
-                <ul>
-                    <li>Measure the circumference of your waist at its narrowest point.</li>
-                    <li>Measure the circumference of your hips at their widest point.</li>
-                    <li>Divide the waist measurement by the hip measurement to get the ratio.</li>
-                    <li>Compare your ratio to the health risk chart to understand your risk level.</li>
-                </ul>
+            <div class="form-group">
+                <label for="bodyFatAge">Age:</label>
+                <input type="number" id="bodyFatAge" name="age" required>
             </div>
-        </section>
+            <div class="form-group">
+                <label for="neck">Neck (cm):</label>
+                <input type="number" id="neck" name="neck" required>
+            </div>
+            <div class="form-group">
+                <label for="abdomen">Abdomen (cm):</label>
+                <input type="number" id="abdomen" name="abdomen" required>
+            </div>
+            <div class="form-group">
+                <label for="bodyFatWaist">Waist (cm):</label>
+                <input type="number" id="bodyFatWaist" name="waist">
+            </div>
+            <div class="form-group">
+                <label for="bodyFatHip">Hip (cm):</label>
+                <input type="number" id="bodyFatHip" name="hip">
+            </div>
+            <button type="submit" class="calculate-button">Calculate</button>
+        </form>
+        <div class="chart-container">
+            <canvas id="bodyFatChart"></canvas>
+        </div>
+        <div class="image-text">
+            <p>The Body Fat Percentage Calculator estimates your body fat percentage using various measurements. For
+                men, it typically uses measurements like the neck and abdomen, while for women, it includes the
+                waist, wrist, hip, and forearm. Body fat percentage is a good indicator of overall fitness and
+                health.</p>
+            <p><strong>How to Use:</strong></p>
+            <ul>
+                <li>Measure the required body parts accurately using a tape measure.</li>
+                <li>Input these measurements into the calculator along with your gender and age.</li>
+                <li>The calculator will provide an estimate of your body fat percentage.</li>
+            </ul>
+        </div>
+    </section>
 
-        <!-- Protein Requirement Calculator Section -->
-        <section class="content-section with-charts protein-calculator">
-            <h2>Protein Requirement Calculator</h2>
-            <form id="proteinRequirementForm">
-                <div class="form-group">
-                    <label for="proteinWeight">Weight (kg):</label>
-                    <input type="number" id="proteinWeight" name="weight" required>
-                </div>
-                <div class="form-group">
-                    <label for="proteinActivityLevel">Activity Level:</label>
-                    <select id="proteinActivityLevel" name="activityLevel" required>
-                        <option value="">Select Activity Level</option>
-                        <option value="sedentary">Sedentary</option>
-                        <option value="moderate">Moderate</option>
-                        <option value="active">Active</option>
-                    </select>
-                </div>
-                <button type="submit">Calculate</button>
-            </form>
-            <div class="chart-container">
-                <canvas id="proteinRequirementChart"></canvas>
+    <!-- Waist Hip Ratio Calculator Section -->
+    <section class="content-section with-charts waist-hip-ratio-calculator">
+        <h2>Waist to Hip Ratio Calculator</h2>
+        <form id="waistHipForm">
+            <div class="form-group">
+                <label for="waistHipWaist">Waist (cm):</label>
+                <input type="number" id="waistHipWaist" name="waist" required>
             </div>
-            <div class="image-text">
-                <p>The Protein Requirement Calculator estimates the amount of protein you need each day based on your weight and activity level. Adequate protein intake is crucial for muscle growth, repair, and overall health.</p>
-                <p><strong>How to Use:</strong></p>
-                <ul>
-                    <li>Input your weight and activity level into the calculator.</li>
-                    <li>The calculator will provide an estimate of your daily protein needs.</li>
-                    <li>Use this information to plan your diet and ensure you are getting enough protein to support your fitness goals.</li>
-                </ul>
+            <div class="form-group">
+                <label for="waistHipHip">Hip (cm):</label>
+                <input type="number" id="waistHipHip" name="hip" required>
             </div>
-        </section>
+            <button type="submit" class="calculate-button">Calculate</button>
+        </form>
+        <div class="chart-container">
+            <canvas id="waistHipRatioChart"></canvas>
+        </div>
+        <div class="image-text">
+            <p>The Waist to Hip Ratio Calculator measures the circumference of your waist and hips to determine your
+                waist-to-hip ratio. This ratio is a good indicator of body composition and potential health risks
+                related to obesity and fat distribution.</p>
+            <p><strong>How to Use:</strong></p>
+            <ul>
+                <li>Measure the circumference of your waist at its narrowest point.</li>
+                <li>Measure the circumference of your hips at their widest point.</li>
+                <li>Divide the waist measurement by the hip measurement to get the ratio.</li>
+                <li>Compare your ratio to the health risk chart to understand your risk level.</li>
+            </ul>
+        </div>
+    </section>
 
-        <!-- Water Intake Calculator Section -->
-        <section class="content-section with-charts water-intake-calculator">
-            <h2>Water Intake Calculator</h2>
-            <form id="waterIntakeForm">
-                <div class="form-group">
-                    <label for="waterWeight">Weight (kg):</label>
-                    <input type="number" id="waterWeight" name="weight" required>
-                </div>
-                <div class="form-group">
-                    <label for="waterActivityLevel">Activity Level:</label>
-                    <select id="waterActivityLevel" name="activityLevel" required>
-                        <option value="">Select Activity Level</option>
-                        <option value="sedentary">Sedentary</option>
-                        <option value="moderate">Moderate</option>
-                        <option value="active">Active</option>
-                    </select>
-                </div>
-                <button type="submit">Calculate</button>
-            </form>
-            <div class="chart-container">
-                <canvas id="waterIntakeChart"></canvas>
+    <!-- Protein Requirement Calculator Section -->
+    <section class="content-section with-charts protein-calculator">
+        <h2>Protein Requirement Calculator</h2>
+        <form id="proteinRequirementForm">
+            <div class="form-group">
+                <label for="proteinWeight">Weight (kg):</label>
+                <input type="number" id="proteinWeight" name="weight" required>
             </div>
-            <div class="image-text">
-                <p>The Water Intake Calculator estimates the amount of water you should drink each day to stay hydrated. Proper hydration is essential for overall health, physical performance, and cognitive function.</p>
-                <p><strong>How to Use:</strong></p>
-                <ul>
-                    <li>Input your weight and activity level into the calculator.</li>
-                    <li>The calculator will provide an estimate of your daily water needs.</li>
-                    <li>Use this information to ensure you are drinking enough water throughout the day.</li>
-                </ul>
+            <div class="form-group">
+                <label for="proteinActivityLevel">Activity Level:</label>
+                <select id="proteinActivityLevel" name="activityLevel" required>
+                    <option value="">Select Activity Level</option>
+                    <option value="sedentary">Sedentary</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="active">Active</option>
+                </select>
             </div>
-        </section>
+            <button type="submit" class="calculate-button">Calculate</button>
+        </form>
+        <div class="chart-container">
+            <canvas id="proteinRequirementChart"></canvas>
+        </div>
+        <div class="image-text">
+            <p>The Protein Requirement Calculator estimates the amount of protein you need each day based on your
+                weight and activity level. Adequate protein intake is crucial for muscle growth, repair, and overall
+                health.</p>
+            <p><strong>How to Use:</strong></p>
+            <ul>
+                <li>Input your weight and activity level into the calculator.</li>
+                <li>The calculator will provide an estimate of your daily protein needs.</li>
+                <li>Use this information to plan your diet and ensure you are getting enough protein to support your
+                    fitness goals.</li>
+            </ul>
+        </div>
+    </section>
 
-        <!-- Heart Rate Zone Calculator Section -->
-        <section class="content-section with-charts heart-rate-zone-calculator">
-            <h2>Heart Rate Zone Calculator</h2>
-            <form id="heartRateForm">
-                <div class="form-group">
-                    <label for="heartRateAge">Age:</label>
-                    <input type="number" id="heartRateAge" name="age" required>
-                </div>
-                <div class="form-group">
-                    <label for="restingHeartRate">Resting Heart Rate (bpm):</label>
-                    <input type="number" id="restingHeartRate" name="restingHeartRate" required>
-                </div>
-                <button type="submit">Calculate</button>
-            </form>
-            <div class="chart-container">
-                <canvas id="heartRateChart"></canvas>
+    <!-- Water Intake Calculator Section -->
+    <section class="content-section with-charts water-intake-calculator">
+        <h2>Water Intake Calculator</h2>
+        <form id="waterIntakeForm">
+            <div class="form-group">
+                <label for="waterWeight">Weight (kg):</label>
+                <input type="number" id="waterWeight" name="weight" required>
             </div>
-            <div class="image-text">
-                <p>This calculator estimates your heart rate zones based on your age and resting heart rate. It uses the Karvonen formula to calculate your target heart rate for different exercise intensities.</p>
+            <div class="form-group">
+                <label for="waterActivityLevel">Activity Level:</label>
+                <select id="waterActivityLevel" name="activityLevel" required>
+                    <option value="">Select Activity Level</option>
+                    <option value="sedentary">Sedentary</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="active">Active</option>
+                </select>
             </div>
-        </section>
+            <button type="submit" class="calculate-button">Calculate</button>
+        </form>
+        <div class="chart-container">
+            <canvas id="waterIntakeChart"></canvas>
+        </div>
+        <div class="image-text">
+            <p>The Water Intake Calculator estimates the amount of water you should drink each day to stay hydrated.
+                Proper hydration is essential for overall health, physical performance, and cognitive function.</p>
+            <p><strong>How to Use:</strong></p>
+            <ul>
+                <li>Input your weight and activity level into the calculator.</li>
+                <li>The calculator will provide an estimate of your daily water needs.</li>
+                <li>Use this information to ensure you are drinking enough water throughout the day.</li>
+            </ul>
+        </div>
+    </section>
 
-        <!-- Disclaimer Section -->
-        <section id="disclaimer" class="disclaimer content-section">
-            <h2 class="glow-text">Disclaimer</h2>
-            <p>
-                The workout plans and information provided on this website are for educational and informational purposes only. They are not intended to be a substitute for professional medical advice. Always consult with a qualified healthcare provider before starting any new workout routine or exercise program, especially if you have any underlying health conditions.
-        
-                Wemyss Workouts is not liable for any injuries or health problems that may occur due to following these workout plans. It is essential to listen to your body and stop any exercise if you feel pain. By using this website, you acknowledge and agree to these terms and conditions.
-            </p>
-        </section>
+    <!-- Heart Rate Zone Calculator Section -->
+    <section class="content-section with-charts heart-rate-zone-calculator">
+        <h2>Heart Rate Zone Calculator</h2>
+        <form id="heartRateForm">
+            <div class="form-group">
+                <label for="heartRateAge">Age:</label>
+                <input type="number" id="heartRateAge" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="restingHeartRate">Resting Heart Rate (bpm):</label>
+                <input type="number" id="restingHeartRate" name="restingHeartRate" required>
+            </div>
+            <button type="submit" class="calculate-button">Calculate</button>
+        </form>
+        <div class="chart-container">
+            <canvas id="heartRateChart"></canvas>
+        </div>
+        <div class="image-text">
+            <p>This calculator estimates your heart rate zones based on your age and resting heart rate. It uses the
+                Karvonen formula to calculate your target heart rate for different exercise intensities.</p>
+        </div>
+    </section>
+<!-- Disclaimer Section -->
+<section id="disclaimer" class="disclaimer content-section">
+    <h2 class="glow-text">Disclaimer</h2>
+    <button class="close-btn" onclick="document.getElementById('disclaimer').style.display='none'">Close</button>
+    <p>
+        The workout plans and information provided on this website are for educational and informational
+        purposes only. They are not intended to be a substitute for professional medical advice. Always consult
+        with a qualified healthcare provider before starting any new workout routine or exercise program,
+        especially if you have any underlying health conditions.
+
+        Wemyss Workouts is not liable for any injuries or health problems that may occur due to following these
+        workout plans. It is essential to listen to your body and stop any exercise if you feel pain. By using
+        this website, you acknowledge and agree to these terms and conditions.
+    </p>
+</section>
     </main>
 
     <!-- Footer -->
@@ -213,23 +283,28 @@
         <div class="footer-content">
             <p>Fitness with Wemyss Workouts. All rights reserved.</p>
             <div class="social-media">
-                <a href="https://twitter.com/wemyssworkouts" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://facebook.com/wemyssworkouts" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com/wemyssworkouts" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/leo-wemyss-356505b1/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/wemyssworkouts" target="_blank" aria-label="Twitter"><i
+                        class="fab fa-twitter"></i></a>
+                <a href="https://facebook.com/wemyssworkouts" target="_blank" aria-label="Facebook"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/wemyssworkouts" target="_blank" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/leo-wemyss-356505b1/" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
             </div>
         </div>
+        
     </footer>
 
     <!-- JavaScript for Calculators -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Body Fat Calculator
             const bodyFatForm = document.getElementById('bodyFatForm');
             const bodyFatChartCanvas = document.getElementById('bodyFatChart');
             let bodyFatChart;
 
-            bodyFatForm.addEventListener('submit', function(event) {
+            bodyFatForm.addEventListener('submit', function (event) {
                 event.preventDefault();
                 const gender = document.getElementById('gender').value;
                 const age = parseFloat(document.getElementById('bodyFatAge').value);
@@ -265,7 +340,7 @@
             const waistHipRatioChartCanvas = document.getElementById('waistHipRatioChart');
             let waistHipRatioChart;
 
-            waistHipForm.addEventListener('submit', function(event) {
+            waistHipForm.addEventListener('submit', function (event) {
                 event.preventDefault();
                 const waist = parseFloat(document.getElementById('waistHipWaist').value);
                 const hip = parseFloat(document.getElementById('waistHipHip').value);
@@ -292,7 +367,7 @@
             const proteinRequirementChartCanvas = document.getElementById('proteinRequirementChart');
             let proteinRequirementChart;
 
-            proteinRequirementForm.addEventListener('submit', function(event) {
+            proteinRequirementForm.addEventListener('submit', function (event) {
                 event.preventDefault();
                 const weight = parseFloat(document.getElementById('proteinWeight').value);
                 const activityLevel = document.getElementById('proteinActivityLevel').value;
@@ -327,7 +402,7 @@
             const waterIntakeChartCanvas = document.getElementById('waterIntakeChart');
             let waterIntakeChart;
 
-            waterIntakeForm.addEventListener('submit', function(event) {
+            waterIntakeForm.addEventListener('submit', function (event) {
                 event.preventDefault();
                 const weight = parseFloat(document.getElementById('waterWeight').value);
                 const activityLevel = document.getElementById('waterActivityLevel').value;
@@ -362,7 +437,7 @@
             const heartRateChartCanvas = document.getElementById('heartRateChart');
             let heartRateChart;
 
-            heartRateForm.addEventListener('submit', function(event) {
+            heartRateForm.addEventListener('submit', function (event) {
                 event.preventDefault();
                 const age = parseFloat(document.getElementById('heartRateAge').value);
                 const restingHeartRate = parseFloat(document.getElementById('restingHeartRate').value);
@@ -400,4 +475,5 @@
         });
     </script>
 </body>
+
 </html>

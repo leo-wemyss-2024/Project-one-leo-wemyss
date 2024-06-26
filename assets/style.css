@@ -1,970 +1,1422 @@
 /* Basic Reset */
 * {
     margin: 0;
+    /* Removes margins from all elements. */
     padding: 0;
+    /* Removes padding from all elements. */
     box-sizing: border-box;
+    /* Includes padding and border in the element's total width and height. */
 }
 
 /* Body Styling */
 body {
     font-family: 'Lato', 'Oswald', sans-serif;
+    /* Sets the default font family with backups. */
     background-color: #e0ebea;
+    /* Light grey-blue background color for the page. */
     color: #333;
+    /* Dark grey text color for better readability. */
     line-height: 1.6;
+    /* Sets the line height to space out text more comfortably. */
     overflow-x: hidden;
+    /* Prevents horizontal scrolling across the site. */
 }
 
 /* Header Styling */
 header {
     text-align: center;
+    /* Aligns text and inline elements in the center. */
     background: url('/assets/images/military-combat-workout.jpg') no-repeat center center/cover;
+    /* Sets a background image with positioning and sizing. */
     height: 700px;
+    /* Fixes the height of the header to ensure it covers the upper part of the view. */
     display: flex;
+    /* Enables flexbox for aligning children elements easily. */
     justify-content: center;
+    /* Centers children horizontally within the header. */
     align-items: center;
+    /* Centers children vertically within the header. */
     position: relative;
+    /* Establishes a positioning context for pseudo-elements or children. */
 }
 
 header::before {
     content: '';
+    /* Necessary for the pseudo-element to work. */
     position: absolute;
+    /* Positions the pseudo-element absolutely within the header. */
     top: 0;
+    /* Aligns the top edge of the pseudo-element with the header. */
     left: 0;
+    /* Aligns the left edge of the pseudo-element with the header. */
     width: 100%;
+    /* Full width to cover the entire header. */
     height: 100%;
+    /* Full height to cover the entire header. */
     background: rgba(0, 0, 0, 0.2);
+    /* Semi-transparent black overlay for better text visibility. */
 }
 
 /* Navigation Styling */
 nav {
     width: 100%;
+    /* Ensures the nav bar spans the full width of its parent. */
     position: absolute;
+    /* Positions the nav bar at a specific place within its relative parent. */
     top: 0;
+    /* Anchors the nav to the top of its parent. */
 }
 
 nav ul {
     list-style: none;
+    /* Removes default list styling. */
     display: flex;
+    /* Displays the list items in a row. */
     justify-content: center;
+    /* Centers the list items horizontally. */
     background: rgba(109, 101, 101, 0.7);
+    /* Semi-transparent grey background for the nav bar. */
     padding: 10px 0;
+    /* Adds vertical padding but no horizontal padding to the nav bar. */
 }
 
 nav ul li {
     margin: 0 20px;
+    /* Adds horizontal spacing between menu items. */
 }
 
 nav ul li a {
     color: #fff;
+    /* Sets text color to white for readability. */
     text-decoration: none;
+    /* Removes underline from links. */
     font-weight: bold;
+    /* Makes the font bold. */
     padding: 10px;
+    /* Adds padding around the text for better clickability. */
     transition: background 0.3s;
+    /* Smooth transition for background color on hover. */
 }
 
 nav ul li a:hover {
     background: #e96c36;
+    /* Changes background to a dark orange on hover. */
 }
 
 /* Hero Content Styling */
 .hero-content {
     color: white;
+    /* Sets the text color to white for visibility against darker backgrounds. */
     position: relative;
+    /* Ensures that positioning is relative to the header for any positioned child elements. */
     z-index: 1;
+    /* Places the hero content above the background image layer in stacking order. */
 }
 
 .hero-content h1 {
     font-size: 3em;
+    /* Sets a large font size for the main headline. */
     margin-bottom: 20px;
+    /* Adds space below the headline. */
 }
 
 .hero-content p {
     font-size: 1.2em;
+    /* Sets the font size slightly larger than default for readability. */
 }
 
 /* CTA Button Styling */
 .cta-button {
     display: inline-block;
+    /* Allows the button to be sized by its content and placed within text flow. */
     padding: 10px 20px;
+    /* Adds padding inside the button for better touch targets and aesthetics. */
     background-color: #e96c36;
+    /* A vivid orange background color for visibility and design. */
     color: white;
+    /* White text to contrast the background. */
     text-decoration: none;
+    /* Removes underline from what would normally be a link. */
     font-weight: bold;
+    /* Bold text to make the button text stand out. */
     border-radius: 5px;
+    /* Rounded corners for a modern look. */
     transition: background 0.3s, transform 0.3s;
+    /* Smooth transitions for hover effects. */
 }
 
 .cta-button:hover {
     background-color: #d85a29;
+    /* Darker orange background on hover for visual feedback. */
     transform: translateY(-3px);
+    /* Moves the button up slightly on hover for a dynamic effect. */
 }
 
 /* Content Section Styling */
 .content-section {
     padding: 40px 20px;
+    /* Adds padding around the content for spacing. */
     text-align: center;
+    /* Centers text and other inline content. */
     background-color: #fff;
+    /* White background to contrast with the main body color. */
     margin: 20px 0;
+    /* Vertical spacing between sections. */
     border-radius: 10px;
+    /* Rounded corners for aesthetics. */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for a 3D effect. */
 }
 
 /* Chart Container Styling */
 .chart-container {
     max-width: 600px;
+    /* Limits the width to prevent overly large charts. */
     margin: 0 auto;
+    /* Centers the container horizontally. */
     padding: 20px;
+    /* Padding inside the container for spacing around the chart. */
 }
 
 .chart-container canvas {
     width: 100% !important;
+    /* Ensures the canvas takes the full width of its container. */
     height: auto !important;
+    /* Maintains aspect ratio based on width. */
 }
 
 /* Form Group Styling */
 .form-group {
     margin-bottom: 15px;
+    /* Adds space below each form group for separation. */
 }
 
 .form-group label {
     display: block;
+    /* Makes the label take up the full width, placing the input below. */
     margin-bottom: 5px;
+    /* Space between the label and the input field. */
     color: #333;
+    /* Dark grey color for the text to ensure it's readable. */
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
     width: 100%;
+    /* Full width to fill the container. */
     padding: 10px;
+    /* Padding inside the input for better readability and clickability. */
     border: 2px solid #ccc;
+    /* Subtle border for aesthetics. */
     border-radius: 5px;
+    /* Rounded corners to match other design elements. */
     color: #333;
+    /* Consistent text color for readability. */
 }
 
 .form-group textarea {
     resize: vertical;
+    /* Allows the user to resize the textarea vertically, improving usability. */
 }
 
+/* Form Section Button Styling */
 .form-section button {
     padding: 10px 20px;
+    /* Adds internal padding to increase the clickable area and aesthetic appeal. */
     background-color: #e96c36;
+    /* A vivid orange background color for visibility and design. */
     color: white;
+    /* White text to contrast the background. */
     border: none;
+    /* Removes the default border to maintain a clean and modern design. */
     border-radius: 5px;
+    /* Rounded corners to match other interactive elements. */
     cursor: pointer;
+    /* Changes the cursor to indicate the button is clickable. */
     transition: background 0.3s;
+    /* Smooth transition for background color change to enhance the interactive feel. */
 }
 
 .form-section button:hover {
     background-color: #d85a29;
+    /* Darker orange background on hover for visual feedback. */
 }
 
 /* Map Container Styling */
 .map-container {
+    background-color: #f5f5f5;
+    /* Light grey background for a subtle contrast with other sections. */
+    padding: 20px;
+    /* Padding to create space around the map content. */
+    border-radius: 8px;
+    /* Rounded corners to soften the visual design. */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Adds a subtle shadow for depth. */
+    text-align: center;
+    /* Centers any text within the container. */
     position: relative;
-    overflow: hidden;
+    /* Positions the map container relative to other elements. */
     width: 100%;
-    padding-top: 56.25%;
+    /* Ensures the container takes the full width of its parent element. */
+    height: 450px;
+    /* Fixes the height of the map container. */
+    margin-top: 20px;
+    /* Adds space above the container to separate it from other content. */
 }
 
+.map-container h2 {
+    margin-bottom: 15px;
+    /* Spacing below the header to separate it from the map or other content. */
+}
+
+/* Responsive iframe technique */
 .map-container iframe {
     position: absolute;
+    /* Positioned absolutely to overlay within the relative container. */
     top: 0;
+    /* Aligns to the top of the container. */
     left: 0;
+    /* Aligns to the left of the container. */
     width: 100%;
+    /* Takes the full width of the container to cover the area. */
     height: 100%;
+    /* Takes the full height of the container to cover the area completely. */
     border: 0;
+    /* Removes any default border from the iframe element. */
 }
 
 /* Footer Content Styling */
 .footer-content {
     display: flex;
+    /* Uses flexbox to align child elements horizontally. */
     flex-direction: column;
+    /* Stacks child elements vertically. */
     align-items: center;
+    /* Centers items along the cross axis (horizontally). */
     max-width: 1200px;
+    /* Maximum width of the footer content to align with the site's content width. */
     margin: 0 auto;
+    /* Centers the footer content within the page. */
     padding: 20px;
+    /* Padding around the content within the footer. */
     width: 100%;
+    /* Ensures the footer takes the full width of its container. */
     background-color: #333;
+    /* Dark background for the footer for a visually distinct area. */
     color: white;
+    /* White text for high contrast and readability. */
 }
 
 .footer-content p {
     margin: 0;
+    /* Removes default margin to control spacing explicitly within the footer. */
 }
 
+/* Social Media Icon Styling */
 .social-media {
     display: flex;
+    /* Aligns social media icons horizontally using flexbox. */
     gap: 20px;
+    /* Space between each icon for clarity and aesthetics. */
     margin-top: 10px;
+    /* Space above the icon list to separate from other content. */
 }
 
 .social-media a {
     color: white;
+    /* Ensures icons are white for contrast and visibility. */
     transition: transform 0.3s, color 0.3s;
+    /* Smooth transitions for transform and color changes on hover. */
 }
 
 .social-media a:hover {
     transform: scale(1.2);
+    /* Scales up the icon to indicate hover interaction. */
     color: #e96c36;
+    /* Changes color on hover to match the site's theme. */
 }
 
 /* Responsive Design Adjustments for Footer */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
+        /* Stack the navigation links vertically on smaller screens. */
         align-items: center;
+        /* Center the navigation links horizontally. */
     }
 
     .footer-content {
         text-align: center;
+        /* Center the text within the footer for better alignment on smaller screens. */
     }
 
     .social-media {
         justify-content: center;
+        /* Center the social media icons within their container on smaller screens. */
     }
 }
 
-/* Typing Animation */
+/* Typing Animation Keyframes */
 @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+    from {
+        width: 0;
+        /* Starts the typing effect with a width of 0. */
+    }
+
+    to {
+        width: 100%;
+        /* Completes the typing effect by expanding the width to 100%. */
+    }
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: orange; }
+
+    from,
+    to {
+        border-color: transparent;
+        /* Starts and ends the blink effect with a transparent border color. */
+    }
+
+    50% {
+        border-color: orange;
+        /* Changes the border color to orange at the halfway point of the animation. */
+    }
 }
 
 .typing-animation {
     width: 100%;
+    /* Sets the initial width to full to accommodate the typing effect. */
     overflow: hidden;
+    /* Hides overflowed content to maintain the typing effect's visual integrity. */
     white-space: nowrap;
+    /* Ensures the text stays on one line, necessary for the typing effect. */
     border-right: 0.10em solid orange;
+    /* Adds a right border to simulate a typing cursor. */
     animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+    /* Applies the typing and blink animations. */
     font-size: 2em;
+    /* Sets the size of the text. */
     padding: 10px;
+    /* Adds padding inside the element for spacing. */
     display: flex;
+    /* Enables flexbox layout mode. */
     flex-direction: column;
+    /* Stacks child elements vertically. */
     align-items: center;
+    /* Centers child elements horizontally. */
     text-align: center;
+    /* Aligns text in the center of the element. */
 }
 
 .typing-animation .above-text,
 .typing-animation .below-text {
     display: block;
+    /* Displays elements as block, allowing width and height properties to take effect. */
     font-size: 0.5em;
+    /* Sets a smaller font size for text above and below the main content. */
     margin: 0.2em 0;
+    /* Adds vertical spacing around the text for better visual separation. */
 }
 
+/* Responsive adjustments for the typing animation based on screen width */
 @media (max-width: 768px) {
     .typing-animation {
         font-size: 1.5em;
+        /* Reduces the font size for smaller screens. */
         padding: 8px;
+        /* Reduces padding for a tighter layout on smaller screens. */
     }
+
     .typing-animation .above-text,
     .typing-animation .below-text {
         font-size: 0.6em;
+        /* Adjusts the font size of supplementary text for readability on smaller screens. */
     }
 }
 
 @media (max-width: 480px) {
     .typing-animation {
         font-size: 1.2em;
+        /* Further reduces the font size on very small screens. */
         padding: 5px;
+        /* Minimizes padding to save space on very small screens. */
     }
+
     .typing-animation .above-text,
     .typing-animation .below-text {
         font-size: 0.7em;
+        /* Slightly increases the font size from the previous breakpoint for readability. */
     }
 }
 
 @media (min-width: 1024px) {
     .typing-animation {
         font-size: 2.5em;
+        /* Increases font size on larger screens for better visibility. */
         padding: 12px;
+        /* Adds more padding for a more spacious layout on larger screens. */
     }
+
     .typing-animation .above-text,
     .typing-animation .below-text {
         font-size: 0.4em;
+        /* Decreases the font size of supplementary text to keep focus on the main text. */
     }
 }
 
 /* Image-Text Layout Styles */
 .image-container {
     display: flex;
+    /* Uses flexbox layout to align child elements next to each other. */
     align-items: center;
+    /* Vertically centers the child elements within the container. */
     margin: 40px auto;
+    /* Adds vertical margin and centers the container horizontally. */
     max-width: 900px;
+    /* Restricts the maximum width to maintain layout consistency across larger screens. */
     padding: 20px;
+    /* Adds padding inside the container for spacing around content. */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    /* Applies rounded corners for aesthetic purposes. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Adds a subtle shadow for a 3D effect. */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transitions for the transform and box-shadow properties on hover. */
     perspective: 1000px;
+    /* Sets the perspective for 3D transforms of child elements. */
     overflow: hidden;
+    /* Hides any content that overflows the boundaries of the container. */
 }
 
 .image-container:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    /* Moves the container up slightly on hover for a lifting effect. */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Increases the shadow to enhance the lifting effect on hover. */
 }
 
 .image-container img {
     flex: 1;
+    /* Allows the image to grow and fill the space in the flex container. */
     max-width: 50%;
+    /* Limits the image's width to half of the container. */
     height: auto;
+    /* Maintains the aspect ratio of the image. */
     margin: 0 20px;
+    /* Adds horizontal spacing between the image and other content. */
     transform: translateZ(-100px) scale(1.1);
+    /* Moves the image slightly back and scales it up for a subtle 3D effect. */
     transition: transform 0.3s ease;
+    /* Smooth transition for the transform property. */
 }
 
 .image-container.left:hover img,
 .image-container.right:hover img {
     transform: translateZ(0);
+    /* Brings the image back to the original plane on hover, cancelling the 3D effect. */
 }
 
 .image-text {
     flex: 1;
+    /* Allows the text block to grow and fill the space in the flex container. */
     background: linear-gradient(to bottom right, #f8f8f8, #ffffff);
+    /* Applies a gradient background from top-left to bottom-right. */
     animation: pulseBackground 5s infinite;
+    /* Applies an infinite pulsing animation to the background. */
     transition: background-color 0.3s ease;
+    /* Smooth transition for background color changes. */
 }
 
 .image-text:hover {
     background-color: rgba(255, 255, 255, 0.9);
+    /* Changes the background color on hover for a subtle interactive effect. */
 }
 
 .image-text h2 {
     color: #333;
+    /* Sets the text color to dark grey for contrast against the light background. */
     margin-bottom: 10px;
+    /* Adds spacing below the heading for separation from subsequent text. */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    /* Adds a light shadow to the text for better legibility. */
 }
 
 .image-text p {
     line-height: 1.6;
+    /* Increases the line height for better readability of paragraphs. */
 }
 
 /* Styling the Read More button */
 .read-more {
     background-color: #e96c36;
+    /* Sets a consistent orange background color. */
     border: none;
+    /* Removes any default borders. */
     color: white;
+    /* Sets the text color to white for high contrast. */
     padding: 10px 20px;
+    /* Adds padding for a better click area and visual appeal. */
     text-align: center;
+    /* Ensures the text within the button is centered. */
     text-decoration: none;
+    /* Removes underline from text to look more like a button than a link. */
     display: inline-block;
+    /* Allows the button to sit inline with other elements but maintain block behavior. */
     font-size: 16px;
+    /* Sets the font size for the text within the button. */
     margin: 10px 0;
+    /* Adds vertical margin for spacing around the button. */
     cursor: pointer;
+    /* Changes the cursor to indicate the button is clickable. */
     border-radius: 5px;
+    /* Rounds the corners of the button. */
     transition: background-color 0.3s ease;
+    /* Smooth transition for background color changes. */
 }
 
 .read-more:hover {
     background-color: #d85a29;
+    /* Darkens the background color on hover for visual feedback. */
 }
 
 /* Animations */
 @keyframes kenburns {
     0% {
         transform: scale(1) translate(0, 0);
+        /* Starts the image at normal size and centered position. */
         transform-origin: 16% 84%;
+        /* Sets the origin of transformation towards the bottom left. */
     }
+
     100% {
         transform: scale(1.25) translate(-10%, -15%);
+        /* Enlarges the image and moves it slightly upwards and to the left. */
         transform-origin: left top;
+        /* Keeps the transformation origin at the top left, focusing the zoom effect there. */
     }
 }
 
 @keyframes pulseBackground {
-    0% { background-color: rgba(255, 255, 255, 0.9); }
-    50% { background-color: rgba(255, 255, 255, 0.95); }
-    100% { background-color: rgba(255, 255, 255, 0.9); }
+    0% {
+        background-color: rgba(255, 255, 255, 0.9);
+        /* Starts with a slightly transparent white background. */
+    }
+
+    50% {
+        background-color: rgba(255, 255, 255, 0.95);
+        /* Lightens the background mid-animation for a pulsing effect. */
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0.9);
+        /* Returns to the initial background color. */
+    }
 }
 
 /* Flexbox direction adjustments for alternating layout */
 .image-container.left {
     flex-direction: row-reverse;
+    /* Reverses the order of elements in the container, placing the image on the left. */
 }
 
 .image-container.right {
     flex-direction: row;
+    /* Keeps the default order, placing the image on the right. */
 }
 
 /* Responsive Design Adjustments for Image-Text Layout */
 @media (max-width: 768px) {
     .image-container {
         flex-direction: column;
+        /* Stacks the image and text vertically on smaller screens. */
     }
+
     .image-container img {
         height: 200px;
+        /* Adjusts the image height to be consistent and manageable on smaller screens. */
     }
+
     .image-container::before,
     .image-container::after {
         display: none;
+        /* Removes any pseudo-elements that may interfere with the layout on smaller screens. */
     }
 }
 
 /* Workout Page Specific Styling */
 #workout-page .content-section {
     padding: 40px 20px;
+    /* Adjusts the padding for consistency and spacing within the section. */
     text-align: center;
+    /* Centers the text within the workout page sections for consistency and focus. */
     background-color: #fff;
+    /* Sets a white background for clear segmentation of content. */
     margin: 20px 0;
+    /* Adds vertical margin to separate each section visually. */
     border-radius: 10px;
+    /* Applies rounded corners for a softer, more modern look. */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Adds a subtle shadow to lift the section off the rest of the content. */
 }
 
 /* Form Group Styling */
 #workout-page .form-group {
     margin-bottom: 15px;
+    /* Adds space below each form group to separate fields visually. */
 }
 
 #workout-page .form-group label {
     display: block;
+    /* Ensures the label takes up the full width available, placing the input below. */
     margin-bottom: 5px;
+    /* Adds a small space below the label for clarity. */
     color: #333;
+    /* Sets the text color to dark grey for readability against a light background. */
 }
 
 #workout-page .form-group input,
 #workout-page .form-group select,
 #workout-page .form-group textarea {
     width: 100%;
+    /* Forces these elements to take the full width of their container, maintaining form structure. */
     padding: 10px;
+    /* Adds padding inside the inputs for better text visibility and ease of interaction. */
     border: 2px solid #ccc;
+    /* Adds a grey border for visual definition. */
     border-radius: 5px;
+    /* Rounds the corners of the input fields for a softer, modern look. */
     color: #333;
+    /* Ensures text is dark grey for contrast and readability. */
 }
 
 #workout-page .form-group textarea {
     resize: vertical;
+    /* Allows the textarea to be resizable vertically only, preventing layout disruption. */
 }
 
 #workout-page button {
     padding: 10px 20px;
+    /* Adds padding to make the button larger and easier to interact with. */
     background-color: #e96c36;
+    /* Sets a strong, orange background color to draw attention to the button. */
     color: white;
+    /* Ensures text on the button is white for high contrast and visibility. */
     border: none;
+    /* Removes any default borders. */
     border-radius: 5px;
+    /* Applies rounded corners to match other design elements. */
     cursor: pointer;
+    /* Changes the cursor to indicate the element is clickable. */
     transition: background 0.3s;
+    /* Animates background color changes smoothly. */
 }
 
 #workout-page button:hover {
     background-color: #d85a29;
+    /* Changes the background color on hover to a slightly darker shade for interactive feedback. */
 }
 
 /* Plan Container Styling */
 #workout-page .plan-grid {
     display: grid;
+    /* Uses CSS grid layout to arrange plan items in a grid format. */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Creates columns that fit the content size but also ensures responsiveness. */
     gap: 20px;
+    /* Adds space between grid items for clarity and separation. */
     justify-content: center;
+    /* Centers the grid items horizontally if there is extra space in the container. */
 }
 
 /* Plan Item Styling */
 #workout-page .plan-item {
     background-color: #fff;
+    /* Sets a white background for plan items to stand out against a possibly different section background. */
     padding: 20px;
+    /* Adds padding within each plan item for spacing around the content. */
     border-radius: 10px;
+    /* Rounds the corners of the plan items for consistency with other elements like inputs and plan items. */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Applies a subtle shadow for depth. */
     text-align: center;
+    /* Centers the text within the plan items to match the overall style of the page. */
     cursor: pointer;
+    /* Changes the cursor to indicate these items can be interacted with. */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Ensures transformations and shadow changes are smooth. */
 }
 
 #workout-page .plan-item:hover {
     transform: translateY(-5px);
+    /* Moves the item up slightly when hovered to create a lifting effect. */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Increases the shadow to enhance the lifting effect. */
 }
 
 #workout-page .plan-item h3 {
     color: #e96c36;
+    /* Sets the heading color to orange, providing a visual link to the call-to-action button and other interactive elements. */
     margin-bottom: 15px;
+    /* Adds space below the heading to separate it from the text that follows. */
 }
 
 #workout-page .plan-item p {
     margin-bottom: 15px;
+    /* Adds spacing below the paragraph to separate it from any following content or buttons. */
 }
 
 #workout-page .plan-item img {
     width: 100%;
+    /* Forces the image to take up 100% of its container's width, ensuring it scales properly within the item. */
     height: 200px;
+    /* Sets a fixed height for images to maintain a consistent size across all plan items. */
     object-fit: cover;
+    /* Ensures the image covers the set area without distorting its aspect ratio. */
     border-radius: 10px;
+    /* Applies rounded corners to the images to match other elements like inputs and plan items. */
     margin-bottom: 15px;
+    /* Adds space below images to separate them from text or other content. */
 }
 
 /* Center Content Styling */
 .center-content {
     display: flex;
+    /* Enables flexbox layout to align child elements flexibly. */
     justify-content: center;
+    /* Centers child elements horizontally within the container. */
     align-items: center;
+    /* Centers child elements vertically within the container. */
     flex-direction: column;
+    /* Stacks child elements vertically. */
 }
 
 /* Day Boxes Styling */
 #workout-page .days-container {
     display: flex;
+    /* Uses flexbox layout to provide a flexible container for day boxes. */
     flex-wrap: wrap;
+    /* Allows day boxes to wrap onto the next line if there isn't enough space. */
     justify-content: center;
+    /* Centers the day boxes within the container. */
     gap: 10px;
+    /* Adds space between each day box for clarity. */
     margin-top: 15px;
+    /* Adds space above the container to separate it from other content. */
 }
 
 #workout-page .day-box {
     background-color: #f0f0f0;
+    /* Sets a light grey background for the day boxes to differentiate them from the white background of the plan items. */
     border: 1px solid #ddd;
+    /* Adds a subtle border around the day boxes for definition. */
     padding: 10px 15px;
+    /* Adds internal padding to increase the clickable area and improve the visual appearance. */
     border-radius: 5px;
+    /* Rounds the corners of the day boxes to maintain consistency with other elements. */
     cursor: pointer;
+    /* Changes the cursor to indicate the boxes are interactive. */
     transition: background-color 0.3s ease;
+    /* Smoothly animates background color changes on interaction. */
     width: calc(33.33% - 10px);
+    /* Calculates the width to distribute three boxes per line, accounting for gaps. */
     box-sizing: border-box;
+    /* Ensures the width calculation includes padding and border sizes. */
 }
 
 #workout-page .day-box:hover {
     background-color: #ddd;
+    /* Darkens the box background on hover for visual feedback. */
 }
 
 /* Resistance Training Table Styling */
 #workout-page .resistance-training {
     border: 2px dashed #e96c36;
+    /* Adds a dashed orange border for visual emphasis and to draw attention. */
     padding: 20px;
+    /* Adds padding within the element for spacing around the content. */
     background-color: #fff;
+    /* Sets a white background to keep the content clear and focused. */
     border-radius: 10px;
+    /* Rounds the corners for a modern and cohesive look. */
     overflow-x: auto;
+    /* Enables horizontal scrolling if the content overflows. */
 }
 
 #workout-page .resistance-training h3 {
     color: #e96c36;
+    /* Sets the heading color to orange to match the border and maintain design consistency. */
 }
 
 #workout-page .resistance-training table {
     width: 100%;
+    /* Ensures the table takes up the full width of its container. */
     border-collapse: collapse;
+    /* Collapses the table borders into a single border for a cleaner look. */
     margin-top: 20px;
+    /* Adds space above the table to separate it from any preceding content. */
 }
 
 #workout-page .resistance-training th,
 #workout-page .resistance-training td {
     border: 1px solid #ddd;
+    /* Adds a border around table cells for definition. */
     padding: 8px;
+    /* Adds padding inside the cells for better readability. */
     text-align: center;
+    /* Centers the text within each cell for consistency. */
 }
 
 #workout-page .resistance-training th {
     background-color: #f2f2f2;
+    /* Sets a light grey background for table headers to differentiate them from the body cells. */
 }
 
 /* Cardio Training Styles */
 #workout-page .cardio-training {
     border: 2px dashed #e96c36;
+    /* Adds a dashed orange border for visual emphasis and to draw attention. */
     padding: 20px;
+    /* Adds padding within the element for spacing around the content. */
     background-color: #fff;
+    /* Sets a white background to keep the content clear and focused. */
     border-radius: 10px;
+    /* Rounds the corners for a modern and cohesive look. */
     overflow-x: auto;
+    /* Enables horizontal scrolling if the content overflows. */
 }
 
 #workout-page .cardio-training h3 {
     color: #d85a29;
+    /* Sets the heading color to a darker orange for a slightly different emphasis. */
 }
 
 #workout-page .cardio-training table {
     width: 100%;
+    /* Ensures the table takes up the full width of its container. */
     border-collapse: collapse;
+    /* Collapses the table borders into a single border for a cleaner look. */
     margin-top: 20px;
+    /* Adds space above the table to separate it from any preceding content. */
 }
 
 #workout-page .cardio-training th,
 #workout-page .cardio-training td {
     border: 1px solid #ddd;
+    /* Adds a border around table cells for definition. */
     padding: 8px;
+    /* Adds padding inside the cells for better readability. */
     text-align: left;
+    /* Aligns text to the left for better readability in larger text blocks. */
 }
 
 #workout-page .cardio-training th {
     background-color: #f2f2f2;
+    /* Sets a light grey background for table headers to differentiate them from the body cells. */
     color: #d85a29;
+    /* Matches the header text color to the section header for visual consistency. */
 }
 
 #workout-page .cardio-training td {
     background-color: #ffece6;
+    /* Sets a very light orange background for table cells to subtly differentiate them from other table sections. */
 }
 
 /* Testimonials Section Styling */
 .testimonial-container {
     display: flex;
+    /* Uses flexbox layout to arrange testimonials side-by-side. */
     justify-content: space-between;
+    /* Distributes testimonials evenly across the container. */
     flex-wrap: wrap;
+    /* Allows testimonials to wrap onto the next line if necessary. */
 }
 
 .testimonial {
     display: flex;
+    /* Uses flexbox layout to arrange image and text side-by-side. */
     align-items: center;
+    /* Vertically centers the items within the testimonial. */
     background-color: #fff;
+    /* Sets a white background for clear readability. */
     padding: 20px;
+    /* Adds padding for internal spacing. */
     margin: 10px;
+    /* Adds margin outside the testimonial for separation. */
     border-radius: 10px;
+    /* Rounds the corners for a modern look. */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Adds a subtle shadow for depth. */
     flex: 1 1 calc(50% - 20px);
+    /* Ensures testimonials take up half the container width, minus margins. */
     box-sizing: border-box;
+    /* Ensures padding and borders are included in the element's total width and height. */
 }
 
 .testimonial-image {
     width: 70px;
+    /* Sets a fixed width for the testimonial images. */
     height: 70px;
+    /* Sets a fixed height to match the width, making the image square. */
     border-radius: 50%;
+    /* Rounds the corners fully to create a circular image. */
     margin-right: 20px;
+    /* Adds space to the right of the image to separate it from the text. */
 }
 
 .testimonial-text {
     flex: 1;
+    /* Allows the text to take up the remaining space within the testimonial container. */
 }
 
 .testimonial p {
     margin: 0;
+    /* Removes default margin for a cleaner look. */
     color: #666;
+    /* Sets a medium grey text color for readability without too much contrast. */
 }
 
 @media (max-width: 768px) {
     .testimonial {
         flex-direction: column;
+        /* Stacks image and text vertically on smaller screens. */
         align-items: flex-start;
+        /* Aligns items to the start of the container. */
     }
 
     .testimonial-image {
         margin-right: 0;
+        /* Removes right margin since elements are stacked vertically. */
         margin-bottom: 20px;
+        /* Adds space below the image to separate it from the text. */
     }
 }
 
 /* Modal Styling */
 .modal {
     display: none;
+    /* Hides the modal by default. */
     position: fixed;
+    /* Positions the modal relative to the viewport. */
     z-index: 1;
+    /* Places the modal on top of other elements. */
     left: 0;
+    /* Aligns the modal to the left of the viewport. */
     top: 0;
+    /* Aligns the modal to the top of the viewport. */
     width: 100%;
+    /* Ensures the modal takes up the full width of the viewport. */
     height: 100%;
+    /* Ensures the modal takes up the full height of the viewport. */
     overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+    /* Adds scrollbars if the content overflows. */
+    background-color: rgb(0, 0, 0);
+    /* Sets a black background for the overlay. */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Makes the background slightly transparent. */
 }
 
 .modal-content {
     background-color: #fefefe;
+    /* Sets a white background for the modal content. */
     margin: 15% auto;
+    /* Centers the modal content vertically and horizontally. */
     padding: 20px;
+    /* Adds padding within the modal content for spacing. */
     border: 1px solid #888;
+    /* Adds a border for visual definition. */
     width: 80%;
+    /* Sets the modal content width to 80% of the viewport. */
     border-radius: 10px;
+    /* Rounds the corners for a cohesive look. */
 }
 
 .modal-close {
     color: #aaa;
+    /* Sets the close button color to light grey. */
     float: right;
+    /* Aligns the close button to the right of the modal content. */
     font-size: 28px;
+    /* Increases the font size for visibility. */
     font-weight: bold;
+    /* Makes the close button bold. */
 }
 
 .modal-close:hover,
 .modal-close:focus {
     color: black;
+    /* Changes the close button color to black on hover or focus. */
     text-decoration: none;
+    /* Removes any text decoration from the close button. */
     cursor: pointer;
+    /* Changes the cursor to indicate the button is clickable. */
 }
 
-/* Modal Styling Specific to Workout Page */
-#workout-page .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-}
-
-#workout-page .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    border-radius: 10px;
-}
-
-#workout-page .modal-close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-#workout-page .modal-close:hover,
-#workout-page .modal-close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Media Queries for Workout Page */
+/* Responsive Adjustments for Workout Page */
 @media (max-width: 768px) {
     #workout-page .days-container .day-box {
         width: calc(50% - 10px);
+        /* Adjusts the day box width to fit two per line on smaller screens. */
     }
 
     #workout-page .plan-item img {
         height: 150px;
+        /* Reduces the image height for consistency on smaller screens. */
     }
 
-    /* Media Query for Smaller Screens */
-    .resistance-training, .cardio-training {
-        width: 100%; /* Make sections full width */
+    /* Responsive Adjustments for Resistance and Cardio Training Sections */
+    .resistance-training,
+    .cardio-training {
+        width: 100%;
+        /* Makes the sections full width on smaller screens. */
     }
 
-    .resistance-training-container, .cardio-training-container {
-        flex-direction: column; /* Stack exercises vertically */
+    .resistance-training-container,
+    .cardio-training-container {
+        flex-direction: column;
+        /* Stacks exercises vertically on smaller screens. */
     }
 
-    .resistance-training-exercise, .cardio-training-exercise {
-        width: 90%; /* Adjust width as needed */
-        margin: 10px auto; /* Center exercises */
+    .resistance-training-exercise,
+    .cardio-training-exercise {
+        width: 90%;
+        /* Adjusts width as needed to fit the container. */
+        margin: 10px auto;
+        /* Centers exercises within the container. */
     }
 
-    .resistance-training-exercise table, .cardio-training-exercise table {
-        width: 100%; /* Make tables full width */
+    .resistance-training-exercise table,
+    .cardio-training-exercise table {
+        width: 100%;
+        /* Makes tables full width for better readability. */
     }
 }
 
 @media (max-width: 480px) {
     #workout-page .days-container .day-box {
         width: 100%;
+        /* Makes day boxes full width on very small screens to use the available space effectively. */
     }
 
     #workout-page .plan-item img {
         height: 120px;
+        /* Further reduces the image height for consistency on smaller screens. */
     }
 }
 
 /* Scoped Styles for Classes Page */
 #classes-page header {
     text-align: center;
+    /* Aligns text to the center for a clean, centered look in the header. */
     background: url('/assets/images/military-combat-workout.jpg') no-repeat center center/cover;
+    /* Sets a background image with full cover and centered. */
     height: 700px;
+    /* Sets a fixed height to maintain a large, impactful header. */
     display: flex;
+    /* Uses flexbox for positioning child elements like navigation and hero content. */
     justify-content: center;
+    /* Centers child elements horizontally within the header. */
     align-items: center;
+    /* Centers child elements vertically within the header. */
     position: relative;
+    /* Allows for absolute positioning of child elements relative to the header. */
 }
 
 #classes-page header::before {
     content: '';
+    /* Required for pseudo-elements, used here to create an overlay. */
     position: absolute;
+    /* Positions the overlay absolutely relative to the header. */
     top: 0;
+    /* Aligns the overlay to the top of the header. */
     left: 0;
+    /* Aligns the overlay to the left of the header. */
     width: 100%;
+    /* Ensures the overlay covers the full width of the header. */
     height: 100%;
+    /* Ensures the overlay covers the full height of the header. */
     background: rgba(0, 0, 0, 0.4);
+    /* Adds a black overlay with 40% opacity to darken the background image for better text visibility. */
 }
 
 /* Navigation Styling */
 #classes-page nav {
     width: 100%;
+    /* Ensures the navigation bar spans the full width of the header. */
     position: absolute;
+    /* Positions the navigation bar absolutely to sit on top of the header content. */
     top: 0;
+    /* Anchors the navigation bar to the top of the header. */
 }
 
 #classes-page nav ul {
     list-style: none;
+    /* Removes default list styling. */
     display: flex;
+    /* Displays list items in a row using flexbox. */
     justify-content: center;
+    /* Centers the navigation items horizontally. */
     background: rgba(109, 101, 101, 0.7);
+    /* Adds a semi-transparent dark background for the navigation items for better contrast. */
     padding: 10px 0;
+    /* Adds vertical padding to the navigation bar for better touch targets and visual separation. */
 }
 
 #classes-page nav ul li {
     margin: 0 20px;
+    /* Adds horizontal spacing between navigation items. */
 }
 
 #classes-page nav ul li a {
     color: #fff;
+    /* Sets the text color to white for contrast against the dark background. */
     text-decoration: none;
+    /* Removes underlines from links for a cleaner look. */
     font-weight: bold;
+    /* Makes the navigation text bold for better readability. */
     padding: 10px;
+    /* Adds padding to increase the clickable area and improve usability. */
     transition: background 0.3s;
+    /* Animates background changes on hover for a smooth visual effect. */
 }
 
 #classes-page nav ul li a:hover {
     background: #e96c36;
+    /* Changes the background color to orange on hover for visual feedback. */
 }
 
 /* Hero Content Styling */
 #classes-page .hero-content {
     color: white;
+    /* Sets the text color to white for visibility against the background. */
     position: relative;
+    /* Allows precise positioning of the hero content within the header. */
     z-index: 1;
+    /* Ensures the hero content sits on top of the background overlay. */
 }
 
 #classes-page .hero-content h1 {
     font-size: 3em;
+    /* Sets a large font size for the main heading to make it prominent. */
     margin-bottom: 20px;
+    /* Adds space below the heading to separate it from the subtext. */
 }
 
 #classes-page .hero-content p {
     font-size: 1.2em;
+    /* Sets a slightly larger font size for the paragraph to improve readability. */
 }
 
 /* CTA Button Styling */
 #classes-page .cta-button {
     display: inline-block;
+    /* Allows the button to be treated like a block element but only takes up as much space as it needs. */
     padding: 10px 20px;
+    /* Adds padding inside the button to make it larger and easier to interact with. */
     background-color: #e96c36;
+    /* Sets the button color to orange for it to stand out. */
     color: white;
+    /* Sets the text color to white for contrast. */
     text-decoration: none;
+    /* Ensures the button does not look like a typical hyperlink. */
     font-weight: bold;
+    /* Makes the button text bold to make it more prominent. */
     border-radius: 5px;
+    /* Rounds the corners of the button to make it look friendlier and more modern. */
     transition: background 0.3s, transform 0.3s;
+    /* Adds a transition effect for the background color and transform properties to animate the button on hover. */
 }
 
 #classes-page .cta-button:hover {
     background-color: #d85a29;
+    /* Darkens the button color on hover for a subtle feedback effect. */
     transform: translateY(-3px);
+    /* Moves the button up slightly on hover to give a feeling of being pressed. */
 }
 
 /* Content Section Styling */
 #classes-page .content-section {
     padding: 40px 20px;
+    /* Adds significant padding to create ample space around the content. */
     text-align: center;
+    /* Centers the text within the section. */
     background-color: #fff;
+    /* Sets the background color to white to ensure content is easily readable. */
     margin: 20px 0;
+    /* Adds vertical margins to separate each content section visually. */
     border-radius: 10px;
+    /* Applies rounded corners to the content sections for a soft, modern look. */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Adds a subtle shadow for depth, making the content sections appear slightly raised. */
 }
 
 /* Class Item Styling */
 #classes-page .class-item {
     background-color: #f9f9f9;
+    /* Sets a very light grey background to differentiate class items from the general background. */
     border: 1px solid #ddd;
+    /* Adds a subtle border to define the edges of class items. */
     padding: 20px;
+    /* Adds padding to create space within each class item. */
     margin: 10px;
+    /* Adds outside margin to create space between class items. */
     border-radius: 10px;
+    /* Applies rounded corners to class items for consistency with other design elements. */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Adds a light shadow to elevate the class items visually. */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Animates transformations and shadow changes to enhance interactivity. */
 }
 
 #classes-page .class-item:hover {
     transform: translateY(-5px);
+    /* Moves the class item up slightly on hover to suggest interactivity. */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Increases the shadow on hover to emphasize the lifting effect. */
 }
 
 #classes-page .class-item h3 {
     color: #e96c36;
+    /* Sets the headings within class items to orange to tie them into the overall design theme. */
     margin-bottom: 10px;
+    /* Adds a small space below headings to separate them from the text that follows. */
 }
 
 #classes-page .class-item p {
     color: #666;
+    /* Sets the text color to a medium grey to reduce the intensity of black text, which can be harsh in large amounts. */
 }
 
 /* Video Container Styling */
 #classes-page .video-container {
     display: flex;
+    /* Uses flexbox to lay out video elements in a row. */
     flex-wrap: wrap;
+    /* Allows video elements to wrap onto the next line if there's not enough space. */
     gap: 20px;
+    /* Sets the space between video elements. */
     justify-content: center;
+    /* Centers video elements within the container. */
 }
 
 #classes-page .video-container video {
     width: 100%;
-    max-width: 320px; /* Set a fixed max width for consistency */
-    height: auto; /* Maintain aspect ratio */
+    /* Makes video elements responsive by allowing them to expand to fill their container. */
+    max-width: 320px;
+    /* Restricts video width to 320px to ensure they don't become too large on wider screens. */
+    height: auto;
+    /* Keeps the aspect ratio of videos consistent as their width changes. */
     border-radius: 10px;
+    /* Rounds the corners of video elements. */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    object-fit: cover; /* Ensure videos cover the fixed dimensions */
+    /* Adds a subtle shadow to lift the video elements off the page. */
+    object-fit: cover;
+    /* Ensures the videos cover the area of the element without being distorted. */
 }
-
 
 /* Footer Content Styling */
 #classes-page .footer-content {
     display: flex;
+    /* Uses flexbox to arrange footer content horizontally. */
     flex-direction: column;
+    /* Stacks footer content vertically. */
     align-items: center;
+    /* Centers footer content horizontally. */
     max-width: 1200px;
+    /* Restricts the maximum width of the footer to ensure content doesn't stretch too far on larger screens. */
     margin: 0 auto;
+    /* Centers the footer content horizontally on the page. */
     padding: 20px;
+    /* Adds padding around the footer content. */
     width: 100%;
+    /* Ensures the footer spans the full width of its container. */
     background-color: #333;
+    /* Sets a dark background for the footer, creating a strong base for the page. */
     color: white;
+    /* Sets the text color to white for contrast against the dark background. */
 }
 
 #classes-page .footer-content p {
     margin: 0;
+    /* Removes the default margin from paragraph elements to control spacing tightly. */
 }
 
 #classes-page .social-media {
     display: flex;
+    /* Uses flexbox to lay out social media links in a row. */
     gap: 20px;
+    /* Creates space between each social media link. */
     margin-top: 10px;
+    /* Adds a small space above the social media links to separate them from other content. */
 }
 
 #classes-page .social-media a {
     color: white;
+    /* Ensures social media icons are white to stand out against the dark background. */
     transition: transform 0.3s, color 0.3s;
+    /* Adds a transition effect to animate changes in color and position. */
 }
 
 #classes-page .social-media a:hover {
     transform: scale(1.2);
+    /* Enlarges social media icons slightly on hover for a tactile feel. */
     color: #e96c36;
+    /* Changes the icon color to orange on hover for visual feedback. */
 }
 
 /* Responsive Design Adjustments */
 @media (max-width: 768px) {
     #classes-page nav ul {
         flex-direction: column;
+        /* Stacks navigation items vertically on smaller screens. */
         align-items: center;
+        /* Centers navigation items within their container. */
     }
 
     #classes-page .footer-content {
         text-align: center;
+        /* Centers footer text for consistency with the centered navigation. */
     }
 
     #classes-page .social-media {
         justify-content: center;
+        /* Centers social media links within their container. */
     }
 
     #classes-page .hero-content h1 {
         font-size: 2.5em;
+        /* Reduces the font size of the main heading to fit better on smaller screens. */
     }
 
     #classes-page .hero-content p {
         font-size: 1em;
+        /* Adjusts the paragraph font size for better readability on smaller devices. */
     }
 
     #classes-page .cta-button {
         font-size: 0.9em;
+        /* Slightly reduces the font size of the call to action button to better fit its surroundings. */
         padding: 8px 16px;
+        /* Adjusts padding to maintain button proportionality. */
     }
 }
 
 @media (max-width: 480px) {
     #classes-page .hero-content h1 {
         font-size: 2em;
+        /* Further reduces the font size for the smallest screens. */
     }
 
     #classes-page .hero-content p {
         font-size: 0.9em;
+        /* Slightly reduces the paragraph text size for balance and proportion. */
     }
 
     #classes-page .cta-button {
         font-size: 0.8em;
+        /* Reduces the call to action button font size to ensure it doesn't overpower the space. */
         padding: 6px 12px;
+        /* Adjusts padding to keep the button tactile but not too bulky. */
     }
 }
 
@@ -973,16 +1425,19 @@ nav ul li a:hover {
     from {
         width: 0;
     }
+
     to {
         width: 100%;
     }
 }
 
 @keyframes blink-caret {
+
     from,
     to {
         border-color: transparent;
     }
+
     50% {
         border-color: orange;
     }
@@ -1014,6 +1469,7 @@ nav ul li a:hover {
     from {
         text-shadow: 0 0 10px #fff, 0 0 20px #e8c34b, 0 0 30px #e8c34b, 0 0 40px #e8c34b, 0 0 50px #e8c34b, 0 0 60px #e8c34b, 0 0 70px #e8c34b;
     }
+
     to {
         text-shadow: 0 0 20px #fff, 0 0 30px #e8c34b, 0 0 40px #e8c34b, 0 0 50px #e8c34b, 0 0 60px #e8c34b, 0 0 70px #e8c34b, 0 0 80px #e8c34b;
     }
@@ -1022,7 +1478,6 @@ nav ul li a:hover {
 #classes-page .glow-animation {
     animation: glow 1.5s infinite alternate;
 }
-
 
 /* Header Styling */
 #about-page header {
@@ -1118,7 +1573,7 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-#about-page .about-item h3, 
+#about-page .about-item h3,
 #about-page .about-item h4 {
     color: #e96c36;
     margin-bottom: 10px;
@@ -1220,54 +1675,285 @@ nav ul li a:hover {
     from {
         width: 0;
     }
+
     to {
         width: 100%;
     }
 }
 
 @keyframes blink-caret {
+
     from,
     to {
         border-color: transparent;
     }
+
     50% {
         border-color: orange;
     }
 }
 
-#about-page .typing-animation {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 0.10em solid orange;
-    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
-    font-size: 2em;
-    padding: 10px;
+.hero-section {
+    background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+.hero-content h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+.hero-content p {
+    font-size: 1.2em;
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.about-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.about-item {
+    display: flex;
+    margin-bottom: 40px;
+}
+.about-item:nth-child(even) .text-section {
+    order: 2;
+}
+.about-item img {
+    max-width: 50%;
+    border-radius: 8px;
+}
+.text-section {
+    padding: 20px;
+}
+.text-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ff5722;
+}
+.text-section p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+.testimonial-carousel {
+    text-align: center;
+    margin: 40px 0;
+}
+.testimonial-carousel img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+.testimonial-carousel p {
+    font-style: italic;
+    font-size: 1em;
+    margin: 0 0 20px;
+}
+.testimonial-carousel h4 {
+    font-weight: bold;
+    margin-top: 0;
+}
+.cta-button {
+    background: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px;
+}
+.cta-button:hover {
+    background: #e64a19;
+}
+.timeline-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+.timeline {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    margin: 50px 0;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #ff5722;
+    z-index: -1;
+}
+.timeline-item {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    width: 60%;
+    text-align: left;
+}
+.timeline-item h3 {
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+.timeline-item:nth-child(even) {
+    align-self: flex-start;
+}
+.timeline-item:nth-child(odd) {
+    align-self: flex-end;
+}
+.video-section {
+    padding: 50px 20px;
     text-align: center;
 }
-
-#about-page .typing-animation .above-text,
-#about-page .typing-animation .below-text {
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.services-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.service-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.service-card i {
+    font-size: 2em;
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+.service-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.service-card p {
+    font-size: 0.9em;
+}
+.service-card:hover {
+    transform: translateY(-10px);
+}
+.map-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+.map-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    position: relative;
+    overflow: hidden;
+}
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.skills-section {
+    padding: 50px 20px;
+    text-align: center;
+    background: #ffffff; /* Light background for blending */
+}
+.skill {
+    margin-bottom: 20px;
+}
+.skill h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ff5722; /* Darker tone */
+}
+.skill-bar {
+    background: #ffccbc;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+.skill-level {
+    background: linear-gradient(90deg, #ff5722, #ffccbc); /* Two-tone blend */
+    height: 100%;
+    transition: width 1s ease;
+}
+.faq-section {
+    padding: 50px 20px;
+    text-align: center;
+    background: #ffffff; /* Light background for blending */
+}
+.faq-item {
+    margin-bottom: 20px;
+}
+.faq-question {
+    background: #ff5722; /* Darker tone */
+    color: white;
+    padding: 15px;
+    border: none;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.faq-question:hover {
+    background: #ffccbc; /* Even darker tone */
+}
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+.faq-item.active .faq-answer {
     display: block;
-    font-size: 0.5em;
-    margin: 0.2em 0;
-}
-
-/* Glow Animation */
-@keyframes glow {
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #e8c34b, 0 0 30px #e8c34b, 0 0 40px #e8c34b, 0 0 50px #e8c34b, 0 0 60px #e8c34b, 0 0 70px #e8c34b;
-    }
-    to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #e8c34b, 0 0 40px #e8c34b, 0 0 50px #e8c34b, 0 0 60px #e8c34b, 0 0 70px #e8c34b, 0 0 80px #e8c34b;
-    }
-}
-
-#about-page .glow-animation {
-    animation: glow 1.5s infinite alternate;
 }
 
 /* Sections with charts and text side by side */
@@ -1279,6 +1965,95 @@ nav ul li a:hover {
     margin: 20px 0;
     gap: 20px;
 }
+
+/* General styles for content sections */
+.content-section {
+    padding: 40px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* Card Container Styles */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.info-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.info-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    color: #e96c36;
+    margin-bottom: 10px;
+}
+
+.info-card p,
+.info-card a {
+    font-family: 'Lato', sans-serif;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.info-card a {
+    color: #e96c36;
+    text-decoration: none;
+}
+
+.info-card a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+    color: #333333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+    color: #333333;
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+/* Button Styles */
+.calculate-button {
+    background-color: #e96c36;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.calculate-button:hover {
+    background-color: #e96c36
+}
+
+
 
 .with-charts .chart-container {
     flex: 1;
