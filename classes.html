@@ -14,17 +14,6 @@
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap">
     
-    <!-- Social Media Metadata -->
-    <meta property="og:title" content="About - Fitness with Wemyss Workouts">
-    <meta property="og:description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
-    <meta property="og:image" content="path/to/your-photo.jpg">
-    <meta property="og:url" content="http://www.yourwebsite.com/about.html">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About - Fitness with Wemyss Workouts">
-    <meta name="twitter:description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
-    <meta name="twitter:image" content="path/to/your-photo.jpg">
-    
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="assets/style.css">
     
@@ -36,8 +25,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
 </head>
 
-
-<body>
+<body id="classes-page">
     <header>
         <nav>
             <ul class="nav-list">
@@ -55,6 +43,7 @@
                 <span class="below-text">Join Us Today!</span>
             </h1>
             <p class="glow-animation">Join our variety of classes to stay fit and healthy.</p>
+            <a href="join.html" class="cta-button">Join Now</a>
         </div>
     </header>
 
@@ -62,37 +51,52 @@
         <section class="content-section">
             <h2>Available Classes</h2>
             <div class="class-item glow">
-                <h3>HIIT Training</h3>
-                <p>High-Intensity Interval Training to boost your cardiovascular fitness.</p>
+                <img src="assets/images/hiit.jpg" alt="HIIT Training">
+                <div class="text-section">
+                    <h3>HIIT Training</h3>
+                    <p>High-Intensity Interval Training to boost your cardiovascular fitness.</p>
+                </div>
             </div>
             <div class="class-item">
-                <h3>Build Strength & Get Fit</h3>
-                <p>Challenge yourself with our dynamic strength and conditioning program.</p>
+                <img src="assets/images/strength.jpg" alt="Build Strength & Get Fit">
+                <div class="text-section">
+                    <h3>Build Strength & Get Fit</h3>
+                    <p>Challenge yourself with our dynamic strength and conditioning program.</p>
+                </div>
             </div>            
             <div class="class-item">
-                <h3>Sculpt Your Physique & Get Stronger</h3>
-                <p>Transform your body and boost your strength with our expert-led resistance training program.</p>
+                <img src="assets/images/sculpt.jpg" alt="Sculpt Your Physique & Get Stronger">
+                <div class="text-section">
+                    <h3>Sculpt Your Physique & Get Stronger</h3>
+                    <p>Transform your body and boost your strength with our expert-led resistance training program.</p>
+                </div>
             </div>
             <div class="class-item">
-                <h3>Get Fit & Have Fun!</h3>
-                <p>Torch calories and boost your stamina with our energizing cardio workouts.</p>
+                <img src="assets/images/cardio.jpg" alt="Get Fit & Have Fun!">
+                <div class="text-section">
+                    <h3>Get Fit & Have Fun!</h3>
+                    <p>Torch calories and boost your stamina with our energizing cardio workouts.</p>
+                </div>
             </div>
             <div class="class-item">
-                <h3>New to Fitness? Start with Cardio!</h3>
-                <p>Our beginner-friendly cardio classes are a fun way to burn calories and get into shape.</p>
+                <img src="assets/images/beginner-cardio.jpg" alt="New to Fitness? Start with Cardio!">
+                <div class="text-section">
+                    <h3>New to Fitness? Start with Cardio!</h3>
+                    <p>Our beginner-friendly cardio classes are a fun way to burn calories and get into shape.</p>
+                </div>
             </div>
         </section>
 
         <!-- Video Section -->
-        <section class="content-section">
+        <section class="content-section video-section">
             <h2>Watch Our Fitness Videos</h2>
             <div class="video-container">
                 <video controls>
-                    <source src="assets/videos/cardio-video-St-Mullins .mp4" type="video/mp4">
+                    <source src="assets/videos/cardio-video-St-Mullins.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <video controls>
-                    <source src="assets/videos/Mixed-Circuit-St-Mullins .mp4" type="video/mp4">
+                    <source src="assets/videos/Mixed-Circuit-St-Mullins.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <video controls>
@@ -109,6 +113,7 @@
                 </video>
             </div>
         </section>
+
         <section id="disclaimer" class="disclaimer content-section">
             <h2 class="glow-text">Disclaimer</h2>
             <p>
@@ -129,5 +134,4 @@
         </div>
     </footer>
 </body>
-
 </html>

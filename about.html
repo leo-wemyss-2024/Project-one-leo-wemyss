@@ -1,330 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Fitness with Wemyss Workouts</title>
+    <title>Fitness with Wemyss Workouts</title>
+    <meta name="description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
+    <meta name="keywords" content="fitness, personal trainer, about, Leo Wemyss">
+    <meta name="author" content="Leo Wemyss">
+    
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap">
+    
+    <!-- Social Media Metadata -->
+    <meta property="og:title" content="About - Fitness with Wemyss Workouts">
+    <meta property="og:description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
+    <meta property="og:image" content="path/to/your-photo.jpg">
+    <meta property="og:url" content="http://www.yourwebsite.com/about.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About - Fitness with Wemyss Workouts">
+    <meta name="twitter:description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
+    <meta name="twitter:image" content="path/to/your-photo.jpg">
+    
+    <!-- Link to CSS file -->
     <link rel="stylesheet" href="assets/style.css">
-    <style>
-        body {
-            font-family: 'Lato', sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            background: #ffffff;
-        }
-
-        .hero-section {
-            background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-            position: relative;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-content h1 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-
-        .hero-content p {
-            font-size: 1.2em;
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.6s ease-out;
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .about-section {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-item {
-            display: flex;
-            margin-bottom: 40px;
-        }
-
-        .about-item:nth-child(even) .text-section {
-            order: 2;
-        }
-
-        .about-item img {
-            max-width: 50%;
-            border-radius: 8px;
-        }
-
-        .text-section {
-            padding: 20px;
-        }
-
-        .text-section h2 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            color: #ff5722;
-        }
-
-        .text-section p {
-            font-size: 1em;
-            margin-bottom: 20px;
-        }
-
-        .testimonial-carousel {
-            text-align: center;
-            margin: 40px 0;
-        }
-
-        .testimonial-carousel iframe {
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .cta-button {
-            background: #ff5722;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin: 10px;
-        }
-
-        .cta-button:hover {
-            background: #e64a19;
-        }
-
-        .timeline-section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            margin: 50px 0;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background-color: #ff5722;
-            z-index: -1;
-        }
-
-        .timeline-item {
-            position: relative;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            width: 60%;
-            text-align: left;
-        }
-
-        .timeline-item h3 {
-            color: #ff5722;
-            margin-bottom: 10px;
-        }
-
-        .timeline-item:nth-child(even) {
-            align-self: flex-start;
-        }
-
-        .timeline-item:nth-child(odd) {
-            align-self: flex-end;
-        }
-
-        .video-section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background: #000;
-            margin-bottom: 40px;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .services-section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .services-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .service-card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 200px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .service-card i {
-            font-size: 2em;
-            color: #ff5722;
-            margin-bottom: 10px;
-        }
-
-        .service-card h3 {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-
-        .service-card p {
-            font-size: 0.9em;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .map-section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .map-container {
-            width: 100%;
-            height: 0;
-            padding-bottom: 56.25%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .map-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .skills-section {
-            padding: 50px 20px;
-            text-align: center;
-            background: #ffffff;
-        }
-
-        .skill {
-            margin-bottom: 20px;
-        }
-
-        .skill h3 {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-            color: #ff5722;
-        }
-
-        .skill-bar {
-            background: #ffccbc;
-            border-radius: 8px;
-            overflow: hidden;
-            height: 20px;
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        .skill-level {
-            background: linear-gradient(90deg, #ff5722, #ffccbc);
-            height: 100%;
-            transition: width 1s ease;
-        }
-
-        .faq-section {
-            padding: 50px 20px;
-            text-align: center;
-            background: #ffffff;
-        }
-
-        .faq-item {
-            margin-bottom: 20px;
-        }
-
-        .faq-question {
-            background: #ff5722;
-            color: white;
-            padding: 15px;
-            border: none;
-            text-align: left;
-            width: 100%;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .faq-question:hover {
-            background: #ffccbc;
-        }
-
-        .faq-answer {
-            display: none;
-            padding: 15px;
-            background: #f9f9f9;
-            border-top: 1px solid #ddd;
-        }
-
-        .faq-item.active .faq-answer {
-            display: block;
-        }
-    </style>
+    
+    <!-- Favicon Links -->
+    <link rel="icon" sizes="192x192" href="assets/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" sizes="512x512" href="assets/favicon_io/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
 </head>
 
 <body>
-    <header class="hero-section">
-        <div class="hero-content">
-            <h1>About Leo Wemyss</h1>
-            <p>Professional fitness instructor with over 20 years of experience.</p>
+    <!-- Header Section -->
+    <header>
+        <nav aria-label="Main Navigation">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="workout-plans.html">Workout Plans</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>About Leo Wemyss</h1>
+                <p>Professional fitness instructor with over 20 years of experience.</p>
+            </div>
         </div>
     </header>
 
@@ -333,82 +61,31 @@
             <img src="assets/images/me.jpg" alt="Leo Wemyss Training">
             <div class="text-section">
                 <h2>Highly Experienced Fitness Professional</h2>
-                <p>Leo Wemyss is a dedicated fitness instructor with an impressive background spanning over 20 years.
-                    His expertise covers a wide range of disciplines, making him a well-rounded trainer who can cater to
-                    various fitness goals.</p>
-                <p>Throughout his career, Leo has honed his skills in strength training, cardiovascular conditioning,
-                    and flexibility exercises. He has a deep understanding of exercise science and anatomy, enabling him
-                    to design safe and effective workouts for clients of all levels. Leo's passion for fitness is
-                    infectious, and he motivates his clients to push their limits and achieve their best results.</p>
+                <p>Leo Wemyss is a dedicated fitness instructor with an impressive background spanning over 20 years. His expertise covers a wide range of disciplines, making him a well-rounded trainer who can cater to various fitness goals.</p>
+                <p>Throughout his career, Leo has honed his skills in strength training, cardiovascular conditioning, and flexibility exercises. He has a deep understanding of exercise science and anatomy, enabling him to design safe and effective workouts for clients of all levels. Leo's passion for fitness is infectious, and he motivates his clients to push their limits and achieve their best results.</p>
             </div>
         </div>
         <div class="about-item reveal">
-            <img src="assets/images/sisu.jpg" alt="Military Background">
+            <img src="assets/images/sisu.jpg" alt="Kickboxing and Self-Defense Instructor">
             <div class="text-section">
                 <h2>Kickboxing and Self-Defense Instructor</h2>
-                <p>Leo brings extensive experience in kickboxing and self-defense, empowering individuals with practical
-                    skills and the confidence to protect themselves. He provides a welcoming and supportive environment
-                    where students can learn valuable techniques while improving their fitness.</p>
+                <p>Leo brings extensive experience in kickboxing and self-defense, empowering individuals with practical skills and the confidence to protect themselves. He provides a welcoming and supportive environment where students can learn valuable techniques while improving their fitness.</p>
             </div>
         </div>
         <div class="about-item reveal">
-            <img src="assets/images/Military-cooldowm_currgh.jpeg" alt="Military Training">
+            <img src="assets/images/military-.jpeg" alt="Military Training">
             <div class="text-section">
                 <h2>Military Background</h2>
-                <p>Leo's prior service in the Irish Army has instilled in him a strong work ethic, discipline,
-                    resilience, and a deep understanding of physical fitness. He applies these values to his training
-                    methods, fostering a sense of accomplishment and pushing clients to achieve their full potential.
-                </p>
-                <p>Through his personalized training sessions, Leo tailors his instruction to meet the unique needs and
-                    goals of each student. Whether you're a beginner looking to learn the basics of self-defense or an
-                    experienced martial artist seeking to refine your skills, Leo offers a comprehensive approach that
-                    combines physical training with mental conditioning. His passion for empowering others shines
-                    through in every class, as he inspires students to not only become stronger and more confident but
-                    also to embrace a healthier and more active lifestyle.</p>
+                <p>Leo's prior service in the Irish Army has instilled in him a strong work ethic, discipline, resilience, and a deep understanding of physical fitness. He applies these values to his training methods, fostering a sense of accomplishment and pushing clients to achieve their full potential.</p>
+                <p>Through his personalized training sessions, Leo tailors his instruction to meet the unique needs and goals of each student. Whether you're a beginner looking to learn the basics of self-defense or an experienced martial artist seeking to refine your skills, Leo offers a comprehensive approach that combines physical training with mental conditioning. His passion for empowering others shines through in every class, as he inspires students to not only become stronger and more confident but also to embrace a healthier and more active lifestyle.</p>
             </div>
         </div>
         <div class="about-item reveal">
             <img src="assets/images/ffemale-personal-training-kettlebell squat.jpg" alt="Personal training">
             <div class="text-section">
                 <h2>One on One Personal Instructor</h2>
-                <p>Leo's mastery extends beyond kickboxing, encompassing world-class instruction in Muay Thai, Brazilian
-                    Jiu-Jitsu, and Krav Maga. This fusion of striking, grappling, and practical self-defense techniques
-                    creates a uniquely dynamic and effective training program. Through personalized sessions, you'll
-                    develop well-rounded combat skills, enhance your physical fitness, improve coordination, and
-                    cultivate the confidence to protect yourself in any situation.</p>
+                <p>Leo's mastery extends beyond kickboxing, encompassing world-class instruction in Muay Thai, Brazilian Jiu-Jitsu, and Krav Maga. This fusion of striking, grappling, and practical self-defense techniques creates a uniquely dynamic and effective training program. Through personalized sessions, you'll develop well-rounded combat skills, enhance your physical fitness, improve coordination, and cultivate the confidence to protect yourself in any situation.</p>
             </div>
-        </div>
-    </section>
-
-    <section class="testimonial-carousel">
-        <h2>Client Testimonials</h2>
-        <div>
-            <iframe
-                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmartina.redmond.16%2Fposts%2Fpfbid02ohnpKe4KoYATK1MVCskRyDviAgN2vdT4qgY3qaNFXgr96DZB3on3W6d3FsvefcKbl&show_text=true&width=500"
-                width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                allowfullscreen="true"
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-        </div>
-        <div>
-            <iframe
-                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fgeraldine.obrien.735%2Fposts%2Fpfbid0VRoErXrrdwjUr1Ri9pH2Hs3tUpmhjcFda1Va1KNguBUWS3Ri58L1VbZb8GMoUEwHl&show_text=true&width=500"
-                width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                allowfullscreen="true"
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-        </div>
-        <div>
-            <iframe
-                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Femily.lewis.58958%2Fposts%2Fpfbid09HFSqzCM5r8KXNBYmhsM2ebTfk9tZxjqoQqbH7e2YiD68YTvLeZ9n4Q58eXC6q7ul&show_text=true&width=500"
-                width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                allowfullscreen="true"
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-        </div>
-        <div>
-            <iframe
-                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FExtremely.sexy.young.man.77%2Fposts%2Fpfbid049sTU8438ixNimDKbYp1rThAggDHT133GASRofZyFBQJ2pPbPt58DUSsXFnW3xM6l&show_text=true&width=500"
-                width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                allowfullscreen="true"
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
         </div>
     </section>
 
@@ -417,33 +94,27 @@
         <div class="timeline">
             <div class="timeline-item">
                 <h3>1993: Started Fitness Journey</h3>
-                <p>Leo began his journey into the world of fitness and quickly developed a passion for helping others
-                    achieve their health goals.</p>
+                <p>Leo began his journey into the world of fitness and quickly developed a passion for helping others achieve their health goals.</p>
             </div>
             <div class="timeline-item">
                 <h3>2001: Joined the Irish Army</h3>
-                <p>Leo's military service instilled in him the values of discipline and resilience, which he brings into
-                    his training sessions.</p>
+                <p>Leo's military service instilled in him the values of discipline and resilience, which he brings into his training sessions.</p>
             </div>
             <div class="timeline-item">
                 <h3>2010: Certified Personal Trainer</h3>
-                <p>Leo became a certified personal trainer, specializing in strength and conditioning, martial arts, and
-                    self-defense.</p>
+                <p>Leo became a certified personal trainer, specializing in strength and conditioning, martial arts, and self-defense.</p>
             </div>
             <div class="timeline-item">
                 <h3>2015: Founded Wemyss Workouts</h3>
-                <p>Leo founded Wemyss Workouts to provide personalized and group fitness training to individuals of all
-                    fitness levels.</p>
+                <p>Leo founded Wemyss Workouts to provide personalized and group fitness training to individuals of all fitness levels.</p>
             </div>
             <div class="timeline-item">
                 <h3>2020: Expanded Services</h3>
-                <p>Leo expanded his services to include online training programs and virtual classes to reach a wider
-                    audience.</p>
+                <p>Leo expanded his services to include online training programs and virtual classes to reach a wider audience.</p>
             </div>
             <div class="timeline-item">
                 <h3>2021: Youth Coaching</h3>
-                <p>Leo began coaching youth sports teams, sharing his expertise and passion with the next generation of
-                    athletes.</p>
+                <p>Leo expanded his services to include online training programs and virtual classes to reach a wider audience.</p>
             </div>
         </div>
     </section>
@@ -451,25 +122,7 @@
     <section class="video-section">
         <h2>Watch Leo in Action</h2>
         <div class="video-container">
-            <iframe
-                src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FWEMYSSWORKOUTS%2Fvideos%2F711522959041028%2F&show_text=false&width=560&t=0"
-                width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                allowFullScreen="true"></iframe>
-        </div>
-        <div class="video-container">
-            <iframe
-                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FWEMYSSWORKOUTS%2Fvideos%2F715041455355845%2F&show_text=false&width=560&t=0"
-                width="560" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                allowFullScreen="true"></iframe>
-        </div>
-        <div class="video-container">
-            <iframe
-                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FWEMYSSWORKOUTS%2Fvideos%2F712131528980171%2F&show_text=false&width=267&t=0"
-                width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                allowFullScreen="true"></iframe>
+            <video src="/assets/videos/Mixed-Circuit-St-Mullins.mp4"></video>
         </div>
     </section>
 
@@ -502,9 +155,7 @@
     <section class="map-section">
         <h2>Find Us</h2>
         <div class="map-container">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0861660853954!2d144.963058!3d-37.816279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5775c87edbb75a3!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1632924741325!5m2!1sen!2sau"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0861660853954!2d144.963058!3d-37.816279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5775c87edbb75a3!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1632924741325!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
@@ -513,25 +164,25 @@
         <div class="skill">
             <h3>Kickboxing</h3>
             <div class="skill-bar">
-                <div class="skill-level" style="width: 90%;"></div>
+                <div class="skill-level" style="width: 90%; background: linear-gradient(to right, #ff6f00, #ffb300);"></div>
             </div>
         </div>
         <div class="skill">
             <h3>Personal Training</h3>
             <div class="skill-bar">
-                <div class="skill-level" style="width: 95%;"></div>
+                <div class="skill-level" style="width: 95%; background: linear-gradient(to right, #ff6f00, #ffb300);"></div>
             </div>
         </div>
         <div class="skill">
             <h3>Strength & Conditioning</h3>
             <div class="skill-bar">
-                <div class="skill-level" style="width: 85%;"></div>
+                <div class="skill-level" style="width: 85%; background: linear-gradient(to right, #ff6f00, #ffb300);"></div>
             </div>
         </div>
         <div class="skill">
             <h3>Military Training</h3>
             <div class="skill-bar">
-                <div class="skill-level" style="width: 80%;"></div>
+                <div class="skill-level" style="width: 80%; background: linear-gradient(to right, #ff6f00, #ffb300);"></div>
             </div>
         </div>
     </section>
@@ -539,28 +190,26 @@
     <section class="faq-section">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-item">
-            <button class="faq-question">What services do you offer?</button>
-            <div class="faq-answer">
+            <button class="faq-question" style="background: #ff6f00; color: white;">What services do you offer?</button>
+            <div class="faq-answer" style="background: #fff3e0;">
                 <p>We offer personal training, group classes, strength and conditioning, youth coaching, and more.</p>
             </div>
         </div>
         <div class="faq-item">
-            <button class="faq-question">How can I join a class?</button>
-            <div class="faq-answer">
-                <p>You can join a class by visiting our Classes page and signing up for a session that fits your
-                    schedule.</p>
+            <button class="faq-question" style="background: #ff6f00; color: white;">How can I join a class?</button>
+            <div class="faq-answer" style="background: #fff3e0;">
+                <p>You can join a class by visiting our Classes page and signing up for a session that fits your schedule.</p>
             </div>
         </div>
         <div class="faq-item">
-            <button class="faq-question">Do you offer online training?</button>
-            <div class="faq-answer">
-                <p>Yes, we offer online training programs and virtual classes for those who prefer to work out from
-                    home.</p>
+            <button class="faq-question" style="background: #ff6f00; color: white;">Do you offer online training?</button>
+            <div class="faq-answer" style="background: #fff3e0;">
+                <p>Yes, we offer online training programs and virtual classes for those who prefer to work out from home.</p>
             </div>
         </div>
         <div class="faq-item">
-            <button class="faq-question">What is your cancellation policy?</button>
-            <div class="faq-answer">
+            <button class="faq-question" style="background: #ff6f00; color: white;">What is your cancellation policy?</button>
+            <div class="faq-answer" style="background: #fff3e0;">
                 <p>We require at least 24 hours' notice for cancellations to avoid any charges.</p>
             </div>
         </div>
@@ -575,14 +224,10 @@
         <div class="footer-content">
             <p>Fitness with Wemyss Workouts. All rights reserved.</p>
             <div class="social-media">
-                <a href="https://twitter.com/wemyssworkouts" target="_blank" aria-label="Twitter"><i
-                        class="fab fa-twitter"></i></a>
-                <a href="https://facebook.com/wemyssworkouts" target="_blank" aria-label="Facebook"><i
-                        class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com/wemyssworkouts" target="_blank" aria-label="Instagram"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/leo-wemyss-356505b1/" target="_blank" aria-label="LinkedIn"><i
-                        class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/wemyssworkouts" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://facebook.com/wemyssworkouts" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/wemyssworkouts" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/leo-wemyss-356505b1/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </footer>
@@ -616,5 +261,4 @@
         });
     </script>
 </body>
-
 </html>
