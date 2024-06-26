@@ -541,7 +541,7 @@ nav ul li a:hover {
 
 #workout-page .plan-item img {
     width: 100%;
-    height: 200px;
+    height: 700px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
@@ -916,7 +916,7 @@ nav ul li a:hover {
 
 #classes-page .class-item img {
     width: 100%;
-    height: 200px;
+    height: 700px;
     object-fit: cover;
 }
 
