@@ -36,25 +36,24 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
 </head>
 
-<body>
-    <!-- Header Section -->
+<body id="about-page">
     <header>
         <nav aria-label="Main Navigation">
             <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="classes.html">Classes</a></li>
-                <li><a href="workout-plans.html">Workout Plans</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="classes.html" class="nav-link">Classes</a></li>
+                <li><a href="workout-plans.html" class="nav-link">Workout Plans</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
             </ul>
         </nav>
-        <div class="hero-section">
-            <div class="hero-content">
-                <h1>About Leo Wemyss</h1>
-                <p>Professional fitness instructor with over 20 years of experience.</p>
-            </div>
-        </div>
     </header>
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>About Leo Wemyss</h1>
+            <p>Professional fitness instructor with over 20 years of experience.</p>
+        </div>
+    </div>
 
     <section class="about-section">
         <div class="about-item reveal">
@@ -81,7 +80,7 @@
             </div>
         </div>
         <div class="about-item reveal">
-            <img src="assets/images/ffemale-personal-training-kettlebell squat.jpg" alt="Personal training">
+            <img src="assets/images/female-deadlift.jpg" alt="Personal training">
             <div class="text-section">
                 <h2>One on One Personal Instructor</h2>
                 <p>Leo's mastery extends beyond kickboxing, encompassing world-class instruction in Muay Thai, Brazilian Jiu-Jitsu, and Krav Maga. This fusion of striking, grappling, and practical self-defense techniques creates a uniquely dynamic and effective training program. Through personalized sessions, you'll develop well-rounded combat skills, enhance your physical fitness, improve coordination, and cultivate the confidence to protect yourself in any situation.</p>
@@ -122,7 +121,7 @@
     <section class="video-section">
         <h2>Watch Leo in Action</h2>
         <div class="video-container">
-            <video src="/assets/videos/Mixed-Circuit-St-Mullins.mp4"></video>
+            <video src="/assets/videos/cardio.mp4"></video>
         </div>
     </section>
 
@@ -234,6 +233,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            // Function to reveal elements on scroll
             function reveal() {
                 var reveals = document.querySelectorAll('.reveal');
                 for (var i = 0; i < reveals.length; i++) {
@@ -258,6 +258,61 @@
                     item.classList.toggle('active');
                 });
             });
+
+            // Function to highlight the active nav link
+            function highlightActiveLink() {
+                const currentUrl = window.location.href;
+                const navLinks = document.querySelectorAll('.nav-link');
+                
+                navLinks.forEach(link => {
+                    if (link.href === currentUrl) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+
+            // Call the function on page load and when the URL changes
+            highlightActiveLink();
+            window.addEventListener('popstate', highlightActiveLink); 
+
+            // Cookie functions
+            function setCookie(name, value, days) {
+                var expires = "";
+                if (days) {
+                    var date = new Date();
+                    date.setTime(date.getTime() + (days*24*60*60*1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+            }
+
+            function getCookie(name) {
+                var nameEQ = name + "=";
+                var ca = document.cookie.split(';');
+                for(var i=0;i < ca.length;i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) === ' ') c = c.substring(1,c.length);
+                    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length,c.length);
+                }
+                return null;
+            }
+
+            function eraseCookie(name) {
+                document.cookie = name + '=; Max-Age=-99999999;';
+            }
+
+            // Example usage of cookies
+            setCookie('username', 'Leo Wemyss', 7); // Set a cookie
+            var username = getCookie('username'); // Get a cookie
+            if (username) {
+                console.log('Welcome back, ' + username);
+            } else {
+                console.log('Welcome, new user!');
+            }
+            // eraseCookie('username'); // Delete a cookie if needed
+
         });
     </script>
 </body>

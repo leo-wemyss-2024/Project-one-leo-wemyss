@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Body Styling */
 body {
     font-family: 'Lato', 'Oswald', sans-serif;
@@ -281,6 +286,7 @@ nav ul li a:hover {
 }
 
 @keyframes blink-caret {
+
     from,
     to {
         border-color: transparent;
@@ -764,16 +770,15 @@ nav ul li a:hover {
     }
 }
 
-/* Hero Section */
+/* Header Styling */
 #classes-page header {
-    position: relative;
-    height: 100vh;
-    background: url('/assets/images/hero-bg.jpg') no-repeat center center/cover;
+    text-align: center;
+    background: url('/assets/images/military-combat-workout.jpg') no-repeat center center/cover;
+    height: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    color: #fff;
+    position: relative;
 }
 
 #classes-page header::before {
@@ -783,22 +788,55 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.2);
 }
 
+/* Navigation Styling */
+#classes-page nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(109, 101, 101, 0.7);
+}
+
+#classes-page nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+#classes-page nav ul li {
+    margin: 0 20px;
+}
+
+#classes-page nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+#classes-page nav ul li a:hover {
+    background: #e96c36;
+}
+
+/* Hero Content Styling */
 #classes-page .hero-content {
+    color: white;
     position: relative;
     z-index: 1;
 }
 
 #classes-page .hero-content h1 {
-    font-size: 4em;
+    font-size: clamp(2.5rem, 5vw, 3em);
     margin-bottom: 20px;
     animation: fadeInDown 1s ease;
 }
 
 #classes-page .hero-content p {
-    font-size: 1.5em;
+    font-size: clamp(1rem, 2.5vw, 1.2em);
     margin-bottom: 20px;
     animation: fadeInUp 1s ease;
 }
@@ -806,7 +844,7 @@ nav ul li a:hover {
 #classes-page .cta-button {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #ff5722;
+    background-color: #e96c36;
     color: #fff;
     border-radius: 50px;
     font-size: 1.2em;
@@ -815,7 +853,7 @@ nav ul li a:hover {
 }
 
 #classes-page .cta-button:hover {
-    background-color: #e64a19;
+    background-color: #d85a29;
     transform: scale(1.05);
 }
 
@@ -842,21 +880,33 @@ nav ul li a:hover {
     }
 }
 
-/* Card Layout for Classes */
+/* Content Section Styling */
 #classes-page .content-section {
-    padding: 60px 20px;
+    padding: 40px 20px;
     background-color: #fff;
+    color: #333;
+    text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    margin: 20px 0;
 }
 
+#classes-page .content-section h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5em);
+    margin-bottom: 20px;
+}
+
+/* Class Item Styling */
 #classes-page .class-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
 }
 
 #classes-page .class-item:hover {
@@ -877,7 +927,7 @@ nav ul li a:hover {
 
 #classes-page .text-section h3 {
     font-size: 1.8em;
-    color: #ff5722;
+    color: #e96c36;
     margin-bottom: 10px;
 }
 
@@ -888,7 +938,7 @@ nav ul li a:hover {
 }
 
 #classes-page .text-section .cta-button {
-    background-color: #ff5722;
+    background-color: #e96c36;
     color: #fff;
     padding: 10px 20px;
     border-radius: 30px;
@@ -897,98 +947,84 @@ nav ul li a:hover {
 }
 
 #classes-page .text-section .cta-button:hover {
-    background-color: #e64a19;
+    background-color: #d85a29;
     transform: scale(1.05);
 }
 
 /* Video Section */
+#classes-page .video-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
 #classes-page .video-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     justify-content: center;
     margin-top: 40px;
 }
 
-#classes-page .video-container video {
-    width: calc(50% - 20px);
-    max-width: 480px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 768px) {
-    #classes-page .video-container video {
-        width: calc(100% - 20px);
-    }
-}
-
-/* FAQ Section */
-#classes-page .faq-section {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-}
-
-#classes-page .faq-item {
-    margin-bottom: 20px;
-}
-
-#classes-page .faq-question {
-    background-color: #ff5722;
-    color: #fff;
-    padding: 15px;
-    border: none;
-    text-align: left;
-    width: 100%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 1.1em;
-}
-
-#classes-page .faq-question:hover {
-    background-color: #e64a19;
-}
-
-#classes-page .faq-answer {
-    display: none;
-    padding: 15px;
+#classes-page .video-box {
     background-color: #fff;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding-top: 56.25%; /* Aspect ratio 16:9 */
 }
 
-#classes-page .faq-item.active .faq-answer {
-    display: block;
+#classes-page .video-box video,
+#classes-page .video-box iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
-/* Testimonials Section */
-#classes-page .testimonial-carousel {
-    text-align: center;
-    margin: 50px 0;
-}
-
-#classes-page .testimonial-carousel img {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#classes-page .testimonial-carousel p {
-    font-style: italic;
-    font-size: 1em;
-    margin-bottom: 10px;
-    color: #666;
-}
-
-#classes-page .testimonial-carousel h4 {
-    font-weight: bold;
+/* Disclaimer Section */
+#classes-page .disclaimer {
+    background-color: #fff;
     color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+/* Footer Content Styling */
+#classes-page .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+#classes-page .footer-content p {
+    margin: 0;
+}
+
+#classes-page .social-media {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+#classes-page .social-media a {
+    color: white;
+    transition: transform 0.3s, color 0.3s;
+}
+
+#classes-page .social-media a:hover {
+    transform: scale(1.2);
+    color: #e96c36;
 }
 
 /* Responsive Design Adjustments */
@@ -1018,10 +1054,6 @@ nav ul li a:hover {
         font-size: 0.9em;
         padding: 8px 16px;
     }
-
-    #classes-page .video-container video {
-        width: calc(100% - 20px);
-    }
 }
 
 @media (max-width: 480px) {
@@ -1038,7 +1070,6 @@ nav ul li a:hover {
         padding: 6px 12px;
     }
 }
-
 
 /* Header Styling */
 #about-page header {
@@ -1145,13 +1176,16 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-/* About Image Styling */
-#about-page .about-img {
-    width: 100%;
-    height: 700px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Image Container Styling */
+.about-item img,
+.about-section img,
+.services-container img {
+    width: 100%; /* Full width */
+    height: 300px; /* Fixed height */
+    object-fit: cover; /* Scale the image, maintaining its aspect ratio and cropping if necessary */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+    margin-bottom: 15px; /* Space below the image */
 }
 
 /* Footer Content Styling */
@@ -1432,15 +1466,15 @@ body {
     height: 0;
     overflow: hidden;
     max-width: 100%;
-    background: #000;
+    background: #e0ebea;
 }
 
 .video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 300%;
+    height: 300%;
 }
 
 .services-section {

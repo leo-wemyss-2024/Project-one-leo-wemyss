@@ -28,6 +28,9 @@
 <body id="classes-page">
     <header>
         <nav>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="classes.html">Classes</a></li>
@@ -43,7 +46,7 @@
                 <span class="below-text">Join Us Today!</span>
             </h1>
             <p class="glow-animation">Join our variety of classes to stay fit and healthy.</p>
-            <a href="join.html" class="cta-button">Join Now</a>
+            <a href="contact.html" class="cta-button">Join Now</a>
         </div>
     </header>
 
@@ -51,35 +54,35 @@
         <section class="content-section">
             <h2>Available Classes</h2>
             <div class="class-item glow">
-                <img src="assets/images/hiit.jpg" alt="HIIT Training">
+                <img src="assets/images/pexels-gabby-k-hitt.jpg" alt="HIIT Training">
                 <div class="text-section">
                     <h3>HIIT Training</h3>
                     <p>High-Intensity Interval Training to boost your cardiovascular fitness.</p>
                 </div>
             </div>
             <div class="class-item">
-                <img src="assets/images/strength.jpg" alt="Build Strength & Get Fit">
+                <img src="assets/images/pexels-leonardho-Battlerope.jpg" alt="Build Strength & Get Fit">
                 <div class="text-section">
                     <h3>Build Strength & Get Fit</h3>
                     <p>Challenge yourself with our dynamic strength and conditioning program.</p>
                 </div>
             </div>            
             <div class="class-item">
-                <img src="assets/images/sculpt.jpg" alt="Sculpt Your Physique & Get Stronger">
+                <img src="assets/images/pexels-823sl-2294361.jpg" alt="Sculpt Your Physique & Get Stronger">
                 <div class="text-section">
                     <h3>Sculpt Your Physique & Get Stronger</h3>
                     <p>Transform your body and boost your strength with our expert-led resistance training program.</p>
                 </div>
             </div>
             <div class="class-item">
-                <img src="assets/images/cardio.jpg" alt="Get Fit & Have Fun!">
+                <img src="assets/images/pexels-olly-3764011.jpg" alt="Get Fit & Have Fun!">
                 <div class="text-section">
                     <h3>Get Fit & Have Fun!</h3>
                     <p>Torch calories and boost your stamina with our energizing cardio workouts.</p>
                 </div>
             </div>
             <div class="class-item">
-                <img src="assets/images/beginner-cardio.jpg" alt="New to Fitness? Start with Cardio!">
+                <img src="assets/images/pexels-julia-larson-6455955.jpg" alt="New to Fitness? Start with Cardio!">
                 <div class="text-section">
                     <h3>New to Fitness? Start with Cardio!</h3>
                     <p>Our beginner-friendly cardio classes are a fun way to burn calories and get into shape.</p>
@@ -91,29 +94,33 @@
         <section class="content-section video-section">
             <h2>Watch Our Fitness Videos</h2>
             <div class="video-container">
-                <video controls>
-                    <source src="assets/videos/cardio-video-St-Mullins.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <video controls>
-                    <source src="assets/videos/Mixed-Circuit-St-Mullins.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <video controls>
-                    <source src="assets/videos/Curragh-group-class.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <video controls>
-                    <source src="assets/videos/group-fun.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <video controls>
-                    <source src="assets/videos/male-strength_conditining.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <div class="video-box">
+                    <video controls>
+                        <source src="assets/videos/cardio.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-box">
+                    <video controls>
+                        <source src="assets/videos/Core.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-box">
+                    <video controls>
+                        <source src="assets/videos/curragh.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-box">
+                    <video controls>
+                        <source src="assets/videos/group.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
         </section>
-
+        
         <section id="disclaimer" class="disclaimer content-section">
             <h2 class="glow-text">Disclaimer</h2>
             <p>
@@ -133,5 +140,30 @@
             <a href="https://www.linkedin.com/in/leo-wemyss-356505b1/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
     </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Example: Add play button functionality to videos
+            const videoBoxes = document.querySelectorAll('.video-box video');
+        
+            videoBoxes.forEach(video => {
+                video.addEventListener('click', () => {
+                    if (video.paused) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                });
+            });
+        
+            // Example: Toggle navigation menu on mobile
+            const navToggle = document.querySelector('.nav-toggle');
+            const navList = document.querySelector('.nav-list');
+        
+            navToggle.addEventListener('click', () => {
+                navList.classList.toggle('nav-list--visible');
+            });
+        });
+    </script>
 </body>
 </html>
