@@ -1074,7 +1074,7 @@ nav ul li a:hover {
 /* Header Styling */
 #about-page header {
     text-align: center;
-    background: url('/assets/images/military-combat-workout.jpg') no-repeat center center/cover;
+    background: url('/assets/images/yoga-thomastown.jpg') no-repeat center center/cover;
     height: 700px;
     display: flex;
     justify-content: center;
@@ -1119,7 +1119,8 @@ nav ul li a:hover {
     transition: background 0.3s;
 }
 
-#about-page nav ul li a:hover {
+#about-page nav ul li a:hover,
+#about-page nav ul li a.active {
     background: #e96c36;
 }
 
@@ -1138,6 +1139,7 @@ nav ul li a:hover {
 #about-page .hero-content p {
     font-size: 1.2em;
 }
+
 
 /* Content Section Styling */
 #about-page .content-section {
@@ -1158,6 +1160,9 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 #about-page .about-item:hover {
@@ -1277,7 +1282,6 @@ nav ul li a:hover {
 }
 
 @keyframes blink-caret {
-
     from,
     to {
         border-color: transparent;
@@ -1340,35 +1344,6 @@ body {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.about-item {
-    display: flex;
-    margin-bottom: 40px;
-}
-
-.about-item:nth-child(even) .text-section {
-    order: 2;
-}
-
-.about-item img {
-    max-width: 50%;
-    border-radius: 8px;
-}
-
-.text-section {
-    padding: 20px;
-}
-
-.text-section h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #ff5722;
-}
-
-.text-section p {
-    font-size: 1em;
-    margin-bottom: 20px;
 }
 
 .testimonial-carousel {
