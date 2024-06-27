@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+
 /* Basic Reset */
 * {
     margin: 0;
@@ -799,6 +801,17 @@ nav ul li a:hover {
     background: rgba(109, 101, 101, 0.7);
 }
 
+#classes-page nav .nav-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#classes-page nav .nav-toggle i {
+    color: #fff;
+    font-size: 24px;
+}
+
 #classes-page nav ul {
     list-style: none;
     display: flex;
@@ -1032,6 +1045,10 @@ nav ul li a:hover {
     #classes-page nav ul {
         flex-direction: column;
         align-items: center;
+    }
+
+    #classes-page nav .nav-toggle {
+        display: block;
     }
 
     #classes-page .footer-content {

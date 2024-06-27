@@ -17,13 +17,13 @@
     <!-- Social Media Metadata -->
     <meta property="og:title" content="About - Fitness with Wemyss Workouts">
     <meta property="og:description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
-    <meta property="og:image" content="path/to/your-photo.jpg">
+    <meta property="og:image" content="https://www.yourwebsite.com/assets/images/social-share-image.jpg">
     <meta property="og:url" content="http://www.yourwebsite.com/about.html">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="About - Fitness with Wemyss Workouts">
     <meta name="twitter:description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
-    <meta name="twitter:image" content="path/to/your-photo.jpg">
+    <meta name="twitter:image" content="https://www.yourwebsite.com/assets/images/social-share-image.jpg">
     
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="assets/style.css">
@@ -34,6 +34,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    
+    <!-- Leaflet CSS and JS for OpenStreetMap -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
 <body id="about-page">
     <header>
@@ -53,6 +57,7 @@
             </div>
         </div>
     </header>
+
     <section class="about-section">
         <div class="about-item reveal">
             <img src="assets/images/me.jpg" alt="Leo Wemyss Training">
@@ -111,7 +116,7 @@
             </div>
             <div class="timeline-item">
                 <h3>2021: Youth Coaching</h3>
-                <p>Leo expanded his services to include online training programs and virtual classes to reach a wider audience.</p>
+                <p>Leo expanded his services to include youth coaching programs, nurturing the next generation of athletes.</p>
             </div>
         </div>
     </section>
@@ -119,7 +124,10 @@
     <section class="video-section">
         <h2>Watch Leo in Action</h2>
         <div class="video-container">
-            <video src="/assets/videos/cardio.mp4"></video>
+            <video controls>
+                <source src="/assets/videos/cardio.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </section>
 
@@ -151,9 +159,7 @@
 
     <section class="map-section">
         <h2>Find Us</h2>
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0861660853954!2d144.963058!3d-37.816279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5775c87edbb75a3!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1632924741325!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
+        <div id="map" class="map-container"></div>
     </section>
 
     <section class="skills-section">
@@ -221,60 +227,75 @@
         <div class="footer-content">
             <p>Fitness with Wemyss Workouts. All rights reserved.</p>
             <div class="social-media">
-                <a href="https://twitter.com/wemyssworkouts" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://x.com/wemyssworkouts" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                 <a href="https://facebook.com/wemyssworkouts" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://instagram.com/wemyssworkouts" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/in/leo-wemyss-356505b1/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </footer>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    // Function to highlight the active nav link
-    function highlightActiveLink() {
-        const currentUrl = window.location.href;
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        navLinks.forEach(link => {
-            if (link.href === currentUrl) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to highlight the active nav link
+            function highlightActiveLink() {
+                const currentUrl = window.location.href;
+                const navLinks = document.querySelectorAll('.nav-link');
+                
+                navLinks.forEach(link => {
+                    if (link.href === currentUrl) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
             }
-        });
-    }
-
-    // Call the function on page load and when the URL changes
-    highlightActiveLink();
-    window.addEventListener('popstate', highlightActiveLink);
-
-    // Function to reveal elements on scroll
-    function reveal() {
-        var reveals = document.querySelectorAll('.reveal');
-        for (var i = 0; i < reveals.length; i++) {
-            var windowHeight = window.innerHeight;
-            var elementTop = reveals[i].getBoundingClientRect().top;
-            var elementVisible = 150;
-            if (elementTop < windowHeight - elementVisible) {
-                reveals[i].classList.add('active');
-            } else {
-                reveals[i].classList.remove('active');
+    
+            // Call the function on page load and when the URL changes
+            highlightActiveLink();
+            window.addEventListener('popstate', highlightActiveLink);
+    
+            // Function to reveal elements on scroll
+            function reveal() {
+                var reveals = document.querySelectorAll('.reveal');
+                for (var i = 0; i < reveals.length; i++) {
+                    var windowHeight = window.innerHeight;
+                    var elementTop = reveals[i].getBoundingClientRect().top;
+                    var elementVisible = 150;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveals[i].classList.add('active');
+                    } else {
+                        reveals[i].classList.remove('active');
+                    }
+                }
             }
-        }
-    }
-
-    window.addEventListener('scroll', reveal);
-    reveal(); // To check the scroll position on page load
-
-    // FAQ section toggle
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-        item.querySelector('.faq-question').addEventListener('click', () => {
-            item.classList.toggle('active');
+    
+            window.addEventListener('scroll', reveal);
+            reveal(); // To check the scroll position on page load
+    
+            // FAQ section toggle
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                item.querySelector('.faq-question').addEventListener('click', () => {
+                    item.classList.toggle('active');
+                });
+            });
+    
+            // OpenStreetMap initialization
+            function initMap() {
+                var map = L.map('map').setView([52.6541, -7.2448], 13); // Centered on Kilkenny, Ireland
+    
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+    
+                var marker = L.marker([52.6541, -7.2448]).addTo(map);
+                marker.bindPopup("<b>Fitness with Wemyss Workouts</b><br>Kilkenny, Ireland").openPopup();
+            }
+    
+            // Initialize the map
+            initMap();
         });
-    });
-});
-
-</script>
-</body>
-</html>
+        </script>
+    </body>
+    </html>
