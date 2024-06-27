@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness with Wemyss Workouts</title>
-    <meta name="description" content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
+    <meta name="description"
+        content="Learn more about Leo Wemyss, a professional fitness instructor dedicated to helping you achieve your fitness goals.">
     <meta name="keywords" content="fitness, personal trainer, about, Leo Wemyss">
     <meta name="author" content="Leo Wemyss">
-    
+
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+
     <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap">
-    
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap">
+
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="assets/style.css">
-    
+
     <!-- Favicon Links -->
     <link rel="icon" sizes="192x192" href="assets/favicon_io/android-chrome-192x192.png">
     <link rel="icon" sizes="512x512" href="assets/favicon_io/android-chrome-512x512.png">
@@ -63,7 +66,7 @@
                     <h3>Build Strength & Get Fit</h3>
                     <p>Challenge yourself with our dynamic strength and conditioning program.</p>
                 </div>
-            </div>            
+            </div>
             <div class="class-item">
                 <img src="assets/images/pexels-823sl-2294361.jpg" alt="Sculpt Your Physique & Get Stronger">
                 <div class="text-section">
@@ -90,50 +93,125 @@
         <!-- Video Section -->
         <section class="content-section video-section">
             <h2>Watch Our Fitness Videos</h2>
-            <div class="video-container">
-                <div class="video-box">
-                    <video controls>
-                        <source src="assets/videos/cardio.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <video poster="assets/images/Running-group.JPG">
+                            <source src="assets/videos/cardio.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-button"></div>
+                    </div>
+                    <h3>Cardio Workout</h3>
                 </div>
-                <div class="video-box">
-                    <video controls>
-                        <source src="assets/videos/Core.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <video poster="assets/images/core-session-thomastown.jpg">
+                            <source src="assets/videos/Core.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-button"></div>
+                    </div>
+                    <h3>Core workout</h3>
                 </div>
-                <div class="video-box">
-                    <video controls>
-                        <source src="assets/videos/curragh.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <video poster="assets/images/strength-men.jpg">
+                            <source src="assets/videos/mens.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-button"></div>
+                    </div>
+                    <h3>Strength Workout</h3>
                 </div>
-                <div class="video-box">
-                    <video controls>
-                        <source src="assets/videos/group.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <video poster="assets/images/Thomastown-group-exercise.gif">
+                            <source src="assets/videos/group.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-button"></div>
+                    </div>
+                    <h3>Group Workout</h3>
                 </div>
             </div>
+            <button id="load-more">Load More</button>
         </section>
     </main>
 
     <footer class="footer-content">
         <p>Fitness with Wemyss Workouts. All rights reserved.</p>
         <div class="social-media">
-            <a href="https://twitter.com/wemyssworkouts" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://facebook.com/wemyssworkouts" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://instagram.com/wemyssworkouts" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/leo-wemyss-356505b1/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/wemyssworkouts" target="_blank" aria-label="Twitter"><i
+                    class="fab fa-twitter"></i></a>
+            <a href="https://facebook.com/wemyssworkouts" target="_blank" aria-label="Facebook"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/wemyssworkouts" target="_blank" aria-label="Instagram"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/leo-wemyss-356505b1/" target="_blank" aria-label="LinkedIn"><i
+                    class="fab fa-linkedin"></i></a>
         </div>
     </footer>
-    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Example: Add play button functionality to videos
+            if (document.body.id !== 'classes-page') return;
+    
+            // Video functionality for the classes page
+            const videoItems = document.querySelectorAll('.video-item');
+            const loadMoreBtn = document.getElementById('load-more');
+            let currentItems = getInitialItemsCount();
+    
+            function getInitialItemsCount() {
+                if (window.innerWidth >= 992) return 8;
+                if (window.innerWidth >= 768) return 6;
+                if (window.innerWidth >= 576) return 4;
+                return 2;
+            }
+    
+            function showItems() {
+                videoItems.forEach((item, index) => {
+                    if (index < currentItems) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+    
+                if (currentItems >= videoItems.length) {
+                    loadMoreBtn.style.display = 'none';
+                }
+            }
+    
+            showItems();
+    
+            loadMoreBtn.addEventListener('click', () => {
+                currentItems += getInitialItemsCount();
+                showItems();
+            });
+    
+            window.addEventListener('resize', () => {
+                currentItems = getInitialItemsCount();
+                showItems();
+            });
+    
+            videoItems.forEach(item => {
+                const video = item.querySelector('video');
+                const playButton = item.querySelector('.play-button');
+    
+                playButton.addEventListener('click', () => {
+                    if (video.paused) {
+                        video.play();
+                        playButton.style.display = 'none';
+                    } else {
+                        video.pause();
+                        playButton.style.display = 'flex';
+                    }
+                });
+    
+                video.addEventListener('pause', () => {
+                    playButton.style.display = 'flex';
+                });
+            });
+    
+            // Existing functionality
             const videoBoxes = document.querySelectorAll('.video-box video');
-        
+    
             videoBoxes.forEach(video => {
                 video.addEventListener('click', () => {
                     if (video.paused) {
@@ -143,14 +221,16 @@
                     }
                 });
             });
-        
-            // Example: Toggle navigation menu on mobile
+    
+            // Toggle navigation menu on mobile
             const navToggle = document.querySelector('.nav-toggle');
             const navList = document.querySelector('.nav-list');
-        
-            navToggle.addEventListener('click', () => {
-                navList.classList.toggle('nav-list--visible');
-            });
+    
+            if (navToggle && navList) {
+                navToggle.addEventListener('click', () => {
+                    navList.classList.toggle('nav-list--visible');
+                });
+            }
         });
     </script>
 </body>
