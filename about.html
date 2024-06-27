@@ -35,7 +35,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
 </head>
-
 <body id="about-page">
     <header>
         <nav aria-label="Main Navigation">
@@ -54,7 +53,6 @@
             </div>
         </div>
     </header>
-
     <section class="about-section">
         <div class="about-item reveal">
             <img src="assets/images/me.jpg" alt="Leo Wemyss Training">
@@ -230,90 +228,53 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Function to reveal elements on scroll
-            function reveal() {
-                var reveals = document.querySelectorAll('.reveal');
-                for (var i = 0; i < reveals.length; i++) {
-                    var windowHeight = window.innerHeight;
-                    var elementTop = reveals[i].getBoundingClientRect().top;
-                    var elementVisible = 150;
-                    if (elementTop < windowHeight - elementVisible) {
-                        reveals[i].classList.add('active');
-                    } else {
-                        reveals[i].classList.remove('active');
-                    }
-                }
-            }
-
-            window.addEventListener('scroll', reveal);
-            reveal(); // To check the scroll position on page load
-
-            // FAQ section toggle
-            const faqItems = document.querySelectorAll('.faq-item');
-            faqItems.forEach(item => {
-                item.querySelector('.faq-question').addEventListener('click', () => {
-                    item.classList.toggle('active');
-                });
-            });
-
-            // Function to highlight the active nav link
-            function highlightActiveLink() {
-                const currentUrl = window.location.href;
-                const navLinks = document.querySelectorAll('.nav-link');
-                
-                navLinks.forEach(link => {
-                    if (link.href === currentUrl) {
-                        link.classList.add('active');
-                    } else {
-                        link.classList.remove('active');
-                    }
-                });
-            }
-
-            // Call the function on page load and when the URL changes
-            highlightActiveLink();
-            window.addEventListener('popstate', highlightActiveLink); 
-
-            // Cookie functions
-            function setCookie(name, value, days) {
-                var expires = "";
-                if (days) {
-                    var date = new Date();
-                    date.setTime(date.getTime() + (days*24*60*60*1000));
-                    expires = "; expires=" + date.toUTCString();
-                }
-                document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-            }
-
-            function getCookie(name) {
-                var nameEQ = name + "=";
-                var ca = document.cookie.split(';');
-                for(var i=0;i < ca.length;i++) {
-                    var c = ca[i];
-                    while (c.charAt(0) === ' ') c = c.substring(1,c.length);
-                    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length,c.length);
-                }
-                return null;
-            }
-
-            function eraseCookie(name) {
-                document.cookie = name + '=; Max-Age=-99999999;';
-            }
-
-            // Example usage of cookies
-            setCookie('username', 'Leo Wemyss', 7); // Set a cookie
-            var username = getCookie('username'); // Get a cookie
-            if (username) {
-                console.log('Welcome back, ' + username);
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Function to highlight the active nav link
+    function highlightActiveLink() {
+        const currentUrl = window.location.href;
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            if (link.href === currentUrl) {
+                link.classList.add('active');
             } else {
-                console.log('Welcome, new user!');
+                link.classList.remove('active');
             }
-            // eraseCookie('username'); // Delete a cookie if needed
-
         });
-    </script>
+    }
+
+    // Call the function on page load and when the URL changes
+    highlightActiveLink();
+    window.addEventListener('popstate', highlightActiveLink);
+
+    // Function to reveal elements on scroll
+    function reveal() {
+        var reveals = document.querySelectorAll('.reveal');
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add('active');
+            } else {
+                reveals[i].classList.remove('active');
+            }
+        }
+    }
+
+    window.addEventListener('scroll', reveal);
+    reveal(); // To check the scroll position on page load
+
+    // FAQ section toggle
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        item.querySelector('.faq-question').addEventListener('click', () => {
+            item.classList.toggle('active');
+        });
+    });
+});
+
+</script>
 </body>
 </html>

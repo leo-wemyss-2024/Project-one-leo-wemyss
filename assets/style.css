@@ -1071,11 +1071,19 @@ nav ul li a:hover {
     }
 }
 
+/* General styles */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 /* Header Styling */
 #about-page header {
     text-align: center;
     background: url('/assets/images/yoga-thomastown.jpg') no-repeat center center/cover;
-    height: 700px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1089,22 +1097,24 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.5); /* Adjusted opacity for better text visibility */
 }
 
 /* Navigation Styling */
 #about-page nav {
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
+    z-index: 1000;
+    background: rgba(109, 101, 101, 0.7);
 }
 
 #about-page nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    background: rgba(109, 101, 101, 0.7);
     padding: 10px 0;
+    margin: 0;
 }
 
 #about-page nav ul li {
@@ -1129,6 +1139,7 @@ nav ul li a:hover {
     color: white;
     position: relative;
     z-index: 1;
+    text-align: center;
 }
 
 #about-page .hero-content h1 {
@@ -1138,6 +1149,17 @@ nav ul li a:hover {
 
 #about-page .hero-content p {
     font-size: 1.2em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    #about-page .hero-content h1 {
+        font-size: 2em;
+    }
+
+    #about-page .hero-content p {
+        font-size: 0.9em;
+    }
 }
 
 
@@ -1160,9 +1182,6 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 20px;
 }
 
 #about-page .about-item:hover {
@@ -1182,9 +1201,9 @@ nav ul li a:hover {
 }
 
 /* Image Container Styling */
-.about-item img,
-.about-section img,
-.services-container img {
+#about-page .about-item img,
+#about-page .about-section img,
+#about-page .services-container img {
     width: 100%; /* Full width */
     height: 300px; /* Fixed height */
     object-fit: cover; /* Scale the image, maintaining its aspect ratio and cropping if necessary */
@@ -1226,7 +1245,7 @@ nav ul li a:hover {
     color: #e96c36;
 }
 
-/* Responsive Design Adjustments for Footer */
+/* Responsive Design Adjustments */
 @media (max-width: 768px) {
     #about-page nav ul {
         flex-direction: column;
@@ -1253,6 +1272,19 @@ nav ul li a:hover {
         font-size: 0.9em;
         padding: 8px 16px;
     }
+
+    #about-page .about-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about-page .about-item img {
+        max-width: 100%;
+    }
+
+    #about-page .timeline-item {
+        width: 80%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1267,6 +1299,10 @@ nav ul li a:hover {
     #about-page .cta-button {
         font-size: 0.8em;
         padding: 6px 12px;
+    }
+
+    #about-page .timeline-item {
+        width: 100%;
     }
 }
 
@@ -1292,13 +1328,7 @@ nav ul li a:hover {
     }
 }
 
-body {
-    font-family: 'Lato', sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
+/* Hero Section */
 .hero-section {
     color: white;
     text-align: center;
@@ -1326,6 +1356,7 @@ body {
     font-size: 1.2em;
 }
 
+/* Scroll Reveal */
 .reveal {
     opacity: 0;
     transform: translateY(50px);
@@ -1337,6 +1368,7 @@ body {
     transform: translateY(0);
 }
 
+/* About Section */
 .about-section {
     max-width: 1200px;
     margin: 50px auto;
@@ -1346,6 +1378,36 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+.about-item {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.about-item:nth-child(even) .text-section {
+    order: 2;
+}
+
+.about-item img {
+    max-width: 50%;
+    border-radius: 8px;
+}
+
+.text-section {
+    padding: 20px;
+}
+
+.text-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ff5722;
+}
+
+.text-section p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+/* Testimonial Carousel */
 .testimonial-carousel {
     text-align: center;
     margin: 40px 0;
@@ -1369,6 +1431,7 @@ body {
     margin-top: 0;
 }
 
+/* CTA Button */
 .cta-button {
     background: #ff5722;
     color: white;
@@ -1383,6 +1446,7 @@ body {
     background: #e64a19;
 }
 
+/* Timeline Section */
 .timeline-section {
     padding: 50px 20px;
     text-align: center;
@@ -1430,6 +1494,7 @@ body {
     align-self: flex-end;
 }
 
+/* Video Section */
 .video-section {
     padding: 50px 20px;
     text-align: center;
@@ -1452,6 +1517,7 @@ body {
     height: 300%;
 }
 
+/* Services Section */
 .services-section {
     padding: 50px 20px;
     text-align: center;
@@ -1493,6 +1559,7 @@ body {
     transform: translateY(-10px);
 }
 
+/* Map Section */
 .map-section {
     padding: 50px 20px;
     text-align: center;
@@ -1514,6 +1581,7 @@ body {
     height: 100%;
 }
 
+/* Skills Section */
 .skills-section {
     padding: 50px 20px;
     text-align: center;
@@ -1545,6 +1613,7 @@ body {
     transition: width 1s ease;
 }
 
+/* FAQ Section */
 .faq-section {
     padding: 50px 20px;
     text-align: center;
