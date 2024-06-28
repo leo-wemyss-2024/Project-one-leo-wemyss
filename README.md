@@ -46,6 +46,7 @@ To get a local copy up and running, follow these simple steps:
 cd Project-one
 open index.html
 Usage
+Usage
 Home Page: Provides an overview of the services offered and a welcoming hero section.
 Classes Page: Lists the various fitness classes available, along with descriptions and images.
 Workout Plans Page: Details different workout plans tailored for beginners, intermediate, and advanced users.
@@ -89,7 +90,8 @@ fitness-with-wemyss-workouts/
 │   │       ├── protein_calculator.png
 │   │       ├── water_intake_calculator.png
 │   │       └── heart_rate_calculator.png
-│   │   
+│   ├── js/
+│   │   └── script.js
 │   └── videos/
 │       └── (video files)
 ├── index.html
@@ -116,5 +118,3 @@ Chart.js: Chart.js
 Leaflet.js: Leaflet.js
 OpenStreetMap: OpenStreetMap
 Thank you for using the Fitness with Wemyss Workouts website! For any inquiries, please contact Leo Wemyss at leo@example.com.
-
-
