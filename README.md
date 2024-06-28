@@ -86,8 +86,6 @@ fitness-with-wemyss-workouts/
 │   │       ├── index.html.png
 │   │       ├── water-intake.png
 │   │       └── workout-plans.html.png
-│   ├── js/
-│   │   └── script.js
 │   └── videos/
 │       └── (video files)
 ├── about.html
