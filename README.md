@@ -38,20 +38,19 @@ Welcome to the Fitness with Wemyss Workouts website! This project is dedicated t
 
 ## Installation
 
-To get a local copy up and running, follow these simple steps:
+To get a local copy up and running follow these simple steps:
 
 1. **Clone the repo:**
    ```sh
-   git clone https://github.com/leo-wemyss-2024/Project-one.git
-cd Project-one
+   git clone https://github.com/your-username/fitness-with-wemyss-workouts.git
+cd fitness-with-wemyss-workouts
 open index.html
+
 Usage
-Usage
-Home Page: Provides an overview of the services offered and a welcoming hero section.
-Classes Page: Lists the various fitness classes available, along with descriptions and images.
-Workout Plans Page: Details different workout plans tailored for beginners, intermediate, and advanced users.
-Contact Page: Provides contact information and a form for users to get in touch.
-About Page: Shares information about the founder and the mission of the fitness program.
+Navigate through different sections using the navigation bar.
+Use the calculators by filling in the required fields and clicking "Calculate."
+Close the disclaimer by clicking the close button. The site will remember your preference using localStorage.
+Check the "Contact" page for contact details and use the provided form to get in touch.
 Screenshots
 Home Page
 
@@ -79,42 +78,43 @@ fitness-with-wemyss-workouts/
 ├── assets/
 │   ├── css/
 │   │   └── style.css
+│   ├── favicon_io/
 │   ├── images/
-│   │   └── screenshots/
-│   │       ├── home_page.png
-│   │       ├── classes_page.png
-│   │       ├── workout_plans_page.png
-│   │       ├── contact_page.png
-│   │       ├── body_fat_calculator.png
-│   │       ├── waist_to_hip_calculator.png
-│   │       ├── protein_calculator.png
-│   │       ├── water_intake_calculator.png
-│   │       └── heart_rate_calculator.png
+│   │   └── Screenshots/
+│   │       ├── about.html.png
+│   │       ├── Body-fat-percentage.png
+│   │       ├── classes.html.png
+│   │       ├── contact.html.png
+│   │       ├── Heart-rate-zone-calculator.png
+│   │       ├── index.html.png
+│   │       ├── Protein.png
+│   │       ├── water-intake.png
+│   │       └── workout-plans.html.png
 │   ├── js/
 │   │   └── script.js
 │   └── videos/
 │       └── (video files)
-├── index.html
 ├── about.html
 ├── classes.html
 ├── contact.html
+├── index.html
 ├── workout-plans.html
 └── README.md
 Contributing
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
-Fork the Project
-Create your Feature Branch: (git checkout -b feature/AmazingFeature)
-Commit your Changes: (git commit -m 'Add some AmazingFeature')
-Push to the Branch: (git push origin feature/AmazingFeature)
-Open a Pull Request
+Fork the Project.
+Create your Feature Branch (git checkout -b feature/AmazingFeature).
+Commit your Changes (git commit -m 'Add some AmazingFeature').
+Push to the Branch (git push origin feature/AmazingFeature).
+Open a Pull Request.
 License
 Distributed under the MIT License. See LICENSE for more information.
 
 Acknowledgements
-Font Awesome: Font Awesome
-Google Fonts: Google Fonts
-Chart.js: Chart.js
-Leaflet.js: Leaflet.js
-OpenStreetMap: OpenStreetMap
+Font Awesome
+Google Fonts
+Chart.js
+Leaflet.js
+OpenStreetMap
 Thank you for using the Fitness with Wemyss Workouts website! For any inquiries, please contact Leo Wemyss at leo@example.com.
