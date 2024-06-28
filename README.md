@@ -70,9 +70,6 @@ Water Intake Calculator
 
 Heart Rate Zone Calculator
 
-File Structure
-plaintext
-Copy code
 fitness-with-wemyss-workouts/
 ├── assets/
 │   ├── css/
@@ -99,6 +96,7 @@ fitness-with-wemyss-workouts/
 ├── index.html
 ├── workout-plans.html
 └── README.md
+
 Contributing
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
