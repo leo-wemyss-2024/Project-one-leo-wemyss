@@ -43,7 +43,13 @@ To get a local copy up and running follow these simple steps:
 1. **Clone the repo:**
    ```sh
    git clone https://github.com/your-username/fitness-with-wemyss-workouts.git
+Navigate to the project directory:
+sh
+Copy code
 cd fitness-with-wemyss-workouts
+Open index.html in your preferred web browser:
+sh
+Copy code
 open index.html
 Usage
 Navigate through different sections using the navigation bar.
@@ -70,6 +76,9 @@ Water Intake Calculator
 
 Heart Rate Zone Calculator
 
+File Structure
+plaintext
+Copy code
 fitness-with-wemyss-workouts/
 ├── assets/
 │   ├── css/
@@ -86,6 +95,8 @@ fitness-with-wemyss-workouts/
 │   │       ├── index.html.png
 │   │       ├── water-intake.png
 │   │       └── workout-plans.html.png
+│   ├── js/
+│   │   └── script.js
 │   └── videos/
 │       └── (video files)
 ├── about.html
@@ -94,7 +105,6 @@ fitness-with-wemyss-workouts/
 ├── index.html
 ├── workout-plans.html
 └── README.md
-
 Contributing
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
