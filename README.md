@@ -45,7 +45,6 @@ To get a local copy up and running follow these simple steps:
    git clone https://github.com/your-username/fitness-with-wemyss-workouts.git
 cd fitness-with-wemyss-workouts
 open index.html
-
 Usage
 Navigate through different sections using the navigation bar.
 Use the calculators by filling in the required fields and clicking "Calculate."
@@ -80,16 +79,15 @@ fitness-with-wemyss-workouts/
 │   │   └── style.css
 │   ├── favicon_io/
 │   ├── images/
-│   │   └── Screenshots/
-│   │       ├── about.html.png
-│   │       ├── Body-fat-percentage.png
-│   │       ├── classes.html.png
-│   │       ├── contact.html.png
-│   │       ├── Heart-rate-zone-calculator.png
-│   │       ├── index.html.png
-│   │       ├── Protein.png
-│   │       ├── water-intake.png
-│   │       └── workout-plans.html.png
+│   │   ├── about.html.png
+│   │   ├── Body-fat-percentage.png
+│   │   ├── classes.html.png
+│   │   ├── contact.html.png
+│   │   ├── Heart-rate-zone-calculator.png
+│   │   ├── index.html.png
+│   │   ├── Protein.png
+│   │   ├── water-intake.png
+│   │   └── workout-plans.html.png
 │   ├── js/
 │   │   └── script.js
 │   └── videos/
@@ -118,3 +116,4 @@ Chart.js
 Leaflet.js
 OpenStreetMap
 Thank you for using the Fitness with Wemyss Workouts website! For any inquiries, please contact Leo Wemyss at leo@example.com.
+
