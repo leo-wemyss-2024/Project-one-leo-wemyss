@@ -79,15 +79,14 @@ fitness-with-wemyss-workouts/
 │   │   └── style.css
 │   ├── images/
 │   │   └── (image files)
-│   │   
 │   └── videos/
 │       └── (video files)
 ├── index.html
 ├── about.html
 ├── classes.html
 ├── contact.html
-├── workout-plans.html
-└── README.md
+├── README:md
+└── workout.html
 Contributing
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
