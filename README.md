@@ -79,15 +79,16 @@ fitness-with-wemyss-workouts/
 │   │   └── style.css
 │   ├── favicon_io/
 │   ├── images/
-│   │   ├── about.html.png
-│   │   ├── Body-fat-percentage.png
-│   │   ├── classes.html.png
-│   │   ├── contact.html.png
-│   │   ├── Heart-rate-zone-calculator.png
-│   │   ├── index.html.png
-│   │   ├── Protein.png
-│   │   ├── water-intake.png
-│   │   └── workout-plans.html.png
+│   │   └── Screenshots/
+│   │       ├── Body-fat-percentage.png
+│   │       ├── Heart-rate-zone-calculator.png
+│   │       ├── Protein.png
+│   │       ├── about.html.png
+│   │       ├── classes.html.png
+│   │       ├── contact.html.png
+│   │       ├── index.html.png
+│   │       ├── water-intake.png
+│   │       └── workout-plans.html.png
 │   ├── js/
 │   │   └── script.js
 │   └── videos/
