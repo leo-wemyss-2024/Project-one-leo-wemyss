@@ -59,6 +59,7 @@ Check the "Contact" page for contact details and use the provided form to get in
 Screenshots
 Home Page
 
+
 Classes Page
 
 Workout Plans Page
