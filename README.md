@@ -116,4 +116,3 @@ Chart.js
 Leaflet.js
 OpenStreetMap
 Thank you for using the Fitness with Wemyss Workouts website! For any inquiries, please contact Leo Wemyss at leo@example.com.
-
