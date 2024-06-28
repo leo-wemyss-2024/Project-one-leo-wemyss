@@ -68,13 +68,11 @@ Contact Page
 Calculators
 Body Fat Calculator
 
-Waist-to-Hip Ratio Calculator
+Heart Rate Zone Calculator
 
 Protein Requirement Calculator
 
 Water Intake Calculator
-
-Heart Rate Zone Calculator
 
 File Structure
 plaintext
@@ -85,7 +83,7 @@ fitness-with-wemyss-workouts/
 │   │   └── style.css
 │   ├── favicon_io/
 │   ├── images/
-│   │   └── Screenshots/
+│   │   └── screenshots/
 │   │       ├── Body-fat-percentage.png
 │   │       ├── Heart-rate-zone-calculator.png
 │   │       ├── Protein.png
